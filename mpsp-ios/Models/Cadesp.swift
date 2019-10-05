@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct CadespRequest: Codable {
-    var cnpj: String
+class CadespRequest: NSObject, RequestBase {
+    var serviceName: String {
+        return "CADESP"
+    }
+    
+    @objc var cnpj: String = ""
 }
 
 struct CadespResponse: Codable {

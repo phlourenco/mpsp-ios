@@ -1,22 +1,22 @@
+////
+////  CagedCompany.swift
+////  mpsp-ios
+////
+////  Created by Paulo Lourenço on 01/10/19.
+////  Copyright © 2019 Paulo Lourenço. All rights reserved.
+////
 //
-//  CagedCompany.swift
-//  mpsp-ios
+//import Foundation
 //
-//  Created by Paulo Lourenço on 01/10/19.
-//  Copyright © 2019 Paulo Lourenço. All rights reserved.
+//struct CagedCompanyRequest: Codable {
+//    var cnpj: String
+//}
 //
-
-import Foundation
-
-struct CagedCompanyRequest: Codable {
-    var cnpj: String
-}
-
-struct CagedCompanyResponse: Codable {
-    var cnpj: String
-    var name: String
-    var cnae: String
-    var subsidiaries: Int
-    var admissions: Int
-    var demissions: Int
-}
+//struct CagedCompanyResponse: Codable {
+//    var cnpj: String
+//    var name: String
+//    var cnae: String
+//    var subsidiaries: Int
+//    var admissions: Int
+//    var demissions: Int
+//}

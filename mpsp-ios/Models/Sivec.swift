@@ -8,13 +8,17 @@
 
 import Foundation
 
-enum SivecSearchType: String, Codable {
+@objc enum SivecSearchType: Int, Codable {
     case SAP, RG, NAME
 }
 
-struct SivecRequest: Codable {
-    var searchType: SivecSearchType
-    var term: String
+class SivecRequest: NSObject, RequestBase {
+    var serviceName: String {
+        return "SIVEC"
+    }
+    
+    @objc var searchType: SivecSearchType = .NAME
+    @objc var term: String = ""
 }
 
 struct SivecResponse: Codable {

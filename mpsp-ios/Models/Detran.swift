@@ -8,13 +8,16 @@
 
 import Foundation
 
-struct DetranRequest: Codable {
-    var registry: String
-    var rg: String
-    var conductorName: String
-    var pgu: String
-    var uf: String
-    var jhonson: [Int]
+class DetranRequest: NSObject, RequestBase {
+    var serviceName: String {
+        return "DETRAN"
+    }
+    
+    @objc var registry: String = ""
+    @objc var rg: String = ""
+    @objc var conductorName: String = ""
+    @objc var pgu: String = ""
+    @objc var uf: String = ""
 }
 
 struct DetranResponse: Codable {

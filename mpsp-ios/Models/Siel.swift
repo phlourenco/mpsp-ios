@@ -23,7 +23,6 @@ class SielRequest: NSObject, RequestBase {
     @objc var birthdate: String = ""
     @objc var numTitulo: String = "" //CONFERIR!
     @objc var numProcess: String = ""
-
 }
 
 struct SielResponse: Codable {

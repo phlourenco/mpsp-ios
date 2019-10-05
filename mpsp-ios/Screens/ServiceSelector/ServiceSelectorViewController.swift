@@ -8,22 +8,48 @@
 
 import UIKit
 
-class ServiceSelectorViewController: UIViewController {
+protocol ServiceSelectorView {
+    func showServiceList(_ list: [String])
+}
 
+class ServiceSelectorViewController: UIViewController {
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var servicesStackView: UIStackView!
+    
+    // MARK: - Properties
+    
+    var viewModel: ServiceSelectorViewModel?
+    
+    // MARK: - Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = ServiceSelectorViewModel(view: self)
+    }
 
-        // Do any additional setup after loading the view.
+
+}
+
+extension ServiceSelectorViewController: ServiceSelectorView {
+    
+    func showServiceList(_ list: [String]) {
+        servicesStackView.removeAllSubviews()
         
-        let mirror = Mirror(reflecting: DetranRequest(registry: "123", rg: "456", conductorName: "Paulo", pgu: "abc", uf: "SP", jhonson: [1, 2]))
-        
-        mirror.children.forEach { child in
-            print(child.label)
-            print(child.value)
-            print(type(of: child.value))
-            print("---")
+        list.forEach { title in
+            let switchText = SwitchText(title: title)
+            switchText.delegate = self
+            servicesStackView.addArrangedSubview(switchText)
         }
     }
     
+}
 
+extension ServiceSelectorViewController: SwitchTextDelegate {
+    
+    func switchTextChangedState(title: String, isOn: Bool) {
+        viewModel?.selectService(withName: title, checked: isOn)
+    }
+    
 }

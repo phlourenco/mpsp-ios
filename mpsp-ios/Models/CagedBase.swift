@@ -1,18 +1,23 @@
+////
+////  CagedBase.swift
+////  mpsp-ios
+////
+////  Created by Paulo Lourenço on 30/09/19.
+////  Copyright © 2019 Paulo Lourenço. All rights reserved.
+////
 //
-//  CagedBase.swift
-//  mpsp-ios
+//import Foundation
 //
-//  Created by Paulo Lourenço on 30/09/19.
-//  Copyright © 2019 Paulo Lourenço. All rights reserved.
+//enum CagedType: String, Codable {
+//    case RESPONSIBLE, COMPANY, WORKER
+//}
 //
-
-import Foundation
-
-enum CagedType: String, Codable {
-    case RESPONSIBLE, COMPANY, WORKER
-}
-
-struct CagedRequestBase<T: Codable>: Codable {
-    var type: CagedType
-    var object: T
-}
+//@objc
+//class CagedRequestBase<T: NSObject & Codable>: NSObject, RequestBase {
+//    var serviceName: String {
+//        return "CAGED"
+//    }
+//    
+//    var type: CagedType
+//    var object: T
+//}

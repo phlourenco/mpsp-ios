@@ -33,6 +33,10 @@
 		4BCE8AFE23455E8B002791B4 /* SearchFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AFD23455E8B002791B4 /* SearchFormViewController.swift */; };
 		4BCE8B022345655D002791B4 /* RequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B012345655D002791B4 /* RequestBase.swift */; };
 		4BCE8B052346DDC0002791B4 /* BindableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B042346DDC0002791B4 /* BindableTextField.swift */; };
+		4BCE8B0723491A77002791B4 /* SwitchText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0623491A77002791B4 /* SwitchText.xib */; };
+		4BCE8B0923491B7E002791B4 /* SwitchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0823491B7E002791B4 /* SwitchText.swift */; };
+		4BCE8B0B234922F7002791B4 /* ServiceSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0A234922F7002791B4 /* ServiceSelectorViewModel.swift */; };
+		4BCE8B0D23492B1A002791B4 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0C23492B1A002791B4 /* UIStackView.swift */; };
 		FB68993BA18B304D0264161E /* Pods_mpsp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CE37403098E47FB5F8ACC4 /* Pods_mpsp_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,10 @@
 		4BCE8AFD23455E8B002791B4 /* SearchFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormViewController.swift; sourceTree = "<group>"; };
 		4BCE8B012345655D002791B4 /* RequestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBase.swift; sourceTree = "<group>"; };
 		4BCE8B042346DDC0002791B4 /* BindableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTextField.swift; sourceTree = "<group>"; };
+		4BCE8B0623491A77002791B4 /* SwitchText.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchText.xib; sourceTree = "<group>"; };
+		4BCE8B0823491B7E002791B4 /* SwitchText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchText.swift; sourceTree = "<group>"; };
+		4BCE8B0A234922F7002791B4 /* ServiceSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSelectorViewModel.swift; sourceTree = "<group>"; };
+		4BCE8B0C23492B1A002791B4 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		5E3B6D5D6AF85063D470F6C9 /* Pods-mpsp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.release.xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.release.xcconfig"; sourceTree = "<group>"; };
 		96CE37403098E47FB5F8ACC4 /* Pods_mpsp_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mpsp_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D67713B98A8FA431FA7F9C20 /* Pods-mpsp-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.debug.xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +137,7 @@
 				4BCE8AD42342CAE9002791B4 /* Data+Parse.swift */,
 				4BCE8AD62342CB11002791B4 /* Encodable+Convert.swift */,
 				4BCE8ADD2342CBD4002791B4 /* UIView.swift */,
+				4BCE8B0C23492B1A002791B4 /* UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				4BCE8AFB23455E4E002791B4 /* ServiceSelectorViewController.swift */,
+				4BCE8B0A234922F7002791B4 /* ServiceSelectorViewModel.swift */,
 			);
 			path = ServiceSelector;
 			sourceTree = "<group>";
@@ -210,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				4BCE8B042346DDC0002791B4 /* BindableTextField.swift */,
+				4BCE8B0623491A77002791B4 /* SwitchText.xib */,
+				4BCE8B0823491B7E002791B4 /* SwitchText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -293,6 +305,7 @@
 			files = (
 				4BCE8AC92342C84B002791B4 /* LaunchScreen.storyboard in Resources */,
 				4BCE8AC62342C84B002791B4 /* Assets.xcassets in Resources */,
+				4BCE8B0723491A77002791B4 /* SwitchText.xib in Resources */,
 				4BCE8AC42342C847002791B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,13 +370,16 @@
 				4BCE8AF7234428B3002791B4 /* Sivec.swift in Sources */,
 				4BCE8AE92342D5D5002791B4 /* CagedResponsible.swift in Sources */,
 				4BCE8AD22342CAB8002791B4 /* HTTPClient.swift in Sources */,
+				4BCE8B0D23492B1A002791B4 /* UIStackView.swift in Sources */,
 				4BCE8B052346DDC0002791B4 /* BindableTextField.swift in Sources */,
 				4BCE8AE12342D19B002791B4 /* Arisp.swift in Sources */,
+				4BCE8B0B234922F7002791B4 /* ServiceSelectorViewModel.swift in Sources */,
 				4BCE8AEF23440885002791B4 /* CagedWorker.swift in Sources */,
 				4BCE8AD72342CB11002791B4 /* Encodable+Convert.swift in Sources */,
 				4BCE8AD52342CAE9002791B4 /* Data+Parse.swift in Sources */,
 				4BCE8AF523440C06002791B4 /* Censec.swift in Sources */,
 				4BCE8B022345655D002791B4 /* RequestBase.swift in Sources */,
+				4BCE8B0923491B7E002791B4 /* SwitchText.swift in Sources */,
 				4BCE8AF323440B03002791B4 /* Cadesp.swift in Sources */,
 				4BCE8AFE23455E8B002791B4 /* SearchFormViewController.swift in Sources */,
 				4BCE8AEB2342D84F002791B4 /* CagedBase.swift in Sources */,
@@ -518,6 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W8W67XPP2J;
 				INFOPLIST_FILE = "$(SRCROOT)/mpsp-ios/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,7 +542,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.phlourenco.mpsp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -537,6 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W8W67XPP2J;
 				INFOPLIST_FILE = "$(SRCROOT)/mpsp-ios/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,7 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.phlourenco.mpsp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

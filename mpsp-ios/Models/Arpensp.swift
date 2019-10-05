@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ArpenspRegistryType: String, Codable {
+@objc enum ArpenspRegistryType: Int, Codable {
     case BIRTH, MARRIAGE, DEATH, EMANCIPATION, INTERDITION, AWAY, STABLE_UNION
 }
 
@@ -22,9 +22,9 @@ class ArpenspRequest: NSObject, RequestBase {
         return Mirror(self, children: ["Tipo de registro": "", "Número do processo": "", "Vara": 0])
     }
     
-    var registryType: ArpenspRegistryType
-    var processNumber: String
-    var place: Int
+    @objc var registryType: ArpenspRegistryType = .MARRIAGE
+    @objc var processNumber: String = ""
+    @objc var place: Int = 0
 }
 
 struct ArpenspResponse: Codable {

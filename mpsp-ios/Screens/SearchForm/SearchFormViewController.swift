@@ -28,7 +28,7 @@ class SearchFormViewController: UIViewController {
     }
     
     private func generateForm(basedOnContracts contracts: [RequestBase]) {
-        fieldStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        fieldStackView.removeAllSubviews()
         
         contracts.forEach { contract in
             let serviceNameLabel = UILabel()

@@ -8,11 +8,9 @@
 
 import Foundation
 
-enum ArispPersonType: Int, Codable, CaseIterable {
+@objc enum ArispPersonType: Int, Codable, CaseIterable {
     case person = 1, company
 }
-
-
 
 class ArispRequest: NSObject, RequestBase {
     
@@ -24,9 +22,9 @@ class ArispRequest: NSObject, RequestBase {
         return Mirror(self, children: ["Tipo de pessoa": ArispPersonType.allCases, "Cidades": cityNames ?? [], "CPF/CNPJ": ""])
     }
     
-    var personType: ArispPersonType
-    var cityNames: [String]?
-    var cpfCnpj: String
+    @objc var personType: ArispPersonType = .person
+    @objc var cityNames: [String] = []
+    @objc var cpfCnpj: String = ""
 }
 
 struct ArispResponse: Codable {

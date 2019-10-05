@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct JucespRequest: Codable {
-    var companyName: String
+class JucespRequest: NSObject, RequestBase {
+    var serviceName: String {
+        return "JUCESP"
+    }
+    
+    @objc var companyName: String = ""
 }
 
 struct JucespResponse: Codable {

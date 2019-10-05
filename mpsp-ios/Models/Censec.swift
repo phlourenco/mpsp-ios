@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct CensecRequest: Codable {
-    var cpf: String
+class CensecRequest: NSObject, RequestBase {
+    var serviceName: String {
+        return "CENSEC"
+    }
+    
+    @objc var cpf: String = ""
 }
 
 struct CensecResponse: Codable {
