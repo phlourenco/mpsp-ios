@@ -9,20 +9,23 @@
 import Foundation
 
 class SielRequest: NSObject, RequestBase {
-    
-    var serviceName: String {
-        return "SIEL"
-    }
-    
-//    var customMirror: Mirror {
-//        return Mirror(self, children: ["Nome": name, "Nome da mãe": motherName, "Data de nascimento": birthdate, "Título": numTitulo, "Processo": numProcess])
-//    }
-    
     @objc var name: String = ""
     @objc var motherName: String = ""
     @objc var birthdate: String = ""
     @objc var numTitulo: String = "" //CONFERIR!
     @objc var numProcess: String = ""
+    
+    func getServiceName() -> String {
+        return "SIEL"
+    }
+
+    func getEnumCases(propertyName: String) -> [String]? {
+        return nil
+    }
+    
+    func getArrayValues(propertyName: String) -> [String]? {
+        return nil
+    }
 }
 
 struct SielResponse: Codable {

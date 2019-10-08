@@ -9,11 +9,19 @@
 import Foundation
 
 class JucespRequest: NSObject, RequestBase {
-    var serviceName: String {
+    @objc var companyName: String = ""
+    
+    func getServiceName() -> String {
         return "JUCESP"
     }
     
-    @objc var companyName: String = ""
+    func getEnumCases(propertyName: String) -> [String]? {
+        return nil
+    }
+    
+    func getArrayValues(propertyName: String) -> [String]? {
+        return nil
+    }
 }
 
 struct JucespResponse: Codable {

@@ -8,17 +8,28 @@
 
 import Foundation
 
-@objc enum SivecSearchType: Int, Codable {
+@objc enum SivecSearchType: Int, Codable, CaseIterable {
     case SAP, RG, NAME
 }
 
 class SivecRequest: NSObject, RequestBase {
-    var serviceName: String {
+    @objc var searchType: SivecSearchType = .NAME
+    @objc var term: String = ""
+    
+    func getServiceName() -> String {
         return "SIVEC"
     }
     
-    @objc var searchType: SivecSearchType = .NAME
-    @objc var term: String = ""
+    func getEnumCases(propertyName: String) -> [String]? {
+        if propertyName == "searchType" {
+            return SivecSearchType.allCases.map { "\($0)" }
+        }
+        return nil
+    }
+    
+    func getArrayValues(propertyName: String) -> [String]? {
+        return nil
+    }
 }
 
 struct SivecResponse: Codable {

@@ -31,15 +31,19 @@ class ServiceSelectorViewModel {
             CensecRequest(),
             SivecRequest()
         ]
-        view.showServiceList(requests.map { $0.serviceName }.sorted())
+        view.showServiceList(requests.map { $0.getServiceName() }.sorted())
+    }
+    
+    func getSelectedServicesRequests() -> [RequestBase] {
+        return selectedRequests
     }
     
     func selectService(withName name: String, checked: Bool) {
         if checked {
-            guard let foundServiceRequest = requests.first(where: { $0.serviceName == name }) else { return }
+            guard let foundServiceRequest = requests.first(where: { $0.getServiceName() == name }) else { return }
             selectedRequests.append(foundServiceRequest)
         } else {
-            selectedRequests.removeAll(where: { $0.serviceName == name })
+            selectedRequests.removeAll(where: { $0.getServiceName() == name })
         }
     }
     

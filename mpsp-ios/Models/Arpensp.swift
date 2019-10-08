@@ -8,23 +8,48 @@
 
 import Foundation
 
-@objc enum ArpenspRegistryType: Int, Codable {
+@objc enum ArpenspRegistryType: Int, Codable, StringEnum {
     case BIRTH, MARRIAGE, DEATH, EMANCIPATION, INTERDITION, AWAY, STABLE_UNION
+    
+    func getValue() -> String {
+        switch self {
+        case .BIRTH:
+            return "BIRTH"
+        case .MARRIAGE:
+            return "MARRIAGE"
+        case .DEATH:
+            return "DEATH"
+        case .EMANCIPATION:
+            return "EMANCIPATION"
+        case .INTERDITION:
+            return "INTERDITION"
+        case .AWAY:
+            return "AWAY"
+        case .STABLE_UNION:
+            return "STABLE_UNION"
+        }
+    }
 }
 
 class ArpenspRequest: NSObject, RequestBase {
-    
-    var serviceName: String {
-        return "ARPENSP"
-    }
-    
-    var customMirror: Mirror {
-        return Mirror(self, children: ["Tipo de registro": "", "Número do processo": "", "Vara": 0])
-    }
-    
     @objc var registryType: ArpenspRegistryType = .MARRIAGE
     @objc var processNumber: String = ""
     @objc var place: Int = 0
+    
+    func getServiceName() -> String {
+        return "ARPENSP"
+    }
+    
+    func getEnumCases(propertyName: String) -> [String]? {
+        if propertyName == "registryType" {
+            return ArpenspRegistryType.allCases.map { $0.getValue() }
+        }
+        return nil
+    }
+    
+    func getArrayValues(propertyName: String) -> [String]? {
+        return nil
+    }
 }
 
 struct ArpenspResponse: Codable {

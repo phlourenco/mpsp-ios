@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ServiceSelectorView {
+protocol ServiceSelectorView: BaseDisplayLogic {
     func showServiceList(_ list: [String])
 }
 
@@ -28,8 +28,22 @@ class ServiceSelectorViewController: UIViewController {
         super.viewDidLoad()
         viewModel = ServiceSelectorViewModel(view: self)
     }
-
-
+    
+    @IBAction func nextAction(_ sender: Any) {
+        guard let requests = viewModel?.getSelectedServicesRequests(), !requests.isEmpty else {
+            showError(title: "Erro", message: "Selecione pelo menos um serviço!", tryAgainAction: nil)
+            return
+        }
+        performSegue(withIdentifier: "formSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let formVC = segue.destination as? SearchFormViewController {
+            let searchFormViewModel = SearchFormViewModel(view: formVC, requests: viewModel?.getSelectedServicesRequests() ?? [])
+            formVC.viewModel = searchFormViewModel
+        }
+    }
+    
 }
 
 extension ServiceSelectorViewController: ServiceSelectorView {

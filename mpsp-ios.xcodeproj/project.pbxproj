@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B71050C234BF41F001A11A8 /* SelectableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B71050A234BF41F001A11A8 /* SelectableListViewController.swift */; };
+		4B710515234C0517001A11A8 /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B710514234C0517001A11A8 /* MaterialIcons-Regular.ttf */; };
+		4B710518234C05B1001A11A8 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B710517234C05B1001A11A8 /* Checkbox.swift */; };
 		4BCE8ABF2342C847002791B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8ABE2342C847002791B4 /* AppDelegate.swift */; };
 		4BCE8AC42342C847002791B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8AC22342C847002791B4 /* Main.storyboard */; };
 		4BCE8AC62342C84B002791B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8AC52342C84B002791B4 /* Assets.xcassets */; };
@@ -37,10 +40,15 @@
 		4BCE8B0923491B7E002791B4 /* SwitchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0823491B7E002791B4 /* SwitchText.swift */; };
 		4BCE8B0B234922F7002791B4 /* ServiceSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0A234922F7002791B4 /* ServiceSelectorViewModel.swift */; };
 		4BCE8B0D23492B1A002791B4 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0C23492B1A002791B4 /* UIStackView.swift */; };
+		4BCE8B0F23493476002791B4 /* SearchFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0E23493476002791B4 /* SearchFormViewModel.swift */; };
+		4BCE8B1123494762002791B4 /* PickerBindableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B1023494762002791B4 /* PickerBindableTextField.swift */; };
 		FB68993BA18B304D0264161E /* Pods_mpsp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CE37403098E47FB5F8ACC4 /* Pods_mpsp_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B71050A234BF41F001A11A8 /* SelectableListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableListViewController.swift; sourceTree = "<group>"; };
+		4B710514234C0517001A11A8 /* MaterialIcons-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaterialIcons-Regular.ttf"; sourceTree = "<group>"; };
+		4B710517234C05B1001A11A8 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		4BCE8ABB2342C847002791B4 /* mpsp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mpsp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCE8ABE2342C847002791B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BCE8AC32342C847002791B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,6 +81,8 @@
 		4BCE8B0823491B7E002791B4 /* SwitchText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchText.swift; sourceTree = "<group>"; };
 		4BCE8B0A234922F7002791B4 /* ServiceSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSelectorViewModel.swift; sourceTree = "<group>"; };
 		4BCE8B0C23492B1A002791B4 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		4BCE8B0E23493476002791B4 /* SearchFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormViewModel.swift; sourceTree = "<group>"; };
+		4BCE8B1023494762002791B4 /* PickerBindableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerBindableTextField.swift; sourceTree = "<group>"; };
 		5E3B6D5D6AF85063D470F6C9 /* Pods-mpsp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.release.xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.release.xcconfig"; sourceTree = "<group>"; };
 		96CE37403098E47FB5F8ACC4 /* Pods_mpsp_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mpsp_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D67713B98A8FA431FA7F9C20 /* Pods-mpsp-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.debug.xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B710516234C0527001A11A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B710514234C0517001A11A8 /* MaterialIcons-Regular.ttf */,
+				4BCE8AC52342C84B002791B4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4BCE8AB22342C847002791B4 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +137,7 @@
 				4BCE8ADA2342CBAA002791B4 /* Commons */,
 				4BCE8B032346DDAE002791B4 /* Components */,
 				4BCE8AD32342CADC002791B4 /* Extensions */,
+				4B710516234C0527001A11A8 /* Resources */,
 				4BCE8AD82342CB45002791B4 /* Supporting Files */,
 			);
 			path = "mpsp-ios";
@@ -145,7 +165,6 @@
 		4BCE8AD82342CB45002791B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4BCE8AC52342C84B002791B4 /* Assets.xcassets */,
 				4BCE8ABE2342C847002791B4 /* AppDelegate.swift */,
 				4BCE8ACA2342C84B002791B4 /* Info.plist */,
 			);
@@ -203,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				4BCE8AFD23455E8B002791B4 /* SearchFormViewController.swift */,
+				4BCE8B0E23493476002791B4 /* SearchFormViewModel.swift */,
 			);
 			path = SearchForm;
 			sourceTree = "<group>";
@@ -222,6 +242,9 @@
 				4BCE8B042346DDC0002791B4 /* BindableTextField.swift */,
 				4BCE8B0623491A77002791B4 /* SwitchText.xib */,
 				4BCE8B0823491B7E002791B4 /* SwitchText.swift */,
+				4BCE8B1023494762002791B4 /* PickerBindableTextField.swift */,
+				4B71050A234BF41F001A11A8 /* SelectableListViewController.swift */,
+				4B710517234C05B1001A11A8 /* Checkbox.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -306,6 +329,7 @@
 				4BCE8AC92342C84B002791B4 /* LaunchScreen.storyboard in Resources */,
 				4BCE8AC62342C84B002791B4 /* Assets.xcassets in Resources */,
 				4BCE8B0723491A77002791B4 /* SwitchText.xib in Resources */,
+				4B710515234C0517001A11A8 /* MaterialIcons-Regular.ttf in Resources */,
 				4BCE8AC42342C847002791B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BCE8B0F23493476002791B4 /* SearchFormViewModel.swift in Sources */,
 				4BCE8AF123440A1D002791B4 /* Jucesp.swift in Sources */,
 				4BCE8AE52342D360002791B4 /* Arpensp.swift in Sources */,
 				4BCE8ABF2342C847002791B4 /* AppDelegate.swift in Sources */,
@@ -369,7 +394,10 @@
 				4BCE8AED234407BA002791B4 /* CagedCompany.swift in Sources */,
 				4BCE8AF7234428B3002791B4 /* Sivec.swift in Sources */,
 				4BCE8AE92342D5D5002791B4 /* CagedResponsible.swift in Sources */,
+				4B71050C234BF41F001A11A8 /* SelectableListViewController.swift in Sources */,
 				4BCE8AD22342CAB8002791B4 /* HTTPClient.swift in Sources */,
+				4BCE8B1123494762002791B4 /* PickerBindableTextField.swift in Sources */,
+				4B710518234C05B1001A11A8 /* Checkbox.swift in Sources */,
 				4BCE8B0D23492B1A002791B4 /* UIStackView.swift in Sources */,
 				4BCE8B052346DDC0002791B4 /* BindableTextField.swift in Sources */,
 				4BCE8AE12342D19B002791B4 /* Arisp.swift in Sources */,

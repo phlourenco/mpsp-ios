@@ -9,11 +9,19 @@
 import Foundation
 
 class CadespRequest: NSObject, RequestBase {
-    var serviceName: String {
+    @objc var cnpj: String = ""
+    
+    func getServiceName() -> String {
         return "CADESP"
     }
     
-    @objc var cnpj: String = ""
+    func getEnumCases(propertyName: String) -> [String]? {
+        return nil
+    }
+    
+    func getArrayValues(propertyName: String) -> [String]? {
+        return nil
+    }
 }
 
 struct CadespResponse: Codable {

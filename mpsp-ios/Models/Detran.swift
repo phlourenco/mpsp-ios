@@ -9,15 +9,23 @@
 import Foundation
 
 class DetranRequest: NSObject, RequestBase {
-    var serviceName: String {
-        return "DETRAN"
-    }
-    
     @objc var registry: String = ""
     @objc var rg: String = ""
     @objc var conductorName: String = ""
     @objc var pgu: String = ""
     @objc var uf: String = ""
+    
+    func getServiceName() -> String {
+        return "DETRAN"
+    }
+    
+    func getEnumCases(propertyName: String) -> [String]? {
+        return nil
+    }
+    
+    func getArrayValues(propertyName: String) -> [String]? {
+        return nil
+    }
 }
 
 struct DetranResponse: Codable {

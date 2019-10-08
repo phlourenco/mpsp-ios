@@ -8,12 +8,20 @@
 
 import Foundation
 
-class CensecRequest: NSObject, RequestBase {
-    var serviceName: String {
+class CensecRequest: NSObject, RequestBase {    
+    @objc var cpf: String = ""
+    
+    func getServiceName() -> String {
         return "CENSEC"
     }
     
-    @objc var cpf: String = ""
+    func getEnumCases(propertyName: String) -> [String]? {
+        return nil
+    }
+    
+    func getArrayValues(propertyName: String) -> [String]? {
+        return nil
+    }
 }
 
 struct CensecResponse: Codable {

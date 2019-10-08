@@ -39,5 +39,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MaterialIcons-Regular.ttf</string>
+	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>1</string>
 </dict>
 </plist>
