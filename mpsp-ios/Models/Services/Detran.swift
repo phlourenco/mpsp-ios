@@ -18,14 +18,6 @@ class DetranRequest: NSObject, RequestBase {
     func getServiceName() -> String {
         return "DETRAN"
     }
-    
-    func getEnumCases(propertyName: String) -> [String]? {
-        return nil
-    }
-    
-    func getArrayValues(propertyName: String) -> [String]? {
-        return nil
-    }
 }
 
 struct DetranResponse: Codable {

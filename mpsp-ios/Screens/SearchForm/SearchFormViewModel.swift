@@ -12,26 +12,17 @@ class SearchFormViewModel {
     
     private let view: SearchFormView
     
-    private var selectedRequests: [RequestBase]
+    var selectedRequests: [RequestBase]
     
     init(view: SearchFormView, requests: [RequestBase]) {
         self.view = view
-        self.selectedRequests = requests
+        self.selectedRequests = requests.sorted(by: { (a, b) -> Bool in
+            return a.getServiceName() < b.getServiceName()
+        })
     }
     
     func generateForm() {
         view.generateForm(basedOnContracts: selectedRequests)
-    }
-    
-    func makeRequests() {
-        selectedRequests.forEach { request in
-            Mirror(reflecting: request).children.forEach { child in
-                print("Label: \(child.label) - Value: \(child.value)")
-            }
-            print("------------------------")
-        }
-        
-        
     }
     
 }

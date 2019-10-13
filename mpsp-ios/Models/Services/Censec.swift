@@ -14,14 +14,6 @@ class CensecRequest: NSObject, RequestBase {
     func getServiceName() -> String {
         return "CENSEC"
     }
-    
-    func getEnumCases(propertyName: String) -> [String]? {
-        return nil
-    }
-    
-    func getArrayValues(propertyName: String) -> [String]? {
-        return nil
-    }
 }
 
 struct CensecResponse: Codable {

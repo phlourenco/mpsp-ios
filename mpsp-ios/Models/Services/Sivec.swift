@@ -8,8 +8,19 @@
 
 import Foundation
 
-@objc enum SivecSearchType: Int, Codable, CaseIterable {
+@objc enum SivecSearchType: Int, Codable, StringEnum {
     case SAP, RG, NAME
+    
+    func getValue() -> String {
+        switch self {
+        case .NAME:
+            return "Nome"
+        case .RG:
+            return "RG"
+        case .SAP:
+            return "SAP"
+        }
+    }
 }
 
 class SivecRequest: NSObject, RequestBase {
@@ -20,14 +31,10 @@ class SivecRequest: NSObject, RequestBase {
         return "SIVEC"
     }
     
-    func getEnumCases(propertyName: String) -> [String]? {
+    func getEnumCases(propertyName: String) -> [EnumWrapper]? {
         if propertyName == "searchType" {
-            return SivecSearchType.allCases.map { "\($0)" }
+            return SivecSearchType.allCases.map { EnumWrapper(intValue: $0.rawValue, stringValue: $0.getValue()) }
         }
-        return nil
-    }
-    
-    func getArrayValues(propertyName: String) -> [String]? {
         return nil
     }
 }

@@ -18,14 +18,6 @@ class SielRequest: NSObject, RequestBase {
     func getServiceName() -> String {
         return "SIEL"
     }
-
-    func getEnumCases(propertyName: String) -> [String]? {
-        return nil
-    }
-    
-    func getArrayValues(propertyName: String) -> [String]? {
-        return nil
-    }
 }
 
 struct SielResponse: Codable {

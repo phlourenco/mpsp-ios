@@ -30,6 +30,7 @@ class ServiceSelectorViewController: UIViewController {
     }
     
     @IBAction func nextAction(_ sender: Any) {
+        ReportManager.shared.generateReportId()
         guard let requests = viewModel?.getSelectedServicesRequests(), !requests.isEmpty else {
             showError(title: "Erro", message: "Selecione pelo menos um serviço!", tryAgainAction: nil)
             return

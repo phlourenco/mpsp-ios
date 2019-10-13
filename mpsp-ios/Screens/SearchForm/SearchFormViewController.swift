@@ -24,7 +24,7 @@ class SearchFormViewController: UIViewController {
     }
     
     @IBAction func searchAction(_ sender: Any) {
-        viewModel?.makeRequests()
+        performSegue(withIdentifier: "resultSegue", sender: viewModel?.selectedRequests)
     }
     
     private func openSelectableList(title: String, list: [String], didEndSelectingFunc: (([String]) -> Void)?) {
@@ -32,6 +32,13 @@ class SearchFormViewController: UIViewController {
             selectableListViewController.setTitle(title)
             selectableListViewController.setList(list, didEndSelectingFunc: didEndSelectingFunc)
             present(selectableListViewController, animated: true, completion: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultVC = segue.destination as? ResultListViewController {
+            let vm = ResultListViewModel(view: resultVC, requests: viewModel?.selectedRequests ?? [])
+            resultVC.viewModel = vm
         }
     }
     
@@ -57,20 +64,20 @@ extension SearchFormViewController: SearchFormView {
                         contract.setValue(value, forKey: propertyName)
                     })
                 } else if let arrayValues = contract.getArrayValues(propertyName: propertyName) {
-                    field = BindableTextField(onBeginEditing: {
+                    field = BindableTextField(onBeginEditing: { _ in
                         self.openSelectableList(title: propertyName, list: arrayValues, didEndSelectingFunc: { list in
                             field?.text = list.joined(separator: ", ")
                             contract.setValue(list, forKey: propertyName)
                         })
-                    }, onChange: nil)
+                    }, onChange: nil, canOpenKeyboard: false)
                 } else {
-                    field = BindableTextField(onChange: { value in
+                    field = BindableTextField(onBeginEditing: { textField in
+                        self.handleKeyboard(field: textField, contract: contract, child: child)
+                    }, onChange: { value in
                         contract.setValue(value, forKey: propertyName)
                     })
                 }
-                if child.value is Int {
-                    field?.keyboardType = .numberPad
-                }
+                handleKeyboard(field: field, contract: contract, child: child)
                 field?.borderStyle = .roundedRect
                 field?.placeholder = child.label
                 if let field = field {
@@ -78,7 +85,15 @@ extension SearchFormViewController: SearchFormView {
                 }
             }
         }
-        
+    }
+    
+    private func handleKeyboard(field: UITextField?, contract: RequestBase, child: Mirror.Child) {
+        guard let propertyName = child.label else { return }
+        if child.value is Int || contract.getKeyboardType(propertyName: propertyName) == .number {
+            field?.keyboardType = .numberPad
+        } else {
+            field?.keyboardType = .default
+        }
     }
     
 }

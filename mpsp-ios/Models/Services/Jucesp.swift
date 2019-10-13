@@ -14,14 +14,6 @@ class JucespRequest: NSObject, RequestBase {
     func getServiceName() -> String {
         return "JUCESP"
     }
-    
-    func getEnumCases(propertyName: String) -> [String]? {
-        return nil
-    }
-    
-    func getArrayValues(propertyName: String) -> [String]? {
-        return nil
-    }
 }
 
 struct JucespResponse: Codable {

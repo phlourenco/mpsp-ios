@@ -29,7 +29,10 @@ class ServiceSelectorViewModel {
             JucespRequest(),
             CadespRequest(),
             CensecRequest(),
-            SivecRequest()
+            SivecRequest(),
+            CagedResponsibleRequest(),
+            CagedCompanyRequest(),
+            CagedWorkerRequest()
         ]
         view.showServiceList(requests.map { $0.getServiceName() }.sorted())
     }

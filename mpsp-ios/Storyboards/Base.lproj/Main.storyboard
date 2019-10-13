@@ -181,7 +181,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="fieldStackView" destination="MPq-9G-RtK" id="K8V-22-nd2"/>
-                        <segue destination="WD6-Fm-XXT" kind="show" identifier="reportSegue" id="dvh-07-xA0"/>
+                        <segue destination="urE-4O-bJ1" kind="show" identifier="resultSegue" id="9ni-wu-rxU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Y0-EU-srS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwc-IL-lb1">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b85-Aw-SB7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="390.5"/>
@@ -334,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60E-ha-6Px" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1168.8" y="277.51124437781112"/>
+            <point key="canvasLocation" x="2190" y="278"/>
         </scene>
         <!--Selectable List View Controller-->
         <scene sceneID="aeK-bO-qVo">
@@ -410,7 +410,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKS-5G-s3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973.5999999999999" y="277.51124437781112"/>
+            <point key="canvasLocation" x="364" y="-416"/>
+        </scene>
+        <!--Resultados-->
+        <scene sceneID="A9h-DV-lNo">
+            <objects>
+                <viewController id="urE-4O-bJ1" customClass="ResultListViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbC-e6-q50">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5L-Gz-9Dj">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcX-C4-tdC">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="116.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confira o resultado da sua busca" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSk-5I-xoh">
+                                                <rect key="frame" x="16" y="16" width="343" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GTF-al-vZq">
+                                                <rect key="frame" x="16" y="56.5" width="343" height="40"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vy0-kl-kP6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Ht6-d5-ubc"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="LSk-5I-xoh" firstAttribute="top" secondItem="DcX-C4-tdC" secondAttribute="top" constant="16" id="CLL-60-FyW"/>
+                                            <constraint firstAttribute="trailing" secondItem="GTF-al-vZq" secondAttribute="trailing" constant="16" id="LaH-jL-nOC"/>
+                                            <constraint firstItem="GTF-al-vZq" firstAttribute="leading" secondItem="DcX-C4-tdC" secondAttribute="leading" constant="16" id="ahz-8p-OiQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="GTF-al-vZq" secondAttribute="bottom" constant="20" id="aii-3L-9K4"/>
+                                            <constraint firstItem="LSk-5I-xoh" firstAttribute="leading" secondItem="DcX-C4-tdC" secondAttribute="leading" constant="16" id="cca-n1-trQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="LSk-5I-xoh" secondAttribute="trailing" constant="16" id="vg3-3D-eA9"/>
+                                            <constraint firstItem="GTF-al-vZq" firstAttribute="top" secondItem="LSk-5I-xoh" secondAttribute="bottom" constant="20" id="yXW-Bg-ofY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DcX-C4-tdC" secondAttribute="bottom" id="0LX-UL-ANV"/>
+                                    <constraint firstAttribute="trailing" secondItem="DcX-C4-tdC" secondAttribute="trailing" id="7QC-Pc-XTy"/>
+                                    <constraint firstItem="DcX-C4-tdC" firstAttribute="top" secondItem="L5L-Gz-9Dj" secondAttribute="top" id="Ng0-Q4-iYc"/>
+                                    <constraint firstItem="DcX-C4-tdC" firstAttribute="leading" secondItem="L5L-Gz-9Dj" secondAttribute="leading" id="R4V-VQ-Frh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L5L-Gz-9Dj" firstAttribute="top" secondItem="8yS-BB-Wy6" secondAttribute="top" id="0tG-gE-SiS"/>
+                            <constraint firstItem="DcX-C4-tdC" firstAttribute="width" secondItem="jbC-e6-q50" secondAttribute="width" id="8Es-nL-5XN"/>
+                            <constraint firstItem="8yS-BB-Wy6" firstAttribute="bottom" secondItem="L5L-Gz-9Dj" secondAttribute="bottom" id="L4D-XA-Pzw"/>
+                            <constraint firstItem="L5L-Gz-9Dj" firstAttribute="leading" secondItem="8yS-BB-Wy6" secondAttribute="leading" id="Pcj-en-2SD"/>
+                            <constraint firstItem="8yS-BB-Wy6" firstAttribute="trailing" secondItem="L5L-Gz-9Dj" secondAttribute="trailing" id="VmB-LA-VIF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8yS-BB-Wy6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Resultados" id="gky-cd-54w"/>
+                    <connections>
+                        <outlet property="stackView" destination="GTF-al-vZq" id="mbn-W7-zje"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pd-un-SSt" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274" y="278"/>
         </scene>
     </scenes>
 </document>

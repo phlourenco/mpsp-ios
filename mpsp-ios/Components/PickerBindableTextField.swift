@@ -8,9 +8,11 @@
 
 import UIKit
 
-class PickerBindableTextField: BindableTextField {
+class PickerBindableTextField: UITextField {
     
-    var values: [String] = []
+    private var editingChangeFunc: ((Int?) -> Void)?
+    
+    var values: [EnumWrapper] = []
     
     lazy var pickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -24,8 +26,9 @@ class PickerBindableTextField: BindableTextField {
         super.init(coder: aDecoder)
     }
     
-    init(values: [String], onChange changeFunc: ((String?) -> Void)?) {
-        super.init(onChange: changeFunc)
+    init(values: [EnumWrapper], onChange changeFunc: ((Int?) -> Void)?) {
+        super.init(frame: .zero)
+        self.editingChangeFunc = changeFunc
         self.values = values
         inputView = pickerView
         addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
@@ -33,7 +36,8 @@ class PickerBindableTextField: BindableTextField {
     
     @objc
     private func editingDidEnd() {
-        text = values[pickerView.selectedRow(inComponent: 0)]
+        text = values[pickerView.selectedRow(inComponent: 0)].stringValue
+        editingChangeFunc?(values[pickerView.selectedRow(inComponent: 0)].intValue)
     }
     
 }
@@ -49,6 +53,6 @@ extension PickerBindableTextField: UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return values[row]
+        return values[row].stringValue
     }
 }

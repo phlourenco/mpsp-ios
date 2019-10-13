@@ -11,7 +11,8 @@ import UIKit
 class BindableTextField: UITextField, UITextFieldDelegate {
     
     private var editingChangeFunc: ((String?) -> Void)?
-    private var editingBeginFunc: (() -> Void)?
+    private var editingBeginFunc: ((UITextField) -> Void)?
+    private var canOpenKeyboard: Bool = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,35 +22,34 @@ class BindableTextField: UITextField, UITextFieldDelegate {
         super.init(coder: aDecoder)
     }
     
-    init(onBeginEditing: (() -> Void)? = nil, onChange changeFunc: ((String?) -> Void)?) {
+    init(onBeginEditing: ((UITextField) -> Void)? = nil, onChange changeFunc: ((String?) -> Void)?, canOpenKeyboard: Bool = true) {
         super.init(frame: .zero)
+        self.canOpenKeyboard  = canOpenKeyboard
         editingChangeFunc = changeFunc
         editingBeginFunc = onBeginEditing
-        addTarget(self, action: #selector(editingBegin), for: .editingDidBegin)
+//        addTarget(self, action: #selector(editingBegin), for: .editingDidBegin)
         addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         delegate = self
     }
     
-    @objc
-    private func editingBegin(_ field: UITextField) {
-        editingBeginFunc?()
-    }
+//    @objc
+//    private func editingBegin(_ field: UITextField) {
+//        editingBeginFunc?(self)
+//    }
     
     @objc
     private func editingChanged(_ field: UITextField) {
         editingChangeFunc?(field.text)
     }
     
-//    override var canBecomeFirstResponder: Bool {
-//        return (editingBeginFunc == nil)
-//    }
-    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if editingBeginFunc != nil {
-            editingBeginFunc?()
-            return false
-        }
-        return true
+        editingBeginFunc?(self)
+        return canOpenKeyboard
+//        if editingBeginFunc != nil {
+//            editingBeginFunc?()
+//            return false
+//        }
+//        return true
     }
     
 }

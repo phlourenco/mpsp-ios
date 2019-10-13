@@ -19,6 +19,12 @@ import Foundation
             return "Pessoa jurídica"
         }
     }
+    
+//    mutating func setValue(stringValue: String?) {
+//        if let foundCase = ArispPersonType.allCases.first(where: { $0.getValue() == stringValue }) {
+//            self = foundCase
+//        }
+//    }
 }
 
 class ArispRequest: NSObject, RequestBase {
@@ -30,9 +36,9 @@ class ArispRequest: NSObject, RequestBase {
         return "ARISP"
     }
     
-    func getEnumCases(propertyName: String) -> [String]? {
+    func getEnumCases(propertyName: String) -> [EnumWrapper]? {
         if propertyName == "personType" {
-            return ArispPersonType.allCases.map { $0.getValue() }
+            return ArispPersonType.allCases.map { EnumWrapper(intValue: $0.rawValue, stringValue: $0.getValue()) }
         }
         return nil
     }
@@ -42,6 +48,13 @@ class ArispRequest: NSObject, RequestBase {
             return ["São Paulo", "Alfenas"]
         }
         return nil
+    }
+    
+    func getKeyboardType(propertyName: String) -> SystemKeyboardType {
+        if propertyName == "cpfCnpj" {
+            return .number
+        }
+        return .default
     }
 }
 

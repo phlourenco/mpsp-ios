@@ -40,15 +40,18 @@ class ArpenspRequest: NSObject, RequestBase {
         return "ARPENSP"
     }
     
-    func getEnumCases(propertyName: String) -> [String]? {
+    func getEnumCases(propertyName: String) -> [EnumWrapper]? {
         if propertyName == "registryType" {
-            return ArpenspRegistryType.allCases.map { $0.getValue() }
+            return ArpenspRegistryType.allCases.map { EnumWrapper(intValue: $0.rawValue, stringValue: $0.getValue()) }
         }
         return nil
     }
     
-    func getArrayValues(propertyName: String) -> [String]? {
-        return nil
+    func getKeyboardType(propertyName: String) -> SystemKeyboardType {
+        if propertyName == "place" || propertyName == "processNumber" {
+            return .number
+        }
+        return .default
     }
 }
 
