@@ -37,6 +37,10 @@ class SivecRequest: NSObject, RequestBase {
         }
         return nil
     }
+    
+    func getEndpoint() -> String {
+        return "/5da278c02f00003500f4195f"
+    }
 }
 
 struct SivecResponse: Codable {

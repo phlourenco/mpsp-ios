@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import PromiseKit
 
 class ResultListViewModel {
     
@@ -29,15 +30,21 @@ class ResultListViewModel {
     func makeRequests() {
         view.showList(responses)
         
-        for req in requests {
-            print(req.toJSON() ?? "")
-            print("-----------")
+        for (i, e) in requests.enumerated() {
+            
+            self.responses[i].status = .loading
+            
+            MPSPApi().requestService(endpoint: e.getEndpoint(), contract: e)
+                .done { data in
+                    self.responses[i].status = .success
+                    print(data)
+                    print(type(of: data))
+                }
+                .catch { error in
+                    self.responses[i].status = .error
+                }
         }
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//            self.responses[0].status = .error
-//            self.responses[2].status = .success
-//        }
     }
     
     

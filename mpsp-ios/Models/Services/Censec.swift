@@ -14,6 +14,10 @@ class CensecRequest: NSObject, RequestBase {
     func getServiceName() -> String {
         return "CENSEC"
     }
+    
+    func getEndpoint() -> String {
+        return "/5da295a12f00007b00f4197b"
+    }
 }
 
 struct CensecResponse: Codable {

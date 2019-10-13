@@ -18,6 +18,10 @@ class SielRequest: NSObject, RequestBase {
     func getServiceName() -> String {
         return "SIEL"
     }
+    
+    func getEndpoint() -> String {
+        return "/5da2729d2f00006c00f41952"
+    }
 }
 
 struct SielResponse: Codable {

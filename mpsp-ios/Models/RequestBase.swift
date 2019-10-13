@@ -23,6 +23,7 @@ protocol RequestBase: NSObject, Codable {
     func getEnumCases(propertyName: String) -> [EnumWrapper]?
     func getArrayValues(propertyName: String) -> [String]?
     func getKeyboardType(propertyName: String) -> SystemKeyboardType
+    func getEndpoint() -> String
 }
 
 extension RequestBase {

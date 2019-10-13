@@ -18,6 +18,10 @@ class CagedCompanyRequest: NSObject, RequestBase {
     func getKeyboardType(propertyName: String) -> SystemKeyboardType {
         return .number
     }
+    
+    func getEndpoint() -> String {
+        return "/5da274bd2f00006700f41958"
+    }
 }
 
 struct CagedCompanyResponse: Codable {

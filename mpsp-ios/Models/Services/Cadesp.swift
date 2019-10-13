@@ -14,6 +14,10 @@ class CadespRequest: NSObject, RequestBase {
     func getServiceName() -> String {
         return "CADESP"
     }
+    
+    func getEndpoint() -> String {
+        return "/5da277922f00006600f4195d"
+    }
 }
 
 struct CadespResponse: Codable {

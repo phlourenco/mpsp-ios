@@ -14,6 +14,10 @@ class JucespRequest: NSObject, RequestBase {
     func getServiceName() -> String {
         return "JUCESP"
     }
+    
+    func getEndpoint() -> String {
+        return "/5da275f62f00006600f4195b"
+    }
 }
 
 struct JucespResponse: Codable {
@@ -30,7 +34,7 @@ struct JucespCompany: Codable {
     var address: String
     var number: String
     var locale: String
-    var complement: String
+    var complement: String?
     var postalCode: String
     var city: String
 }

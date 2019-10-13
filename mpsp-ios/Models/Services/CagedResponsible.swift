@@ -48,6 +48,10 @@ class CagedResponsibleRequest: NSObject, RequestBase {
         }
         return .number
     }
+    
+    func getEndpoint() -> String {
+        return "/5da2746c2f00007900f41957"
+    }
 }
 
 struct CagedResponsibleResponse: Codable {

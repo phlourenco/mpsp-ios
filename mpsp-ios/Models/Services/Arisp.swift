@@ -19,12 +19,6 @@ import Foundation
             return "Pessoa jurídica"
         }
     }
-    
-//    mutating func setValue(stringValue: String?) {
-//        if let foundCase = ArispPersonType.allCases.first(where: { $0.getValue() == stringValue }) {
-//            self = foundCase
-//        }
-//    }
 }
 
 class ArispRequest: NSObject, RequestBase {
@@ -55,6 +49,10 @@ class ArispRequest: NSObject, RequestBase {
             return .number
         }
         return .default
+    }
+    
+    func getEndpoint() -> String {
+        return "/5da271982f00002d00f41951"
     }
 }
 

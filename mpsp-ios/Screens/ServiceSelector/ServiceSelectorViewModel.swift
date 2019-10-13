@@ -32,7 +32,8 @@ class ServiceSelectorViewModel {
             SivecRequest(),
             CagedResponsibleRequest(),
             CagedCompanyRequest(),
-            CagedWorkerRequest()
+            CagedWorkerRequest(),
+            InfocrimRequest()
         ]
         view.showServiceList(requests.map { $0.getServiceName() }.sorted())
     }

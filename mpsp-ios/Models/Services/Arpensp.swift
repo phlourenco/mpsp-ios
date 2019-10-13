@@ -53,6 +53,10 @@ class ArpenspRequest: NSObject, RequestBase {
         }
         return .default
     }
+    
+    func getEndpoint() -> String {
+        return "/5da273002f00007900f41954"
+    }
 }
 
 struct ArpenspResponse: Codable {

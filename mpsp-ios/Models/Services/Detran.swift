@@ -18,6 +18,10 @@ class DetranRequest: NSObject, RequestBase {
     func getServiceName() -> String {
         return "DETRAN"
     }
+    
+    func getEndpoint() -> String {
+        return "/5da273212f00006700f41955"
+    }
 }
 
 struct DetranResponse: Codable {
