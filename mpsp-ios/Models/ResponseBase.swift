@@ -16,8 +16,10 @@ struct ServiceResponse {
     var request: RequestBase
     var status: RequestState = .loading
     var response: ResponseBase?
+    var responseData: Data?
+    var tryAgainAction: (() -> Void)?
 }
 
-protocol ResponseBase: NSObject, Codable {
+protocol ResponseBase: NSObject, Decodable {
     
 }

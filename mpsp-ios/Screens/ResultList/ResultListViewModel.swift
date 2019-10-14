@@ -32,19 +32,33 @@ class ResultListViewModel {
         
         for (i, e) in requests.enumerated() {
             
-            self.responses[i].status = .loading
-            
-            MPSPApi().requestService(endpoint: e.getEndpoint(), contract: e)
-                .done { data in
-                    self.responses[i].status = .success
-                    print(data)
-                    print(type(of: data))
-                }
-                .catch { error in
-                    self.responses[i].status = .error
-                }
+            self.responses[i].tryAgainAction = {
+                self.responses[i].status = .loading
+                MPSPApi().requestService(endpoint: e.getEndpoint(), contract: e)
+                    .done { data in
+                        self.responses[i].status = .success
+                        self.responses[i].responseData = data
+                        print(data)
+                        print(type(of: data))
+                        self.handleResponse(index: i, data: data)
+                    }
+                    .catch { error in
+                        self.responses[i].status = .error
+                    }
+            }
+            self.responses[i].tryAgainAction?()
         }
         
+    }
+    
+    private func handleResponse(index: Int, data: Data) {
+//        var decodedResponse: ResponseBase?
+//
+//        data.parse(asObject: types[0])
+//
+//        if let arispResponse = data.parse(asObject: ArispResponse.self) {
+//            decodedResponse = arispResponse
+//        }
     }
     
     

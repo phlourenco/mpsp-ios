@@ -24,6 +24,8 @@ class LabelLoadingView: UIView {
     
     weak var delegate: SwitchTextDelegate?
     
+    private var serviceResponse: ServiceResponse?
+    
     // MARK: - Methods
     
     override init(frame: CGRect) {
@@ -40,9 +42,20 @@ class LabelLoadingView: UIView {
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 40))
         commonInit()
         
+        self.serviceResponse = serviceResponse
+        
         titleLabel.text = serviceResponse.request.getServiceName()
         handleState(serviceResponse.status)
         
+    }
+    
+    private func commonInit() {
+        Bundle.main.loadNibNamed("LabelLoadingView", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleWidth]
+        
+        heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
     private func handleState(_ state: RequestState) {
@@ -61,13 +74,8 @@ class LabelLoadingView: UIView {
         }
     }
     
-    private func commonInit() {
-        Bundle.main.loadNibNamed("LabelLoadingView", owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = bounds
-        contentView.autoresizingMask = [.flexibleWidth]
-        
-        heightAnchor.constraint(equalToConstant: 40).isActive = true
+    @IBAction func tryAgainAct(_ sender: Any) {
+        serviceResponse?.tryAgainAction?()
     }
-
+    
 }

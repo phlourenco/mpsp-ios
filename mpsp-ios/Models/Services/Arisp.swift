@@ -56,11 +56,11 @@ class ArispRequest: NSObject, RequestBase {
     }
 }
 
-struct ArispResponse: Codable {
+class ArispResponse: NSObject, ResponseBase {
     var registries: [ArispRegistry]
 }
 
-struct ArispRegistry: Codable {
+class ArispRegistry: NSObject, ResponseBase {
     var cityName: String
     var office: String
     var registryId: String
