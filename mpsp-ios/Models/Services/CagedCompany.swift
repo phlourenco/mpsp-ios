@@ -20,11 +20,11 @@ class CagedCompanyRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
-        return "/5da274bd2f00006700f41958"
+        return "/5da79ee81200004411eda942"
     }
 }
 
-struct CagedCompanyResponse: Codable {
+struct CagedCompanyResponse: ResponseBase {
     var cnpj: String
     var name: String
     var cnae: String

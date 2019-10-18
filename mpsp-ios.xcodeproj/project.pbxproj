@@ -11,7 +11,18 @@
 		4B3AF8BC234FEA9A00DE088C /* ResultListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AF8BB234FEA9A00DE088C /* ResultListViewModel.swift */; };
 		4B3AF8BE234FF0FC00DE088C /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AF8BD234FF0FC00DE088C /* ResponseBase.swift */; };
 		4B45436D2352068A005B1815 /* ReportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B45436C2352068A005B1815 /* ReportManager.swift */; };
+		4B4BFD412357F6EE00FF2359 /* SectionBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD402357F6EE00FF2359 /* SectionBase.swift */; };
+		4B4BFD452359202000FF2359 /* ReportSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD442359202000FF2359 /* ReportSection.swift */; };
+		4B4BFD4E2359257300FF2359 /* TitleValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4BFD4D2359257300FF2359 /* TitleValueView.xib */; };
+		4B4BFD502359258400FF2359 /* TitleValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD4F2359258400FF2359 /* TitleValueView.swift */; };
+		4B4BFD522359289600FF2359 /* MultiValueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD512359289600FF2359 /* MultiValueCellViewModel.swift */; };
+		4B4BFD5823592D9E00FF2359 /* UniqueValueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5723592D9E00FF2359 /* UniqueValueCellViewModel.swift */; };
+		4B4BFD5D23593EA000FF2359 /* StackedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5B23593EA000FF2359 /* StackedCell.swift */; };
+		4B4BFD5E23593EA000FF2359 /* StackedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5C23593EA000FF2359 /* StackedCell.xib */; };
+		4B4BFD602359429600FF2359 /* ArrayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5F2359429500FF2359 /* ArrayCellViewModel.swift */; };
 		4B6944142352B4E4000A1AE7 /* MPSPApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6944132352B4E4000A1AE7 /* MPSPApi.swift */; };
+		4B69441B2357E40D000A1AE7 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69441A2357E40D000A1AE7 /* ReportViewController.swift */; };
+		4B69441D2357E414000A1AE7 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69441C2357E414000A1AE7 /* ReportViewModel.swift */; };
 		4B71050C234BF41F001A11A8 /* SelectableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B71050A234BF41F001A11A8 /* SelectableListViewController.swift */; };
 		4B710515234C0517001A11A8 /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B710514234C0517001A11A8 /* MaterialIcons-Regular.ttf */; };
 		4B710518234C05B1001A11A8 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B710517234C05B1001A11A8 /* Checkbox.swift */; };
@@ -56,7 +67,18 @@
 		4B3AF8BB234FEA9A00DE088C /* ResultListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultListViewModel.swift; sourceTree = "<group>"; };
 		4B3AF8BD234FF0FC00DE088C /* ResponseBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
 		4B45436C2352068A005B1815 /* ReportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportManager.swift; sourceTree = "<group>"; };
+		4B4BFD402357F6EE00FF2359 /* SectionBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBase.swift; sourceTree = "<group>"; };
+		4B4BFD442359202000FF2359 /* ReportSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSection.swift; sourceTree = "<group>"; };
+		4B4BFD4D2359257300FF2359 /* TitleValueView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleValueView.xib; sourceTree = "<group>"; };
+		4B4BFD4F2359258400FF2359 /* TitleValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleValueView.swift; sourceTree = "<group>"; };
+		4B4BFD512359289600FF2359 /* MultiValueCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiValueCellViewModel.swift; sourceTree = "<group>"; };
+		4B4BFD5723592D9E00FF2359 /* UniqueValueCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueValueCellViewModel.swift; sourceTree = "<group>"; };
+		4B4BFD5B23593EA000FF2359 /* StackedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedCell.swift; sourceTree = "<group>"; };
+		4B4BFD5C23593EA000FF2359 /* StackedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackedCell.xib; sourceTree = "<group>"; };
+		4B4BFD5F2359429500FF2359 /* ArrayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayCellViewModel.swift; sourceTree = "<group>"; };
 		4B6944132352B4E4000A1AE7 /* MPSPApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSPApi.swift; sourceTree = "<group>"; };
+		4B69441A2357E40D000A1AE7 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		4B69441C2357E414000A1AE7 /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
 		4B71050A234BF41F001A11A8 /* SelectableListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableListViewController.swift; sourceTree = "<group>"; };
 		4B710514234C0517001A11A8 /* MaterialIcons-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaterialIcons-Regular.ttf"; sourceTree = "<group>"; };
 		4B710517234C05B1001A11A8 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
@@ -140,6 +162,63 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		4B4BFD422357F70300FF2359 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4B45436C2352068A005B1815 /* ReportManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4B4BFD432357F73700FF2359 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				4B4BFD442359202000FF2359 /* ReportSection.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		4B4BFD46235923C600FF2359 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4B4BFD5A23593E8E00FF2359 /* StackedCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4B4BFD5923593E8300FF2359 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B4BFD4D2359257300FF2359 /* TitleValueView.xib */,
+				4B4BFD4F2359258400FF2359 /* TitleValueView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B4BFD5A23593E8E00FF2359 /* StackedCell */ = {
+			isa = PBXGroup;
+			children = (
+				4B4BFD5B23593EA000FF2359 /* StackedCell.swift */,
+				4B4BFD5C23593EA000FF2359 /* StackedCell.xib */,
+				4B4BFD5F2359429500FF2359 /* ArrayCellViewModel.swift */,
+				4B4BFD512359289600FF2359 /* MultiValueCellViewModel.swift */,
+				4B4BFD5723592D9E00FF2359 /* UniqueValueCellViewModel.swift */,
+			);
+			path = StackedCell;
+			sourceTree = "<group>";
+		};
+		4B6944192357E3FD000A1AE7 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				4B4BFD5923593E8300FF2359 /* Views */,
+				4B4BFD46235923C600FF2359 /* Cells */,
+				4B4BFD432357F73700FF2359 /* Sections */,
+				4B69441A2357E40D000A1AE7 /* ReportViewController.swift */,
+				4B69441C2357E414000A1AE7 /* ReportViewModel.swift */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
 		4B710516234C0527001A11A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +249,7 @@
 		4BCE8ABD2342C847002791B4 /* mpsp-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4B4BFD422357F70300FF2359 /* Managers */,
 				4BCE8AD02342CAAC002791B4 /* Services */,
 				4BCE8ADF2342D188002791B4 /* Models */,
 				4BCE8B0023455F85002791B4 /* Screens */,
@@ -225,7 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				4BCE8ADB2342CBB3002791B4 /* BaseDisplayLogic.swift */,
-				4B45436C2352068A005B1815 /* ReportManager.swift */,
+				4B4BFD402357F6EE00FF2359 /* SectionBase.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -264,6 +344,7 @@
 				4BCE8AFA23455E20002791B4 /* ServiceSelector */,
 				4BCE8AFF23455F7D002791B4 /* SearchForm */,
 				4B3AF8B8234FEA6500DE088C /* ResultList */,
+				4B6944192357E3FD000A1AE7 /* Report */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -361,9 +442,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BCE8AC92342C84B002791B4 /* LaunchScreen.storyboard in Resources */,
+				4B4BFD5E23593EA000FF2359 /* StackedCell.xib in Resources */,
 				4BCE8AC62342C84B002791B4 /* Assets.xcassets in Resources */,
 				4BCE8B0723491A77002791B4 /* SwitchText.xib in Resources */,
 				4B710515234C0517001A11A8 /* MaterialIcons-Regular.ttf in Resources */,
+				4B4BFD4E2359257300FF2359 /* TitleValueView.xib in Resources */,
 				4B884998234EA62200D1EEE7 /* LabelLoadingView.xib in Resources */,
 				4BCE8AC42342C847002791B4 /* Main.storyboard in Resources */,
 			);
@@ -423,14 +506,18 @@
 				4BCE8AE52342D360002791B4 /* Arpensp.swift in Sources */,
 				4BCE8ABF2342C847002791B4 /* AppDelegate.swift in Sources */,
 				4BCE8AF923442A5E002791B4 /* Infocrim.swift in Sources */,
+				4B4BFD5D23593EA000FF2359 /* StackedCell.swift in Sources */,
 				4BCE8AE32342D2AE002791B4 /* Siel.swift in Sources */,
+				4B4BFD412357F6EE00FF2359 /* SectionBase.swift in Sources */,
 				4BCE8ADC2342CBB3002791B4 /* BaseDisplayLogic.swift in Sources */,
 				4BCE8ADE2342CBD4002791B4 /* UIView.swift in Sources */,
 				4BCE8AED234407BA002791B4 /* CagedCompany.swift in Sources */,
+				4B4BFD502359258400FF2359 /* TitleValueView.swift in Sources */,
 				4BCE8AF7234428B3002791B4 /* Sivec.swift in Sources */,
 				4B88499A234EA70700D1EEE7 /* LabelLoadingView.swift in Sources */,
 				4B6944142352B4E4000A1AE7 /* MPSPApi.swift in Sources */,
 				4BCE8AE92342D5D5002791B4 /* CagedResponsible.swift in Sources */,
+				4B4BFD452359202000FF2359 /* ReportSection.swift in Sources */,
 				4B71050C234BF41F001A11A8 /* SelectableListViewController.swift in Sources */,
 				4B3AF8BC234FEA9A00DE088C /* ResultListViewModel.swift in Sources */,
 				4BCE8AD22342CAB8002791B4 /* HTTPClient.swift in Sources */,
@@ -442,6 +529,8 @@
 				4B45436D2352068A005B1815 /* ReportManager.swift in Sources */,
 				4BCE8AE12342D19B002791B4 /* Arisp.swift in Sources */,
 				4B3AF8BA234FEA8F00DE088C /* ResultListViewController.swift in Sources */,
+				4B4BFD602359429600FF2359 /* ArrayCellViewModel.swift in Sources */,
+				4B4BFD522359289600FF2359 /* MultiValueCellViewModel.swift in Sources */,
 				4BCE8B0B234922F7002791B4 /* ServiceSelectorViewModel.swift in Sources */,
 				4BCE8AEF23440885002791B4 /* CagedWorker.swift in Sources */,
 				4BCE8AD72342CB11002791B4 /* Encodable+Convert.swift in Sources */,
@@ -450,8 +539,11 @@
 				4BCE8B022345655D002791B4 /* RequestBase.swift in Sources */,
 				4BCE8B0923491B7E002791B4 /* SwitchText.swift in Sources */,
 				4BCE8AF323440B03002791B4 /* Cadesp.swift in Sources */,
+				4B69441B2357E40D000A1AE7 /* ReportViewController.swift in Sources */,
+				4B4BFD5823592D9E00FF2359 /* UniqueValueCellViewModel.swift in Sources */,
 				4BCE8AFE23455E8B002791B4 /* SearchFormViewController.swift in Sources */,
 				4BCE8AE72342D3F4002791B4 /* Detran.swift in Sources */,
+				4B69441D2357E414000A1AE7 /* ReportViewModel.swift in Sources */,
 				4BCE8AFC23455E4E002791B4 /* ServiceSelectorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,6 @@ class InfocrimRequest: NSObject, RequestBase {
     
 }
 
-struct InfocrimResponse: Codable {
+struct InfocrimResponse: ResponseBase {
     var base64: String
 }

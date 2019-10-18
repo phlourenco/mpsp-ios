@@ -20,7 +20,7 @@ class CadespRequest: NSObject, RequestBase {
     }
 }
 
-struct CadespResponse: Codable {
+struct CadespResponse: ResponseBase {
     var ie: String
     var cnpj: String
     var businessName: String

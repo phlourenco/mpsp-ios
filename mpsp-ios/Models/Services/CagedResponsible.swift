@@ -54,18 +54,18 @@ class CagedResponsibleRequest: NSObject, RequestBase {
     }
 }
 
-struct CagedResponsibleResponse: Codable {
+struct CagedResponsibleResponse: ResponseBase {
     var identification: CagedResponsibleIdentification
     var address: CagedResponsibleAddress
     var contact: CagedResponsibleContact
 }
 
-struct CagedResponsibleIdentification: Codable {
+struct CagedResponsibleIdentification: Decodable, ResponsePart {
     var cnpjCeiCpf: String
     var name: String
 }
 
-struct CagedResponsibleAddress: Codable {
+struct CagedResponsibleAddress: Decodable, ResponsePart {
     var street: String
     var neighborhood: String
     var city: String
@@ -73,7 +73,7 @@ struct CagedResponsibleAddress: Codable {
     var cep: String
 }
 
-struct CagedResponsibleContact: Codable {
+struct CagedResponsibleContact: Decodable, ResponsePart {
     var name: String
     var cpf: String
     var phone: String

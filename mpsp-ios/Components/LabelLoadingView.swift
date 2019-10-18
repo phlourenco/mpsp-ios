@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol LabelLoadingViewDelegate: class {
+    func getReport(response: ServiceResponse)
+}
+
 class LabelLoadingView: UIView {
     
     // MARK: - IBOutlets
@@ -22,7 +26,7 @@ class LabelLoadingView: UIView {
     
     // MARK: - Properties
     
-    weak var delegate: SwitchTextDelegate?
+    weak var delegate: LabelLoadingViewDelegate?
     
     private var serviceResponse: ServiceResponse?
     
@@ -76,6 +80,11 @@ class LabelLoadingView: UIView {
     
     @IBAction func tryAgainAct(_ sender: Any) {
         serviceResponse?.tryAgainAction?()
+    }
+    
+    @IBAction func seeReportAct(_ sender: Any) {
+        guard let serviceResp = serviceResponse else { return }
+        delegate?.getReport(response: serviceResp)
     }
     
 }

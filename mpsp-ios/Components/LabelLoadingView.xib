@@ -47,6 +47,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aah-i7-K1L">
                                     <rect key="frame" x="154" y="0.0" width="66" height="41"/>
                                     <state key="normal" title="Visualizar"/>
+                                    <connections>
+                                        <action selector="seeReportAct:" destination="-1" eventType="touchUpInside" id="Uy8-We-vsa"/>
+                                    </connections>
                                 </button>
                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="2t3-OH-Rj5">
                                     <rect key="frame" x="220" y="0.0" width="20" height="41"/>

@@ -59,7 +59,7 @@ class ArpenspRequest: NSObject, RequestBase {
     }
 }
 
-struct ArpenspResponse: Codable {
+struct ArpenspResponse: ResponseBase {
     var spouse1OldName: String
     var spouse1NewName: String
     var spouse2OldName: String

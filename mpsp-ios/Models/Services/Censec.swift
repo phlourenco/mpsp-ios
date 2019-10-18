@@ -16,15 +16,15 @@ class CensecRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
-        return "/5da295a12f00007b00f4197b"
+        return "/5da79f5a1200004411eda945"
     }
 }
 
-struct CensecResponse: Codable {
+struct CensecResponse: ResponseBase {
     var list: [CensecResponseItem]
 }
 
-struct CensecResponseItem: Codable {
+struct CensecResponseItem: Decodable, ResponsePart {
     var office: String
     var date: String
     var act: String
@@ -34,7 +34,7 @@ struct CensecResponseItem: Codable {
     var parts: [CensecResponseItemPart]
 }
 
-struct CensecResponseItemPart: Codable {
+struct CensecResponseItemPart: Decodable, ResponsePart {
     var name: String
     var document: String
     var role: String

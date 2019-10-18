@@ -43,7 +43,7 @@ class SivecRequest: NSObject, RequestBase {
     }
 }
 
-struct SivecResponse: Codable {
+struct SivecResponse: ResponseBase {
     var name: String
     var sex: String
     var birth: String
@@ -63,7 +63,7 @@ struct SivecResponse: Codable {
     var address: SivecAddress
 }
 
-struct SivecAddress: Codable {
+struct SivecAddress: Decodable, ResponsePart {
     var street: String
     var city: String
 }

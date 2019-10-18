@@ -52,15 +52,15 @@ class ArispRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
-        return "/5da271982f00002d00f41951"
+        return "/5da79de01200001100eda940"
     }
 }
 
-class ArispResponse: NSObject, ResponseBase {
+struct ArispResponse: ResponseBase {
     var registries: [ArispRegistry]
 }
 
-class ArispRegistry: NSObject, ResponseBase {
+struct ArispRegistry: Decodable, ResponsePart {
     var cityName: String
     var office: String
     var registryId: String

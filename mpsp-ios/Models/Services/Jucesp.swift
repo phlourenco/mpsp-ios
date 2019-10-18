@@ -20,11 +20,11 @@ class JucespRequest: NSObject, RequestBase {
     }
 }
 
-struct JucespResponse: Codable {
+struct JucespResponse: ResponseBase {
     var companies: [JucespCompany]
 }
 
-struct JucespCompany: Codable {
+struct JucespCompany: Codable, ResponsePart {
     var companyType: String
     var date: String
     var initDate: String

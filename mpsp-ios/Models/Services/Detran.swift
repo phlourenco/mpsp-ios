@@ -24,6 +24,6 @@ class DetranRequest: NSObject, RequestBase {
     }
 }
 
-struct DetranResponse: Codable {
+struct DetranResponse: ResponseBase {
     var pdfUrl: String
 }

@@ -12,20 +12,25 @@ protocol BaseDisplayLogic {
     func showError(title: String?, message: String?, tryAgainAction: (() -> Void)?)
     func showScreenLoading()
     func hideScreenLoading()
+    func showConfirmation(title: String?, message: String?, actionTitle: String, cancelTitle: String, action: (() -> Void)?)
 }
 
 extension BaseDisplayLogic where Self: UIViewController {
     
     func showError(title: String?, message: String?, tryAgainAction: (() -> Void)?) {
+        showConfirmation(title: title, message: message, actionTitle: "Tentar novamente", cancelTitle: "OK", action: tryAgainAction)
+    }
+    
+    func showConfirmation(title: String?, message: String?, actionTitle: String, cancelTitle: String, action: (() -> Void)?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        if let tryAgainAction = tryAgainAction {
-            alertController.addAction(UIAlertAction(title: "Tentar novamente", style: .default, handler: { _ in
-                tryAgainAction()
+        if let action = action {
+            alertController.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { _ in
+                action()
             }))
         }
         
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: cancelTitle, style: .cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
     

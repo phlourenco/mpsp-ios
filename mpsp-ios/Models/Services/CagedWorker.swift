@@ -46,11 +46,11 @@ class CagedWorkerRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
-        return "/5da275322f00007b00f41959"
+        return "/5da79fc31200004b00eda947"
     }
 }
 
-struct CagedWorkerResponse: Codable {
+struct CagedWorkerResponse: ResponseBase {
     var name: String
     var pis: String
     var convertedPis: String
