@@ -38,7 +38,7 @@ class ReportSection: SectionBase {
     }
 
     func getViewModel(forRow row: Int) -> CellViewModel {
-        if values[row] is String || values[row] is Bool || values[row] is Int || values[row] is Double {
+        if values[row] is String || values[row] is Bool || values[row] is Int || values[row] is Double || values[row] is URL {
             return UniqueValueCellViewModel(title: keys[row], value: values[row])
         } else if let dictValues = values[row] as? Dictionary<String, Any> {
             return MultiValueCellViewModel(title: keys[row], dictionary: dictValues)

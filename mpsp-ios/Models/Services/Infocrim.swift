@@ -15,11 +15,15 @@ class InfocrimRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
+        #if MOCK
         return "/5da2780d2f00007900f4195e"
+        #else
+        return "/infocrim"
+        #endif
     }
     
 }
 
 struct InfocrimResponse: ResponseBase {
-    var base64: String
+    var url: String
 }

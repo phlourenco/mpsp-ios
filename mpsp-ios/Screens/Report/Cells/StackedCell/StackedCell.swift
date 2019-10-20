@@ -28,7 +28,7 @@ class StackedCell: ConfigurableCell {
     }
     
     private func handleUniqueValue(viewModel: UniqueValueCellViewModel) {
-        let titleValueView = TitleValueView(title: viewModel.title, value: "\(viewModel.value)")
+        let titleValueView = createTitleValueView(title: viewModel.title, value: "\(viewModel.value)")
         stackView.addArrangedSubview(titleValueView)
     }
     
@@ -37,7 +37,7 @@ class StackedCell: ConfigurableCell {
         objectNameLabel.text = viewModel.title
         stackView.addArrangedSubview(objectNameLabel)
         for item in viewModel.dict {
-            let titleValueView = TitleValueView(title: item.key, value: "\(item.value)")
+            let titleValueView = createTitleValueView(title: item.key, value: item.value)
             stackView.addArrangedSubview(titleValueView)
         }
     }
@@ -51,9 +51,17 @@ class StackedCell: ConfigurableCell {
             itemLabel.text = "Item \(index+1)"
             stackView.addArrangedSubview(itemLabel)
             for item in dict {
-                let titleValueView = TitleValueView(title: item.key, value: "\(item.value)")
+                let titleValueView = createTitleValueView(title: item.key, value: item.value)
                 stackView.addArrangedSubview(titleValueView)
             }
+        }
+    }
+    
+    private func createTitleValueView(title: String, value: Any) -> UIView {
+        if (value as? String)?.isURL ?? false {
+            return TitleValueView(title: title, url: URL(string: "\(value)")!)
+        } else {
+            return TitleValueView(title: title, value: "\(value)")
         }
     }
     

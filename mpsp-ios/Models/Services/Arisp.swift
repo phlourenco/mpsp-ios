@@ -52,7 +52,11 @@ class ArispRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
+        #if MOCK
         return "/5da79de01200001100eda940"
+        #else
+        return "/arisp"
+        #endif
     }
 }
 

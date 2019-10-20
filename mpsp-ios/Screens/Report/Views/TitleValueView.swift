@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class TitleValueView: UIView {
 
@@ -15,8 +16,10 @@ class TitleValueView: UIView {
     @IBOutlet private var contentView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var valueLabel: UILabel!
-        
+    @IBOutlet private weak var urlButton: UIButton!
+    
     // MARK: - Methods
+    var url: URL?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,6 +37,16 @@ class TitleValueView: UIView {
         
         titleLabel.text = title
         valueLabel.text = value
+        urlButton.isHidden = true
+    }
+    
+    init(title: String, url: URL) {
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 70))
+        commonInit()
+        
+        self.url = url
+        titleLabel.text = title
+        valueLabel.isHidden = true
     }
     
     private func commonInit() {
@@ -43,5 +56,12 @@ class TitleValueView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
     }
-
+    
+    @IBAction func urlAction(_ sender: Any) {
+        if let url = url {
+            let safVC = SFSafariViewController(url: url)
+            window?.rootViewController?.present(safVC, animated: true, completion: nil)
+        }
+    }
+    
 }

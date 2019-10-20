@@ -26,7 +26,7 @@ class HTTPClient {
                 return
             }
                         
-            Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseData(completionHandler: { (response) in
+            Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseData(completionHandler: { (response) in
                 if let error = response.error {
                     seal.reject(error)
                     return

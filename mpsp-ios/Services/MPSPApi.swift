@@ -10,7 +10,13 @@ import Foundation
 import PromiseKit
 
 class MPSPApi {
-    private let baseUrl = "https://www.mocky.io/v2"
+    private var baseUrl: String {
+        #if MOCK
+        return "https://www.mocky.io/v2"
+        #else
+        return "http://localhost:8080"
+        #endif
+    }
 
     func requestService(endpoint: String, contract: RequestBase) -> Promise<Data> {
         let headers: [String: String] = [
