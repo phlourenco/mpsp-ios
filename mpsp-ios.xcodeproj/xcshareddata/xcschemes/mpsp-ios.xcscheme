@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4BCE8ABA2342C847002791B4"
-               BuildableName = "mpsp-ios-mock.app"
-               BlueprintName = "mpsp-ios-mock"
+               BuildableName = "mpsp-ios.app"
+               BlueprintName = "mpsp-ios"
                ReferencedContainer = "container:mpsp-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4BCE8ABA2342C847002791B4"
-            BuildableName = "mpsp-ios-mock.app"
-            BlueprintName = "mpsp-ios-mock"
+            BuildableName = "mpsp-ios.app"
+            BlueprintName = "mpsp-ios"
             ReferencedContainer = "container:mpsp-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4BCE8ABA2342C847002791B4"
-            BuildableName = "mpsp-ios-mock.app"
-            BlueprintName = "mpsp-ios-mock"
+            BuildableName = "mpsp-ios.app"
+            BlueprintName = "mpsp-ios"
             ReferencedContainer = "container:mpsp-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

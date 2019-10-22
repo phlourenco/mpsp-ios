@@ -26,7 +26,7 @@ class ServiceSelectorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = ServiceSelectorViewModel(view: self)
+        viewModel?.prepareRequests()
     }
     
     @IBAction func nextAction(_ sender: Any) {

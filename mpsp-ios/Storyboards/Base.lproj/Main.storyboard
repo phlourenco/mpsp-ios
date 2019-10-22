@@ -8,27 +8,80 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Busca-->
         <scene sceneID="dvq-Ai-IPI">
             <objects>
-                <navigationController id="mmr-3w-Lo3" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="mmr-3w-Lo3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Busca" image="magnifyingglass" catalog="system" id="uWM-CT-2aJ"/>
                     <navigationItem key="navigationItem" id="M3J-e1-kGU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1z6-N2-YCL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="emZ-Gq-Srr"/>
+                        <segue destination="UQo-4Z-P5L" kind="relationship" relationship="rootViewController" id="maj-GC-2TF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3E-or-SYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1230" y="278"/>
+            <point key="canvasLocation" x="-2034" y="278"/>
+        </scene>
+        <!--Relatórios-->
+        <scene sceneID="Adj-Le-lU6">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="vaP-0Y-RHU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JH0-rr-sSt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="q64-dC-6ew"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Relatórios" image="archivebox" catalog="system" id="Q7v-Wx-LV3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agu-qk-mp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2034" y="-397"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Lk9-1j-TVh">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="iBr-rl-hUv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="H2j-bY-4e7"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qll-IW-llA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vaP-0Y-RHU" kind="relationship" relationship="viewControllers" id="Kdn-3H-tSV"/>
+                        <segue destination="mmr-3w-Lo3" kind="relationship" relationship="viewControllers" id="RYE-Bv-9l5"/>
+                        <segue destination="5Hh-uS-SUc" kind="relationship" relationship="viewControllers" id="ntv-Bo-kIJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xY1-yS-LEl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2859" y="295"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="Zoh-xh-RER">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="5Hh-uS-SUc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fRl-8c-2tI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="SUp-KR-2kq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Menu" image="ellipsis.circle" catalog="system" id="RoK-mI-bWE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e81-Ju-5RG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2034" y="1021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="euf-63-ExQ">
             <objects>
-                <viewController id="TiA-XC-Hdb" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="TiA-XC-Hdb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="POo-jb-n9z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,34 +108,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="mmr-3w-Lo3" kind="presentation" modalPresentationStyle="fullScreen" id="fZA-qQ-usW"/>
+                                    <segue destination="iBr-rl-hUv" kind="show" id="tA3-iY-kBc"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="99q-84-3jv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wao-ZN-7fF">
+                                <rect key="frame" x="67.5" y="50" width="240" height="150"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="99q-84-3jv">
                                 <rect key="frame" x="32" y="320" width="311" height="88"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-zD-XgC">
-                                        <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-zD-XgC">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PRC-ql-Rd7">
-                                        <rect key="frame" x="0.0" y="54" width="32" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PRC-ql-Rd7">
+                                        <rect key="frame" x="0.0" y="54" width="311" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="wao-ZN-7fF" firstAttribute="leading" secondItem="XcE-hR-zOn" secondAttribute="leading" id="0aV-QR-HPb"/>
                             <constraint firstItem="99q-84-3jv" firstAttribute="leading" secondItem="zxp-KL-gse" secondAttribute="leading" constant="32" id="EoL-WE-hJc"/>
+                            <constraint firstItem="wao-ZN-7fF" firstAttribute="top" secondItem="XcE-hR-zOn" secondAttribute="top" id="Qb3-M7-ZmJ"/>
+                            <constraint firstItem="wao-ZN-7fF" firstAttribute="bottom" secondItem="XcE-hR-zOn" secondAttribute="bottom" id="T0A-T3-GJi"/>
                             <constraint firstItem="XVL-A9-jbX" firstAttribute="top" secondItem="99q-84-3jv" secondAttribute="bottom" constant="40" id="ZLQ-h0-vhF"/>
                             <constraint firstItem="XcE-hR-zOn" firstAttribute="centerX" secondItem="POo-jb-n9z" secondAttribute="centerX" id="edM-7R-cmk"/>
                             <constraint firstItem="zxp-KL-gse" firstAttribute="trailing" secondItem="99q-84-3jv" secondAttribute="trailing" constant="32" id="lsZ-M2-WqW"/>
                             <constraint firstItem="XVL-A9-jbX" firstAttribute="leading" secondItem="zxp-KL-gse" secondAttribute="leading" constant="32" id="m31-UU-XW6"/>
                             <constraint firstItem="XcE-hR-zOn" firstAttribute="top" secondItem="zxp-KL-gse" secondAttribute="top" constant="50" id="m3Q-LX-wEw"/>
                             <constraint firstItem="99q-84-3jv" firstAttribute="top" secondItem="XcE-hR-zOn" secondAttribute="bottom" constant="120" id="nbU-b8-JWt"/>
+                            <constraint firstItem="wao-ZN-7fF" firstAttribute="trailing" secondItem="XcE-hR-zOn" secondAttribute="trailing" id="sWf-gj-1Ra"/>
                             <constraint firstItem="zxp-KL-gse" firstAttribute="trailing" secondItem="XVL-A9-jbX" secondAttribute="trailing" constant="32" id="zyQ-hp-B86"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zxp-KL-gse"/>
@@ -90,18 +153,199 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cj-j3-k4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1998" y="278"/>
+            <point key="canvasLocation" x="-3891" y="295"/>
+        </scene>
+        <!--Categorias de Busca-->
+        <scene sceneID="Sqa-or-kaF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="UQo-4Z-P5L" customClass="CategorySelectorViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UjQ-q6-Tbg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="N9v-op-8lG">
+                                <rect key="frame" x="20" y="76" width="335" height="341"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione as categorias para, em seguida, escolher os sistemas em que deseja buscar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aea-SB-ZG3">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NVu-6Z-dRA">
+                                        <rect key="frame" x="0.0" y="61" width="335" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lav-GK-WUX" customClass="SelectableButton" customModule="mpsp_ios" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="N81-Rk-QcI"/>
+                                                </constraints>
+                                                <state key="normal" title="Imobiliário">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="categorySelectAct:" destination="UQo-4Z-P5L" eventType="touchUpInside" id="Mvl-ka-qCQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx0-aO-SbC" customClass="SelectableButton" customModule="mpsp_ios" customModuleProvider="target">
+                                                <rect key="frame" x="182.5" y="0.0" width="152.5" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="7nT-n5-yWg"/>
+                                                </constraints>
+                                                <state key="normal" title="Civil">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="categorySelectAct:" destination="UQo-4Z-P5L" eventType="touchUpInside" id="Rip-kp-mO8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SUo-4k-JAf">
+                                        <rect key="frame" x="0.0" y="161" width="335" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dp5-so-jOI" customClass="SelectableButton" customModule="mpsp_ios" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="uR6-PN-99P"/>
+                                                </constraints>
+                                                <state key="normal" title="Jurídico">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="categorySelectAct:" destination="UQo-4Z-P5L" eventType="touchUpInside" id="RYV-Yh-xvk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5m-xv-xUn" customClass="SelectableButton" customModule="mpsp_ios" customModuleProvider="target">
+                                                <rect key="frame" x="182.5" y="0.0" width="152.5" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="ryM-8N-akH"/>
+                                                </constraints>
+                                                <state key="normal" title="Trabalhista">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="categorySelectAct:" destination="UQo-4Z-P5L" eventType="touchUpInside" id="roh-zY-rkY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="f4T-Rt-hh3">
+                                        <rect key="frame" x="0.0" y="261" width="335" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh3-nd-2wc" customClass="SelectableButton" customModule="mpsp_ios" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="f59-sQ-wcU"/>
+                                                </constraints>
+                                                <state key="normal" title="Criminal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="categorySelectAct:" destination="UQo-4Z-P5L" eventType="touchUpInside" id="3wZ-gY-ewn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5V-MS-xFF" customClass="SelectableButton" customModule="mpsp_ios" customModuleProvider="target">
+                                                <rect key="frame" x="182.5" y="0.0" width="152.5" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="fam-lX-RqZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Eleitoral">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="categorySelectAct:" destination="UQo-4Z-P5L" eventType="touchUpInside" id="SGX-Qc-cSM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQE-ad-uzg">
+                                <rect key="frame" x="20" y="528" width="335" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QJo-xN-big"/>
+                                </constraints>
+                                <state key="normal" title="Continuar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueAct:" destination="UQo-4Z-P5L" eventType="touchUpInside" id="eUM-7G-jOV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="N9v-op-8lG" firstAttribute="top" secondItem="S5b-jL-O1E" secondAttribute="top" constant="20" id="3kH-EC-WSZ"/>
+                            <constraint firstItem="S5b-jL-O1E" firstAttribute="bottom" secondItem="CQE-ad-uzg" secondAttribute="bottom" constant="20" id="Ha3-c2-KBj"/>
+                            <constraint firstItem="N9v-op-8lG" firstAttribute="leading" secondItem="S5b-jL-O1E" secondAttribute="leading" constant="20" id="Neb-qZ-A3l"/>
+                            <constraint firstAttribute="trailing" secondItem="CQE-ad-uzg" secondAttribute="trailing" constant="20" id="PSX-X8-U3D"/>
+                            <constraint firstItem="S5b-jL-O1E" firstAttribute="trailing" secondItem="N9v-op-8lG" secondAttribute="trailing" constant="20" id="pFW-NW-Let"/>
+                            <constraint firstItem="CQE-ad-uzg" firstAttribute="leading" secondItem="S5b-jL-O1E" secondAttribute="leading" constant="20" id="zfg-9x-9jS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S5b-jL-O1E"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Categorias de Busca" id="zjv-OZ-gUc"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="serviceSelectorSegue" id="z5T-Zk-oc3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeL-Ii-03Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1234.4000000000001" y="277.51124437781112"/>
         </scene>
         <!--Serviços-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ServiceSelectorViewController" customModule="mpsp_ios_homolog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ServiceSelectorViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ou4-Fq-TZ7">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="542"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhg-em-UQz">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="116.5"/>
@@ -189,13 +433,13 @@
         <!--Formulário-->
         <scene sceneID="EXU-Qo-gah">
             <objects>
-                <viewController id="p3P-iW-QGs" customClass="SearchFormViewController" customModule="mpsp_ios_homolog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="p3P-iW-QGs" customClass="SearchFormViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jcv-to-Ddi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qL-gv-lz5">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="542"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agn-4N-bLk">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
@@ -259,13 +503,13 @@
         <!--Relatório #1234-->
         <scene sceneID="QLG-ad-BLC">
             <objects>
-                <viewController id="WD6-Fm-XXT" customClass="ReportViewController" customModule="mpsp_ios_homolog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="WD6-Fm-XXT" customClass="ReportViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cxs-3m-7s7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jPr-YQ-fv9">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="542"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                             </tableView>
@@ -297,7 +541,7 @@
         <!--Selectable List View Controller-->
         <scene sceneID="aeK-bO-qVo">
             <objects>
-                <viewController storyboardIdentifier="SelectableListViewController" id="av2-9a-9Tf" customClass="SelectableListViewController" customModule="mpsp_ios_homolog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectableListViewController" id="av2-9a-9Tf" customClass="SelectableListViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4YB-ab-UPt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -373,13 +617,13 @@
         <!--Resultados-->
         <scene sceneID="A9h-DV-lNo">
             <objects>
-                <viewController id="urE-4O-bJ1" customClass="ResultListViewController" customModule="mpsp_ios_homolog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="urE-4O-bJ1" customClass="ResultListViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jbC-e6-q50">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5L-Gz-9Dj">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="542"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcX-C4-tdC">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="173.5"/>
@@ -466,6 +710,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="archivebox" catalog="system" width="64" height="52"/>
+        <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>

@@ -12,31 +12,37 @@ class ServiceSelectorViewModel {
     
     private let view: ServiceSelectorView
     
+    private var requestCategories: [RequestGroup] = []
     private var requests: [RequestBase] = []
     private var selectedRequests: [RequestBase] = []
     
-    init(view: ServiceSelectorView) {
+    init(view: ServiceSelectorView, requestCategories: [RequestGroup]) {
         self.view = view
-        prepareRequests()
+        self.requestCategories = requestCategories
+//        prepareRequests()
     }
     
-    private func prepareRequests() {
-        requests = [
-            ArispRequest(),
-            SielRequest(),
-            ArpenspRequest(),
-            DetranVehicleRequest(),
-            DetranCNHRequest(),
-            DetranTimeLineRequest(),
-            JucespRequest(),
-            CadespRequest(),
-            CensecRequest(),
-            SivecRequest(),
-            CagedResponsibleRequest(),
-            CagedCompanyRequest(),
-            CagedWorkerRequest(),
-            InfocrimRequest()
-        ]
+    func prepareRequests() {
+//        requests = [
+//            ArispRequest(),
+//            SielRequest(),
+//            ArpenspRequest(),
+//            DetranVehicleRequest(),
+//            DetranCNHRequest(),
+//            DetranTimeLineRequest(),
+//            JucespRequest(),
+//            CadespRequest(),
+//            CensecRequest(),
+//            SivecRequest(),
+//            CagedResponsibleRequest(),
+//            CagedCompanyRequest(),
+//            CagedWorkerRequest(),
+//            InfocrimRequest()
+//        ]
+        
+        requestCategories.forEach { group in
+            self.requests.append(contentsOf: group.requests)
+        }
         view.showServiceList(requests.map { $0.getServiceName() }.sorted())
     }
     

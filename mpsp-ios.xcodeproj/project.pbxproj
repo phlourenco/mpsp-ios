@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4B08316D235E9DA400F5AE53 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B08316F235E9DA400F5AE53 /* Localizable.strings */; };
+		4B083173235FACFD00F5AE53 /* CategorySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B083172235FACFD00F5AE53 /* CategorySelectorViewController.swift */; };
+		4B083175235FAD8E00F5AE53 /* CategorySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B083174235FAD8E00F5AE53 /* CategorySelectorViewModel.swift */; };
+		4B083177235FB1EB00F5AE53 /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B083176235FB1EB00F5AE53 /* SelectableButton.swift */; };
 		4B3AF8BA234FEA8F00DE088C /* ResultListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AF8B9234FEA8F00DE088C /* ResultListViewController.swift */; };
 		4B3AF8BC234FEA9A00DE088C /* ResultListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AF8BB234FEA9A00DE088C /* ResultListViewModel.swift */; };
 		4B3AF8BE234FF0FC00DE088C /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AF8BD234FF0FC00DE088C /* ResponseBase.swift */; };
@@ -21,60 +24,7 @@
 		4B4BFD5D23593EA000FF2359 /* StackedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5B23593EA000FF2359 /* StackedCell.swift */; };
 		4B4BFD5E23593EA000FF2359 /* StackedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5C23593EA000FF2359 /* StackedCell.xib */; };
 		4B4BFD602359429600FF2359 /* ArrayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5F2359429500FF2359 /* ArrayCellViewModel.swift */; };
-		4B4BFDA6235BA66500FF2359 /* SearchFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0E23493476002791B4 /* SearchFormViewModel.swift */; };
-		4B4BFDA7235BA66500FF2359 /* Jucesp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AF023440A1D002791B4 /* Jucesp.swift */; };
-		4B4BFDA8235BA66500FF2359 /* Arpensp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE42342D360002791B4 /* Arpensp.swift */; };
-		4B4BFDA9235BA66500FF2359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8ABE2342C847002791B4 /* AppDelegate.swift */; };
-		4B4BFDAA235BA66500FF2359 /* Infocrim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AF823442A5E002791B4 /* Infocrim.swift */; };
-		4B4BFDAB235BA66500FF2359 /* StackedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5B23593EA000FF2359 /* StackedCell.swift */; };
-		4B4BFDAC235BA66500FF2359 /* Siel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE22342D2AE002791B4 /* Siel.swift */; };
-		4B4BFDAD235BA66500FF2359 /* SectionBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD402357F6EE00FF2359 /* SectionBase.swift */; };
-		4B4BFDAE235BA66500FF2359 /* BaseDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8ADB2342CBB3002791B4 /* BaseDisplayLogic.swift */; };
-		4B4BFDAF235BA66500FF2359 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8ADD2342CBD4002791B4 /* UIView.swift */; };
-		4B4BFDB0235BA66500FF2359 /* CagedCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AEC234407BA002791B4 /* CagedCompany.swift */; };
-		4B4BFDB1235BA66500FF2359 /* TitleValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD4F2359258400FF2359 /* TitleValueView.swift */; };
-		4B4BFDB2235BA66500FF2359 /* Sivec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AF6234428B3002791B4 /* Sivec.swift */; };
-		4B4BFDB3235BA66500FF2359 /* LabelLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B884999234EA70700D1EEE7 /* LabelLoadingView.swift */; };
-		4B4BFDB4235BA66500FF2359 /* MPSPApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6944132352B4E4000A1AE7 /* MPSPApi.swift */; };
-		4B4BFDB5235BA66500FF2359 /* CagedResponsible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE82342D5D5002791B4 /* CagedResponsible.swift */; };
-		4B4BFDB6235BA66500FF2359 /* ReportSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD442359202000FF2359 /* ReportSection.swift */; };
-		4B4BFDB7235BA66500FF2359 /* SelectableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B71050A234BF41F001A11A8 /* SelectableListViewController.swift */; };
-		4B4BFDB8235BA66500FF2359 /* ResultListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AF8BB234FEA9A00DE088C /* ResultListViewModel.swift */; };
-		4B4BFDB9235BA66500FF2359 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AD12342CAB8002791B4 /* HTTPClient.swift */; };
-		4B4BFDBA235BA66500FF2359 /* PickerBindableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B1023494762002791B4 /* PickerBindableTextField.swift */; };
-		4B4BFDBB235BA66500FF2359 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B710517234C05B1001A11A8 /* Checkbox.swift */; };
-		4B4BFDBC235BA66500FF2359 /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AF8BD234FF0FC00DE088C /* ResponseBase.swift */; };
-		4B4BFDBD235BA66500FF2359 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0C23492B1A002791B4 /* UIStackView.swift */; };
-		4B4BFDBE235BA66500FF2359 /* BindableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B042346DDC0002791B4 /* BindableTextField.swift */; };
-		4B4BFDBF235BA66500FF2359 /* ReportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B45436C2352068A005B1815 /* ReportManager.swift */; };
-		4B4BFDC0235BA66500FF2359 /* Arisp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE02342D19B002791B4 /* Arisp.swift */; };
-		4B4BFDC1235BA66500FF2359 /* ResultListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AF8B9234FEA8F00DE088C /* ResultListViewController.swift */; };
-		4B4BFDC2235BA66500FF2359 /* ArrayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5F2359429500FF2359 /* ArrayCellViewModel.swift */; };
-		4B4BFDC3235BA66500FF2359 /* MultiValueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD512359289600FF2359 /* MultiValueCellViewModel.swift */; };
-		4B4BFDC4235BA66500FF2359 /* ServiceSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0A234922F7002791B4 /* ServiceSelectorViewModel.swift */; };
-		4B4BFDC5235BA66500FF2359 /* CagedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AEE23440885002791B4 /* CagedWorker.swift */; };
-		4B4BFDC6235BA66500FF2359 /* Encodable+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AD62342CB11002791B4 /* Encodable+Convert.swift */; };
-		4B4BFDC7235BA66500FF2359 /* Data+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AD42342CAE9002791B4 /* Data+Parse.swift */; };
-		4B4BFDC8235BA66500FF2359 /* Censec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AF423440C06002791B4 /* Censec.swift */; };
-		4B4BFDC9235BA66500FF2359 /* RequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B012345655D002791B4 /* RequestBase.swift */; };
-		4B4BFDCA235BA66500FF2359 /* SwitchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0823491B7E002791B4 /* SwitchText.swift */; };
-		4B4BFDCB235BA66500FF2359 /* Cadesp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AF223440B03002791B4 /* Cadesp.swift */; };
-		4B4BFDCC235BA66500FF2359 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69441A2357E40D000A1AE7 /* ReportViewController.swift */; };
-		4B4BFDCD235BA66500FF2359 /* UniqueValueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5723592D9E00FF2359 /* UniqueValueCellViewModel.swift */; };
-		4B4BFDCE235BA66500FF2359 /* SearchFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AFD23455E8B002791B4 /* SearchFormViewController.swift */; };
-		4B4BFDCF235BA66500FF2359 /* DetranTimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE62342D3F4002791B4 /* DetranTimeLine.swift */; };
-		4B4BFDD0235BA66500FF2359 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69441C2357E414000A1AE7 /* ReportViewModel.swift */; };
-		4B4BFDD1235BA66500FF2359 /* ServiceSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AFB23455E4E002791B4 /* ServiceSelectorViewController.swift */; };
-		4B4BFDD5235BA66500FF2359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8AC72342C84B002791B4 /* LaunchScreen.storyboard */; };
-		4B4BFDD6235BA66500FF2359 /* StackedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5C23593EA000FF2359 /* StackedCell.xib */; };
-		4B4BFDD7235BA66500FF2359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8AC52342C84B002791B4 /* Assets.xcassets */; };
-		4B4BFDD8235BA66500FF2359 /* SwitchText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0623491A77002791B4 /* SwitchText.xib */; };
-		4B4BFDD9235BA66500FF2359 /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B710514234C0517001A11A8 /* MaterialIcons-Regular.ttf */; };
-		4B4BFDDA235BA66500FF2359 /* TitleValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4BFD4D2359257300FF2359 /* TitleValueView.xib */; };
-		4B4BFDDB235BA66500FF2359 /* LabelLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B884997234EA62200D1EEE7 /* LabelLoadingView.xib */; };
-		4B4BFDDC235BA66500FF2359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8AC22342C847002791B4 /* Main.storyboard */; };
 		4B4BFDE5235BB19A00FF2359 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFDE4235BB19A00FF2359 /* String.swift */; };
-		4B4BFDE6235BB20800FF2359 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFDE4235BB19A00FF2359 /* String.swift */; };
 		4B6944142352B4E4000A1AE7 /* MPSPApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6944132352B4E4000A1AE7 /* MPSPApi.swift */; };
 		4B69441B2357E40D000A1AE7 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69441A2357E40D000A1AE7 /* ReportViewController.swift */; };
 		4B69441D2357E414000A1AE7 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69441C2357E414000A1AE7 /* ReportViewModel.swift */; };
@@ -117,7 +67,6 @@
 		4BCE8B0F23493476002791B4 /* SearchFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0E23493476002791B4 /* SearchFormViewModel.swift */; };
 		4BCE8B1123494762002791B4 /* PickerBindableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B1023494762002791B4 /* PickerBindableTextField.swift */; };
 		6FBEF7170701F04E4C2CFF58 /* Pods_mpsp_ios_mock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3EA5A7CB70B1042CBAE42A /* Pods_mpsp_ios_mock.framework */; };
-		72EC5C393902DB5AC95FC551 /* Pods_mpsp_ios_homolog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84625ACDBCF314A3AEB12945 /* Pods_mpsp_ios_homolog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +74,9 @@
 		0F91332DD70725317DE9F77A /* Pods-mpsp-ios-mock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios-mock.debug.xcconfig"; path = "Target Support Files/Pods-mpsp-ios-mock/Pods-mpsp-ios-mock.debug.xcconfig"; sourceTree = "<group>"; };
 		4B08316E235E9DA400F5AE53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4B083170235E9DF400F5AE53 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4B083172235FACFD00F5AE53 /* CategorySelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectorViewController.swift; sourceTree = "<group>"; };
+		4B083174235FAD8E00F5AE53 /* CategorySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectorViewModel.swift; sourceTree = "<group>"; };
+		4B083176235FB1EB00F5AE53 /* SelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
 		4B3AF8B9234FEA8F00DE088C /* ResultListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultListViewController.swift; sourceTree = "<group>"; };
 		4B3AF8BB234FEA9A00DE088C /* ResultListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultListViewModel.swift; sourceTree = "<group>"; };
 		4B3AF8BD234FF0FC00DE088C /* ResponseBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
@@ -139,7 +91,6 @@
 		4B4BFD5C23593EA000FF2359 /* StackedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackedCell.xib; sourceTree = "<group>"; };
 		4B4BFD5F2359429500FF2359 /* ArrayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayCellViewModel.swift; sourceTree = "<group>"; };
 		4B4BFDA0235BA57500FF2359 /* mpsp-ios copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mpsp-ios copy-Info.plist"; path = "/Users/paulolourenco/Desktop/FIAP/mpsp-ios/mpsp-ios copy-Info.plist"; sourceTree = "<absolute>"; };
-		4B4BFDE2235BA66500FF2359 /* mpsp-ios-homolog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mpsp-ios-homolog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4BFDE3235BA66500FF2359 /* mpsp-ios-mock copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mpsp-ios-mock copy-Info.plist"; path = "/Users/paulolourenco/Desktop/FIAP/mpsp-ios/mpsp-ios-mock copy-Info.plist"; sourceTree = "<absolute>"; };
 		4B4BFDE4235BB19A00FF2359 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		4B6944132352B4E4000A1AE7 /* MPSPApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSPApi.swift; sourceTree = "<group>"; };
@@ -152,7 +103,7 @@
 		4B884999234EA70700D1EEE7 /* LabelLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelLoadingView.swift; sourceTree = "<group>"; };
 		4B9AD44A235E85BE0011FF77 /* DetranCNH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetranCNH.swift; sourceTree = "<group>"; };
 		4B9AD44C235E85CF0011FF77 /* DetranVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetranVehicle.swift; sourceTree = "<group>"; };
-		4BCE8ABB2342C847002791B4 /* mpsp-ios-mock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mpsp-ios-mock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCE8ABB2342C847002791B4 /* mpsp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mpsp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCE8ABE2342C847002791B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BCE8AC32342C847002791B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BCE8AC52342C84B002791B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,14 +145,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4B4BFDD2235BA66500FF2359 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				72EC5C393902DB5AC95FC551 /* Pods_mpsp_ios_homolog.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4BCE8AB82342C847002791B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B083171235FACDF00F5AE53 /* CategorySelector */ = {
+			isa = PBXGroup;
+			children = (
+				4B083172235FACFD00F5AE53 /* CategorySelectorViewController.swift */,
+				4B083174235FAD8E00F5AE53 /* CategorySelectorViewModel.swift */,
+			);
+			path = CategorySelector;
+			sourceTree = "<group>";
+		};
 		4B3AF8B8234FEA6500DE088C /* ResultList */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,8 +277,7 @@
 		4BCE8ABC2342C847002791B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4BCE8ABB2342C847002791B4 /* mpsp-ios-mock.app */,
-				4B4BFDE2235BA66500FF2359 /* mpsp-ios-homolog.app */,
+				4BCE8ABB2342C847002791B4 /* mpsp-ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -427,6 +378,7 @@
 		4BCE8B0023455F85002791B4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4B083171235FACDF00F5AE53 /* CategorySelector */,
 				4BCE8AFA23455E20002791B4 /* ServiceSelector */,
 				4BCE8AFF23455F7D002791B4 /* SearchForm */,
 				4B3AF8B8234FEA6500DE088C /* ResultList */,
@@ -446,6 +398,7 @@
 				4B710517234C05B1001A11A8 /* Checkbox.swift */,
 				4B884997234EA62200D1EEE7 /* LabelLoadingView.xib */,
 				4B884999234EA70700D1EEE7 /* LabelLoadingView.swift */,
+				4B083176235FB1EB00F5AE53 /* SelectableButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -475,28 +428,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B4BFDA3235BA66500FF2359 /* mpsp-ios-homolog */ = {
+		4BCE8ABA2342C847002791B4 /* mpsp-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B4BFDDE235BA66500FF2359 /* Build configuration list for PBXNativeTarget "mpsp-ios-homolog" */;
-			buildPhases = (
-				F064B2DA46160E0BA3FF4A47 /* [CP] Check Pods Manifest.lock */,
-				4B4BFDA5235BA66500FF2359 /* Sources */,
-				4B4BFDD2235BA66500FF2359 /* Frameworks */,
-				4B4BFDD4235BA66500FF2359 /* Resources */,
-				4A0D0BA2F3C39FAA1206F2A7 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "mpsp-ios-homolog";
-			productName = "mpsp-ios";
-			productReference = 4B4BFDE2235BA66500FF2359 /* mpsp-ios-homolog.app */;
-			productType = "com.apple.product-type.application";
-		};
-		4BCE8ABA2342C847002791B4 /* mpsp-ios-mock */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4BCE8ACD2342C84B002791B4 /* Build configuration list for PBXNativeTarget "mpsp-ios-mock" */;
+			buildConfigurationList = 4BCE8ACD2342C84B002791B4 /* Build configuration list for PBXNativeTarget "mpsp-ios" */;
 			buildPhases = (
 				F9B3F19EAC6226784DE70753 /* [CP] Check Pods Manifest.lock */,
 				4BCE8AB72342C847002791B4 /* Sources */,
@@ -508,9 +442,9 @@
 			);
 			dependencies = (
 			);
-			name = "mpsp-ios-mock";
+			name = "mpsp-ios";
 			productName = "mpsp-ios";
-			productReference = 4BCE8ABB2342C847002791B4 /* mpsp-ios-mock.app */;
+			productReference = 4BCE8ABB2342C847002791B4 /* mpsp-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -542,28 +476,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4BCE8ABA2342C847002791B4 /* mpsp-ios-mock */,
-				4B4BFDA3235BA66500FF2359 /* mpsp-ios-homolog */,
+				4BCE8ABA2342C847002791B4 /* mpsp-ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4B4BFDD4235BA66500FF2359 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4B4BFDD5235BA66500FF2359 /* LaunchScreen.storyboard in Resources */,
-				4B4BFDD6235BA66500FF2359 /* StackedCell.xib in Resources */,
-				4B4BFDD7235BA66500FF2359 /* Assets.xcassets in Resources */,
-				4B4BFDD8235BA66500FF2359 /* SwitchText.xib in Resources */,
-				4B4BFDD9235BA66500FF2359 /* MaterialIcons-Regular.ttf in Resources */,
-				4B4BFDDA235BA66500FF2359 /* TitleValueView.xib in Resources */,
-				4B4BFDDB235BA66500FF2359 /* LabelLoadingView.xib in Resources */,
-				4B4BFDDC235BA66500FF2359 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4BCE8AB92342C847002791B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,23 +501,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4A0D0BA2F3C39FAA1206F2A7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mpsp-ios-homolog/Pods-mpsp-ios-homolog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mpsp-ios-homolog/Pods-mpsp-ios-homolog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mpsp-ios-homolog/Pods-mpsp-ios-homolog-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CF81290A9ED22E97E9EE490E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -615,28 +516,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mpsp-ios-mock/Pods-mpsp-ios-mock-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F064B2DA46160E0BA3FF4A47 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-mpsp-ios-homolog-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9B3F19EAC6226784DE70753 /* [CP] Check Pods Manifest.lock */ = {
@@ -664,58 +543,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4B4BFDA5235BA66500FF2359 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4B4BFDA6235BA66500FF2359 /* SearchFormViewModel.swift in Sources */,
-				4B4BFDA7235BA66500FF2359 /* Jucesp.swift in Sources */,
-				4B4BFDA8235BA66500FF2359 /* Arpensp.swift in Sources */,
-				4B4BFDA9235BA66500FF2359 /* AppDelegate.swift in Sources */,
-				4B4BFDAA235BA66500FF2359 /* Infocrim.swift in Sources */,
-				4B4BFDAB235BA66500FF2359 /* StackedCell.swift in Sources */,
-				4B4BFDAC235BA66500FF2359 /* Siel.swift in Sources */,
-				4B4BFDAD235BA66500FF2359 /* SectionBase.swift in Sources */,
-				4B4BFDAE235BA66500FF2359 /* BaseDisplayLogic.swift in Sources */,
-				4B4BFDAF235BA66500FF2359 /* UIView.swift in Sources */,
-				4B4BFDB0235BA66500FF2359 /* CagedCompany.swift in Sources */,
-				4B4BFDB1235BA66500FF2359 /* TitleValueView.swift in Sources */,
-				4B4BFDE6235BB20800FF2359 /* String.swift in Sources */,
-				4B4BFDB2235BA66500FF2359 /* Sivec.swift in Sources */,
-				4B4BFDB3235BA66500FF2359 /* LabelLoadingView.swift in Sources */,
-				4B4BFDB4235BA66500FF2359 /* MPSPApi.swift in Sources */,
-				4B4BFDB5235BA66500FF2359 /* CagedResponsible.swift in Sources */,
-				4B4BFDB6235BA66500FF2359 /* ReportSection.swift in Sources */,
-				4B4BFDB7235BA66500FF2359 /* SelectableListViewController.swift in Sources */,
-				4B4BFDB8235BA66500FF2359 /* ResultListViewModel.swift in Sources */,
-				4B4BFDB9235BA66500FF2359 /* HTTPClient.swift in Sources */,
-				4B4BFDBA235BA66500FF2359 /* PickerBindableTextField.swift in Sources */,
-				4B4BFDBB235BA66500FF2359 /* Checkbox.swift in Sources */,
-				4B4BFDBC235BA66500FF2359 /* ResponseBase.swift in Sources */,
-				4B4BFDBD235BA66500FF2359 /* UIStackView.swift in Sources */,
-				4B4BFDBE235BA66500FF2359 /* BindableTextField.swift in Sources */,
-				4B4BFDBF235BA66500FF2359 /* ReportManager.swift in Sources */,
-				4B4BFDC0235BA66500FF2359 /* Arisp.swift in Sources */,
-				4B4BFDC1235BA66500FF2359 /* ResultListViewController.swift in Sources */,
-				4B4BFDC2235BA66500FF2359 /* ArrayCellViewModel.swift in Sources */,
-				4B4BFDC3235BA66500FF2359 /* MultiValueCellViewModel.swift in Sources */,
-				4B4BFDC4235BA66500FF2359 /* ServiceSelectorViewModel.swift in Sources */,
-				4B4BFDC5235BA66500FF2359 /* CagedWorker.swift in Sources */,
-				4B4BFDC6235BA66500FF2359 /* Encodable+Convert.swift in Sources */,
-				4B4BFDC7235BA66500FF2359 /* Data+Parse.swift in Sources */,
-				4B4BFDC8235BA66500FF2359 /* Censec.swift in Sources */,
-				4B4BFDC9235BA66500FF2359 /* RequestBase.swift in Sources */,
-				4B4BFDCA235BA66500FF2359 /* SwitchText.swift in Sources */,
-				4B4BFDCB235BA66500FF2359 /* Cadesp.swift in Sources */,
-				4B4BFDCC235BA66500FF2359 /* ReportViewController.swift in Sources */,
-				4B4BFDCD235BA66500FF2359 /* UniqueValueCellViewModel.swift in Sources */,
-				4B4BFDCE235BA66500FF2359 /* SearchFormViewController.swift in Sources */,
-				4B4BFDCF235BA66500FF2359 /* DetranTimeLine.swift in Sources */,
-				4B4BFDD0235BA66500FF2359 /* ReportViewModel.swift in Sources */,
-				4B4BFDD1235BA66500FF2359 /* ServiceSelectorViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4BCE8AB72342C847002791B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -742,6 +569,7 @@
 				4B71050C234BF41F001A11A8 /* SelectableListViewController.swift in Sources */,
 				4B3AF8BC234FEA9A00DE088C /* ResultListViewModel.swift in Sources */,
 				4BCE8AD22342CAB8002791B4 /* HTTPClient.swift in Sources */,
+				4B083175235FAD8E00F5AE53 /* CategorySelectorViewModel.swift in Sources */,
 				4BCE8B1123494762002791B4 /* PickerBindableTextField.swift in Sources */,
 				4B710518234C05B1001A11A8 /* Checkbox.swift in Sources */,
 				4B3AF8BE234FF0FC00DE088C /* ResponseBase.swift in Sources */,
@@ -762,9 +590,11 @@
 				4BCE8B0923491B7E002791B4 /* SwitchText.swift in Sources */,
 				4BCE8AF323440B03002791B4 /* Cadesp.swift in Sources */,
 				4B69441B2357E40D000A1AE7 /* ReportViewController.swift in Sources */,
+				4B083177235FB1EB00F5AE53 /* SelectableButton.swift in Sources */,
 				4B4BFD5823592D9E00FF2359 /* UniqueValueCellViewModel.swift in Sources */,
 				4BCE8AFE23455E8B002791B4 /* SearchFormViewController.swift in Sources */,
 				4BCE8AE72342D3F4002791B4 /* DetranTimeLine.swift in Sources */,
+				4B083173235FACFD00F5AE53 /* CategorySelectorViewController.swift in Sources */,
 				4B69441D2357E414000A1AE7 /* ReportViewModel.swift in Sources */,
 				4BCE8AFC23455E4E002791B4 /* ServiceSelectorViewController.swift in Sources */,
 			);
@@ -883,69 +713,6 @@
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Debug (Homolog)";
-		};
-		4B4BFDDF235BA66500FF2359 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58EC2753CAA8EEF01F204D29 /* Pods-mpsp-ios-homolog.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W8W67XPP2J;
-				INFOPLIST_FILE = "$(SRCROOT)/mpsp-ios/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D MOCK";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phlourenco.mpsp-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		4B4BFDE0235BA66500FF2359 /* Debug (Homolog) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 818A4A867B3FAFE6AB5A5A08 /* Pods-mpsp-ios-homolog.debug (homolog).xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W8W67XPP2J;
-				INFOPLIST_FILE = "$(SRCROOT)/mpsp-ios/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D HOMOLOG";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phlourenco.mpsp-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "Debug (Homolog)";
-		};
-		4B4BFDE1235BA66500FF2359 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B4779DF21875015B4D6F7C4 /* Pods-mpsp-ios-homolog.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W8W67XPP2J;
-				INFOPLIST_FILE = "$(SRCROOT)/mpsp-ios/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phlourenco.mpsp-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
 		};
 		4BCE8ACB2342C84B002791B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1110,16 +877,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B4BFDDE235BA66500FF2359 /* Build configuration list for PBXNativeTarget "mpsp-ios-homolog" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4B4BFDDF235BA66500FF2359 /* Debug */,
-				4B4BFDE0235BA66500FF2359 /* Debug (Homolog) */,
-				4B4BFDE1235BA66500FF2359 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4BCE8AB62342C847002791B4 /* Build configuration list for PBXProject "mpsp-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1130,7 +887,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4BCE8ACD2342C84B002791B4 /* Build configuration list for PBXNativeTarget "mpsp-ios-mock" */ = {
+		4BCE8ACD2342C84B002791B4 /* Build configuration list for PBXNativeTarget "mpsp-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BCE8ACE2342C84B002791B4 /* Debug */,
