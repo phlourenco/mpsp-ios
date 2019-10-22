@@ -20,7 +20,10 @@ class SielRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
+        #if MOCK
         return "/5da2729d2f00006c00f41952"
+        #else
+        #endif
     }
 }
 

@@ -16,7 +16,10 @@ class JucespRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
+        #if MOCK
         return "/5da275f62f00006600f4195b"
+        #else
+        #endif
     }
 }
 

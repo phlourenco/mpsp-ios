@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DetranRequest: NSObject, RequestBase {
+class DetranTimeLineRequest: NSObject, RequestBase {
     @objc var registry: String = ""
     @objc var rg: String = ""
     @objc var conductorName: String = ""
@@ -16,14 +16,17 @@ class DetranRequest: NSObject, RequestBase {
     @objc var uf: String = ""
     
     func getServiceName() -> String {
-        return "DETRAN"
+        return "DETRAN (Linha de Tempo)"
     }
     
     func getEndpoint() -> String {
-        return "/5da273212f00006700f41955"
+        #if MOCK
+        return "/5dae505d3200005d00d95a58"
+        #else
+        #endif
     }
 }
 
-struct DetranResponse: ResponseBase {
-    var pdfUrl: String
+struct DetranTimeLineResponse: ResponseBase {
+    var registryFileUrl: String
 }

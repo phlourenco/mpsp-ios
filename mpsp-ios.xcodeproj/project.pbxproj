@@ -61,7 +61,7 @@
 		4B4BFDCC235BA66500FF2359 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69441A2357E40D000A1AE7 /* ReportViewController.swift */; };
 		4B4BFDCD235BA66500FF2359 /* UniqueValueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BFD5723592D9E00FF2359 /* UniqueValueCellViewModel.swift */; };
 		4B4BFDCE235BA66500FF2359 /* SearchFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AFD23455E8B002791B4 /* SearchFormViewController.swift */; };
-		4B4BFDCF235BA66500FF2359 /* Detran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE62342D3F4002791B4 /* Detran.swift */; };
+		4B4BFDCF235BA66500FF2359 /* DetranTimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE62342D3F4002791B4 /* DetranTimeLine.swift */; };
 		4B4BFDD0235BA66500FF2359 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69441C2357E414000A1AE7 /* ReportViewModel.swift */; };
 		4B4BFDD1235BA66500FF2359 /* ServiceSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AFB23455E4E002791B4 /* ServiceSelectorViewController.swift */; };
 		4B4BFDD5235BA66500FF2359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8AC72342C84B002791B4 /* LaunchScreen.storyboard */; };
@@ -82,6 +82,8 @@
 		4B710518234C05B1001A11A8 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B710517234C05B1001A11A8 /* Checkbox.swift */; };
 		4B884998234EA62200D1EEE7 /* LabelLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B884997234EA62200D1EEE7 /* LabelLoadingView.xib */; };
 		4B88499A234EA70700D1EEE7 /* LabelLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B884999234EA70700D1EEE7 /* LabelLoadingView.swift */; };
+		4B9AD44B235E85BE0011FF77 /* DetranCNH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9AD44A235E85BE0011FF77 /* DetranCNH.swift */; };
+		4B9AD44D235E85CF0011FF77 /* DetranVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9AD44C235E85CF0011FF77 /* DetranVehicle.swift */; };
 		4BCE8ABF2342C847002791B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8ABE2342C847002791B4 /* AppDelegate.swift */; };
 		4BCE8AC42342C847002791B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8AC22342C847002791B4 /* Main.storyboard */; };
 		4BCE8AC62342C84B002791B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8AC52342C84B002791B4 /* Assets.xcassets */; };
@@ -94,7 +96,7 @@
 		4BCE8AE12342D19B002791B4 /* Arisp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE02342D19B002791B4 /* Arisp.swift */; };
 		4BCE8AE32342D2AE002791B4 /* Siel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE22342D2AE002791B4 /* Siel.swift */; };
 		4BCE8AE52342D360002791B4 /* Arpensp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE42342D360002791B4 /* Arpensp.swift */; };
-		4BCE8AE72342D3F4002791B4 /* Detran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE62342D3F4002791B4 /* Detran.swift */; };
+		4BCE8AE72342D3F4002791B4 /* DetranTimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE62342D3F4002791B4 /* DetranTimeLine.swift */; };
 		4BCE8AE92342D5D5002791B4 /* CagedResponsible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AE82342D5D5002791B4 /* CagedResponsible.swift */; };
 		4BCE8AED234407BA002791B4 /* CagedCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AEC234407BA002791B4 /* CagedCompany.swift */; };
 		4BCE8AEF23440885002791B4 /* CagedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8AEE23440885002791B4 /* CagedWorker.swift */; };
@@ -145,6 +147,8 @@
 		4B710517234C05B1001A11A8 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		4B884997234EA62200D1EEE7 /* LabelLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelLoadingView.xib; sourceTree = "<group>"; };
 		4B884999234EA70700D1EEE7 /* LabelLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelLoadingView.swift; sourceTree = "<group>"; };
+		4B9AD44A235E85BE0011FF77 /* DetranCNH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetranCNH.swift; sourceTree = "<group>"; };
+		4B9AD44C235E85CF0011FF77 /* DetranVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetranVehicle.swift; sourceTree = "<group>"; };
 		4BCE8ABB2342C847002791B4 /* mpsp-ios-mock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mpsp-ios-mock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCE8ABE2342C847002791B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BCE8AC32342C847002791B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,7 +163,7 @@
 		4BCE8AE02342D19B002791B4 /* Arisp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arisp.swift; sourceTree = "<group>"; };
 		4BCE8AE22342D2AE002791B4 /* Siel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siel.swift; sourceTree = "<group>"; };
 		4BCE8AE42342D360002791B4 /* Arpensp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arpensp.swift; sourceTree = "<group>"; };
-		4BCE8AE62342D3F4002791B4 /* Detran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detran.swift; sourceTree = "<group>"; };
+		4BCE8AE62342D3F4002791B4 /* DetranTimeLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetranTimeLine.swift; sourceTree = "<group>"; };
 		4BCE8AE82342D5D5002791B4 /* CagedResponsible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CagedResponsible.swift; sourceTree = "<group>"; };
 		4BCE8AEC234407BA002791B4 /* CagedCompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CagedCompany.swift; sourceTree = "<group>"; };
 		4BCE8AEE23440885002791B4 /* CagedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CagedWorker.swift; sourceTree = "<group>"; };
@@ -221,7 +225,9 @@
 				4BCE8AE02342D19B002791B4 /* Arisp.swift */,
 				4BCE8AE22342D2AE002791B4 /* Siel.swift */,
 				4BCE8AE42342D360002791B4 /* Arpensp.swift */,
-				4BCE8AE62342D3F4002791B4 /* Detran.swift */,
+				4BCE8AE62342D3F4002791B4 /* DetranTimeLine.swift */,
+				4B9AD44A235E85BE0011FF77 /* DetranCNH.swift */,
+				4B9AD44C235E85CF0011FF77 /* DetranVehicle.swift */,
 				4BCE8AE82342D5D5002791B4 /* CagedResponsible.swift */,
 				4BCE8AEC234407BA002791B4 /* CagedCompany.swift */,
 				4BCE8AEE23440885002791B4 /* CagedWorker.swift */,
@@ -698,7 +704,7 @@
 				4B4BFDCC235BA66500FF2359 /* ReportViewController.swift in Sources */,
 				4B4BFDCD235BA66500FF2359 /* UniqueValueCellViewModel.swift in Sources */,
 				4B4BFDCE235BA66500FF2359 /* SearchFormViewController.swift in Sources */,
-				4B4BFDCF235BA66500FF2359 /* Detran.swift in Sources */,
+				4B4BFDCF235BA66500FF2359 /* DetranTimeLine.swift in Sources */,
 				4B4BFDD0235BA66500FF2359 /* ReportViewModel.swift in Sources */,
 				4B4BFDD1235BA66500FF2359 /* ServiceSelectorViewController.swift in Sources */,
 			);
@@ -721,6 +727,7 @@
 				4BCE8AED234407BA002791B4 /* CagedCompany.swift in Sources */,
 				4B4BFD502359258400FF2359 /* TitleValueView.swift in Sources */,
 				4B4BFDE5235BB19A00FF2359 /* String.swift in Sources */,
+				4B9AD44D235E85CF0011FF77 /* DetranVehicle.swift in Sources */,
 				4BCE8AF7234428B3002791B4 /* Sivec.swift in Sources */,
 				4B88499A234EA70700D1EEE7 /* LabelLoadingView.swift in Sources */,
 				4B6944142352B4E4000A1AE7 /* MPSPApi.swift in Sources */,
@@ -735,6 +742,7 @@
 				4BCE8B0D23492B1A002791B4 /* UIStackView.swift in Sources */,
 				4BCE8B052346DDC0002791B4 /* BindableTextField.swift in Sources */,
 				4B45436D2352068A005B1815 /* ReportManager.swift in Sources */,
+				4B9AD44B235E85BE0011FF77 /* DetranCNH.swift in Sources */,
 				4BCE8AE12342D19B002791B4 /* Arisp.swift in Sources */,
 				4B3AF8BA234FEA8F00DE088C /* ResultListViewController.swift in Sources */,
 				4B4BFD602359429600FF2359 /* ArrayCellViewModel.swift in Sources */,
@@ -750,7 +758,7 @@
 				4B69441B2357E40D000A1AE7 /* ReportViewController.swift in Sources */,
 				4B4BFD5823592D9E00FF2359 /* UniqueValueCellViewModel.swift in Sources */,
 				4BCE8AFE23455E8B002791B4 /* SearchFormViewController.swift in Sources */,
-				4BCE8AE72342D3F4002791B4 /* Detran.swift in Sources */,
+				4BCE8AE72342D3F4002791B4 /* DetranTimeLine.swift in Sources */,
 				4B69441D2357E414000A1AE7 /* ReportViewModel.swift in Sources */,
 				4BCE8AFC23455E4E002791B4 /* ServiceSelectorViewController.swift in Sources */,
 			);
@@ -852,6 +860,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D HOMOLOG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.phlourenco.mpsp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1051,6 +1060,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D MOCK";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.phlourenco.mpsp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1071,6 +1081,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.phlourenco.mpsp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

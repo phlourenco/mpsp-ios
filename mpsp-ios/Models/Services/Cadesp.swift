@@ -16,7 +16,10 @@ class CadespRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
+        #if MOCK
         return "/5da277922f00006600f4195d"
+        #else
+        #endif
     }
 }
 

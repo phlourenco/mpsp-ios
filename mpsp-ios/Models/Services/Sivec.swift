@@ -39,7 +39,10 @@ class SivecRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
+        #if MOCK
         return "/5da278c02f00003500f4195f"
+        #else
+        #endif
     }
 }
 

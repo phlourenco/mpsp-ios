@@ -55,7 +55,10 @@ class ArpenspRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
+        #if MOCK
         return "/5da273002f00007900f41954"
+        #else
+        #endif
     }
 }
 

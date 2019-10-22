@@ -16,7 +16,10 @@ class CensecRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
+        #if MOCK
         return "/5da79f5a1200004411eda945"
+        #else
+        #endif
     }
 }
 

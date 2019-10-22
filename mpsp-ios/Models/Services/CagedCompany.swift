@@ -20,7 +20,10 @@ class CagedCompanyRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
+        #if MOCK
         return "/5da79ee81200004411eda942"
+        #else
+        #endif
     }
 }
 

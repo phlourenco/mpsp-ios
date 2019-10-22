@@ -13,8 +13,10 @@ class MPSPApi {
     private var baseUrl: String {
         #if MOCK
         return "https://www.mocky.io/v2"
-        #else
+        #elseif HOMOLOG
         return "http://localhost:8080"
+        #else
+        return "http://google.com"
         #endif
     }
 

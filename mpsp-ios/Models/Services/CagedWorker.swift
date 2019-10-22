@@ -9,7 +9,7 @@
 import Foundation
 
 @objc enum CagedWorkerSearchType: Int, StringEnum {
-    case PIS, CPF, NAME
+    case PIS = 1, CPF = 2, NAME = 4
     
     func getValue() -> String {
         switch self {
@@ -46,7 +46,10 @@ class CagedWorkerRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
-        return "/5da79fc31200004b00eda947"
+        #if MOCK
+        return "/5dae4ccf3200000e00d95a46"
+        #else
+        #endif
     }
 }
 
@@ -63,4 +66,5 @@ struct CagedWorkerResponse: ResponseBase {
     var color: String
     var study: String
     var hasDisability: Bool
+    var pdfUrl: String
 }

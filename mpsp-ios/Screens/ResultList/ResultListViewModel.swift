@@ -56,7 +56,7 @@ class ResultListViewModel {
             self.view.showReport(successResponses)
         }
         if successResponses.count != responses.count {
-            view.showConfirmation(title: "Relatório incompleto", message: "Ainda existem consultas em andamento. Deseja gerar o relatório mesmo assim?", actionTitle: "Continuar", cancelTitle: "Cancelar", action: showReportClosure)
+            view.showConfirmation(title: "Relatório incompleto", message: "Ainda existem consultas em andamento ou com erro. Deseja gerar o relatório mesmo assim?", actionTitle: "Continuar", cancelTitle: "Cancelar", action: showReportClosure)
         } else {
             showReportClosure()
         }
@@ -69,8 +69,12 @@ class ResultListViewModel {
             self.responses[index].response = sielResponse
         } else if let arpenspResponse = data.parse(asObject: ArpenspResponse.self) {
             self.responses[index].response = arpenspResponse
-        } else if let detranResponse = data.parse(asObject: DetranResponse.self) {
-            self.responses[index].response = detranResponse
+        } else if let detranTimelineResponse = data.parse(asObject: DetranTimeLineResponse.self) {
+            self.responses[index].response = detranTimelineResponse
+        } else if let detranCNHResponse = data.parse(asObject: DetranCNHResponse.self) {
+            self.responses[index].response = detranCNHResponse
+        } else if let detranVehicleResponse = data.parse(asObject: DetranVehicleResponse.self) {
+            self.responses[index].response = detranVehicleResponse
         } else if let cagedResponsibleResponse = data.parse(asObject: CagedResponsibleResponse.self) {
             self.responses[index].response = cagedResponsibleResponse
         } else if let cagedCompanyResponse = data.parse(asObject: CagedCompanyResponse.self) {

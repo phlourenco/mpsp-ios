@@ -8,7 +8,25 @@
 
 import Foundation
 
+
+@objc enum InfocrimInstitution: Int, StringEnum {
+    case civilPolice = 1, militarPolice, prefecture
+    
+    func getValue() -> String {
+        switch self {
+        case .civilPolice:
+            return "Polícia civil"
+        case .militarPolice:
+            return "Polícia militar"
+        case .prefecture:
+            return "Prefeitura"
+        }
+    }
+}
+
 class InfocrimRequest: NSObject, RequestBase {
+    
+    @objc var institution: InfocrimInstitution = .civilPolice
     
     func getServiceName() -> String {
         return "INFOCRIM"
@@ -16,7 +34,7 @@ class InfocrimRequest: NSObject, RequestBase {
     
     func getEndpoint() -> String {
         #if MOCK
-        return "/5da2780d2f00007900f4195e"
+        return "/5dae4d283200005f00d95a48"
         #else
         return "/infocrim"
         #endif

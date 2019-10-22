@@ -9,7 +9,7 @@
 import Foundation
 
 @objc enum CagedResponsibleSearchType: Int, StringEnum {
-    case CNPJ, CEI, CPF, NAME, CREA
+    case CNPJ = 1, CEI, CPF, NAME, CREA
     
     func getValue() -> String {
         switch self {
@@ -50,7 +50,10 @@ class CagedResponsibleRequest: NSObject, RequestBase {
     }
     
     func getEndpoint() -> String {
+        #if MOCK
         return "/5da2746c2f00007900f41957"
+        #else
+        #endif
     }
 }
 
