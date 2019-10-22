@@ -8,6 +8,23 @@
 
 import UIKit
 
+
+public extension UIScrollView {
+    public var snapshot: UIImage? {
+        UIGraphicsBeginImageContextWithOptions(contentSize, false, 0)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        let previousFrame = frame
+        frame = CGRect(origin: frame.origin, size: contentSize)
+        layer.render(in: context)
+        frame = previousFrame
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+}
+
+
 protocol ReportView: BaseDisplayLogic {
     
 }
@@ -25,6 +42,30 @@ class ReportViewController: UIViewController {
         tableView.register(UINib(nibName: "StackedCell", bundle: nil), forCellReuseIdentifier: "StackedCell")
         tableView.tableFooterView = UIView()
         tableView.reloadData()
+    }
+    
+    @IBAction func shareAct(_ sender: Any) {
+        // image to share
+//        var image: UIImage?
+//        if #available(iOS 13.0, *) {
+//            image = UIImage(systemName: "pencil")
+//        } else {
+//            image = nil
+//        }
+//        
+        guard let img = tableView.snapshot else { return }
+
+        // set up activity view controller
+        let imageToShare = [ img ]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+
+        // exclude some activity types from the list (optional)
+//        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+
     }
 }
 

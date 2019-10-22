@@ -98,8 +98,4 @@ class ResultListViewModel {
         }
     }
     
-    func kkn() {
-        
-    }
-    
 }

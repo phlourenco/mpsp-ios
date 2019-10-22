@@ -58,10 +58,11 @@ class StackedCell: ConfigurableCell {
     }
     
     private func createTitleValueView(title: String, value: Any) -> UIView {
+        let translatedTitle = NSLocalizedString(title, comment: "")
         if (value as? String)?.isURL ?? false {
-            return TitleValueView(title: title, url: URL(string: "\(value)")!)
+            return TitleValueView(title: translatedTitle, url: URL(string: "\(value)")!)
         } else {
-            return TitleValueView(title: title, value: "\(value)")
+            return TitleValueView(title: translatedTitle, value: "\(value)")
         }
     }
     

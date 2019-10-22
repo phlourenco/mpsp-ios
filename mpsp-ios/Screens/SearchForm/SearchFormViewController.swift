@@ -56,6 +56,7 @@ extension SearchFormViewController: SearchFormView {
             
             Mirror(reflecting: contract).children.forEach { child in
                 guard let propertyName = child.label else { return }
+                let translatedTitle = NSLocalizedString(propertyName, comment: "")
                 
                 var field: UITextField?
                 
@@ -65,7 +66,7 @@ extension SearchFormViewController: SearchFormView {
                     })
                 } else if let arrayValues = contract.getArrayValues(propertyName: propertyName) {
                     field = BindableTextField(onBeginEditing: { _ in
-                        self.openSelectableList(title: propertyName, list: arrayValues, didEndSelectingFunc: { list in
+                        self.openSelectableList(title: translatedTitle, list: arrayValues, didEndSelectingFunc: { list in
                             field?.text = list.joined(separator: ", ")
                             contract.setValue(list, forKey: propertyName)
                         })
@@ -79,7 +80,7 @@ extension SearchFormViewController: SearchFormView {
                 }
                 handleKeyboard(field: field, contract: contract, child: child)
                 field?.borderStyle = .roundedRect
-                field?.placeholder = child.label
+                field?.placeholder = NSLocalizedString(translatedTitle, comment: "")
                 if let field = field {
                     fieldStackView.addArrangedSubview(field)
                 }

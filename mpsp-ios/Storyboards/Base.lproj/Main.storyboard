@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mmr-3w-Lo3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TiA-XC-Hdb">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,6 +12,7 @@
         <scene sceneID="dvq-Ai-IPI">
             <objects>
                 <navigationController id="mmr-3w-Lo3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="M3J-e1-kGU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1z6-N2-YCL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -22,12 +23,79 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3E-or-SYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1391" y="278"/>
+            <point key="canvasLocation" x="-1230" y="278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="euf-63-ExQ">
+            <objects>
+                <viewController id="TiA-XC-Hdb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="POo-jb-n9z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XcE-hR-zOn">
+                                <rect key="frame" x="67.5" y="50" width="240" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8uw-Ij-NIC"/>
+                                    <constraint firstAttribute="width" constant="240" id="yDW-jK-OMk"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVL-A9-jbX">
+                                <rect key="frame" x="32" y="448" width="311" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ipR-yj-WGW"/>
+                                </constraints>
+                                <state key="normal" title="Logar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="mmr-3w-Lo3" kind="presentation" modalPresentationStyle="fullScreen" id="fZA-qQ-usW"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="99q-84-3jv">
+                                <rect key="frame" x="32" y="320" width="311" height="88"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-zD-XgC">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PRC-ql-Rd7">
+                                        <rect key="frame" x="0.0" y="54" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="99q-84-3jv" firstAttribute="leading" secondItem="zxp-KL-gse" secondAttribute="leading" constant="32" id="EoL-WE-hJc"/>
+                            <constraint firstItem="XVL-A9-jbX" firstAttribute="top" secondItem="99q-84-3jv" secondAttribute="bottom" constant="40" id="ZLQ-h0-vhF"/>
+                            <constraint firstItem="XcE-hR-zOn" firstAttribute="centerX" secondItem="POo-jb-n9z" secondAttribute="centerX" id="edM-7R-cmk"/>
+                            <constraint firstItem="zxp-KL-gse" firstAttribute="trailing" secondItem="99q-84-3jv" secondAttribute="trailing" constant="32" id="lsZ-M2-WqW"/>
+                            <constraint firstItem="XVL-A9-jbX" firstAttribute="leading" secondItem="zxp-KL-gse" secondAttribute="leading" constant="32" id="m31-UU-XW6"/>
+                            <constraint firstItem="XcE-hR-zOn" firstAttribute="top" secondItem="zxp-KL-gse" secondAttribute="top" constant="50" id="m3Q-LX-wEw"/>
+                            <constraint firstItem="99q-84-3jv" firstAttribute="top" secondItem="XcE-hR-zOn" secondAttribute="bottom" constant="120" id="nbU-b8-JWt"/>
+                            <constraint firstItem="zxp-KL-gse" firstAttribute="trailing" secondItem="XVL-A9-jbX" secondAttribute="trailing" constant="32" id="zyQ-hp-B86"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zxp-KL-gse"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cj-j3-k4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1998" y="278"/>
         </scene>
         <!--Serviços-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ServiceSelectorViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ServiceSelectorViewController" customModule="mpsp_ios_homolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +189,7 @@
         <!--Formulário-->
         <scene sceneID="EXU-Qo-gah">
             <objects>
-                <viewController id="p3P-iW-QGs" customClass="SearchFormViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="p3P-iW-QGs" customClass="SearchFormViewController" customModule="mpsp_ios_homolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jcv-to-Ddi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +259,7 @@
         <!--Relatório #1234-->
         <scene sceneID="QLG-ad-BLC">
             <objects>
-                <viewController id="WD6-Fm-XXT" customClass="ReportViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WD6-Fm-XXT" customClass="ReportViewController" customModule="mpsp_ios_homolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cxs-3m-7s7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +280,11 @@
                         <viewLayoutGuide key="safeArea" id="qxN-Rd-N3D"/>
                     </view>
                     <navigationItem key="navigationItem" title="Relatório #1234" id="y3h-c7-eRn">
-                        <barButtonItem key="rightBarButtonItem" title="Compartilhar" image="square.and.arrow.up" catalog="system" id="zhN-RV-eYE"/>
+                        <barButtonItem key="rightBarButtonItem" title="Compartilhar" image="square.and.arrow.up" catalog="system" id="zhN-RV-eYE">
+                            <connections>
+                                <action selector="shareAct:" destination="WD6-Fm-XXT" id="CDx-eH-iYn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="jPr-YQ-fv9" id="amZ-wO-hmi"/>
@@ -225,7 +297,7 @@
         <!--Selectable List View Controller-->
         <scene sceneID="aeK-bO-qVo">
             <objects>
-                <viewController storyboardIdentifier="SelectableListViewController" id="av2-9a-9Tf" customClass="SelectableListViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectableListViewController" id="av2-9a-9Tf" customClass="SelectableListViewController" customModule="mpsp_ios_homolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4YB-ab-UPt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,7 +373,7 @@
         <!--Resultados-->
         <scene sceneID="A9h-DV-lNo">
             <objects>
-                <viewController id="urE-4O-bJ1" customClass="ResultListViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="urE-4O-bJ1" customClass="ResultListViewController" customModule="mpsp_ios_homolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jbC-e6-q50">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

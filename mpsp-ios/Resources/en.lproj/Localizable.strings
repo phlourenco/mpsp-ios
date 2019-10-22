@@ -1,0 +1,152 @@
+/* 
+  Localizable.strings
+  mpsp-ios
+
+  Created by Paulo Lourenço on 21/10/19.
+  Copyright © 2019 Paulo Lourenço. All rights reserved.
+*/
+
+// ARISP
+"personType" = "Tipo de pessoa";
+"cityNames" = "Cidades";
+"cpfCnpj" = "CPF / CNPJ";
+"registries" = "Registros";
+"cityName" = "Cidade";
+"office" = "Cartório";
+"registryId" = "Número da matrícula";
+"registryFileUrl" = "URL do arquivo";
+
+//SIEL
+"name" = "Nome";
+"motherName" = "Nome da mãe";
+"birthDate" = "Data de nascimento";
+"documentNumber" = "Número do título";
+"processNumber" = "Número do Processo";
+"title" = "Título";
+"birthday" = "Data de nascimento";
+"zone" = "Zona";
+"address" = "Endereço";
+"city" = "Cidade";
+"uf" = "UF";
+"domesticDate" = "Data Domicílio";
+"fatherName" = "Nome do pai";
+"natural" = "Naturalidade";
+"validationCode" = "Cód. Validação";
+
+//ARPENSP
+"registryType" = "Tipo de registro";
+"place" = "Vara";
+"spouse1OldName" = "Nome do cônjuge 1 (antigo)";
+"spouse1NewName" = "Nome do cônjuge 1 (novo)";
+"spouse2OldName" = "Nome do cônjuge 2 (antigo)";
+"spouse2NewName" = "Nome do cônjuge 2 (novo)";
+"marriageDate" = "Data do casamento";
+
+//Detran Timeline
+"registry" = "Registro";
+"rg" = "RG";
+"conductorName" = "Nome do condutor";
+"pgu" = "PGU";
+
+//Detran CNH
+"cpf" = "CPF";
+"imageUrl" = "URL da imagem";
+"renach" = "RENACH";
+"category" = "Categoria";
+"emission" = "Emissão";
+"birthDate" = "Data de nascimento";
+"conductionName" = "Nome do condutor";
+"registerDate" = "Data de registro";
+"typographic" = "Tipografia";
+"identification" = "Identificaçõa";
+
+//Detran Vehicle
+"board" = "Quadro";
+"document" = "Documento";
+"renavam" = "RENAVAM";
+
+//Caged responsavel
+"searchType" = "Tipo de pesquisa";
+"term" = "Termo";
+"contact" = "Contato";
+"cnpjCeiCpf" = "CNPJ / CEI / CPF";
+"street" = "Rua";
+"neighborhood" = "Bairro";
+"state" = "Estado";
+"cep" = "CEP";
+"phone" = "Telefone";
+"line" = "Linha";
+"email" = "E-mail";
+
+//Caged Empresa
+"cnpj" = "CNPJ";
+"cnae" = "CNAE";
+"subsidiaries" = "Subsidiárias";
+"admissions" = "Admissões";
+"demissions" = "Demissões";
+
+//Caged trabalhador
+"pis" = "PIS";
+"convertedPis" = "PIS Convertido";
+"ctpsSerie" = "Série da CTPS";
+"pisSituation" = "Situação do PIS";
+"sex" = "Sexo";
+"nationality" = "Nacionalidade";
+"color" = "Raça";
+"study" = "Estudo";
+"hasDisability" = "Possui deficiência?";
+"pdfUrl" = "URL do arquivo / pdf";
+
+//Jucesp
+"companyName" = "Nome da empresa";
+"companies" = "Empresas";
+"companyType" = "Tipo de empresa";
+"date" = "Data";
+"initDate" = "Data de início";
+"object" = "Objeto";
+"capital" = "Capital (R$)";
+"number" = "Número";
+"locale" = "Local";
+"complement" = "Complemento";
+"postalCode" = "CEP";
+
+//Cadesp
+"ie" = "Identificação do Estabelecimento";
+"businessName" = "Nome Empresarial";
+"drt" = "DRT";
+"situation" = "Situação";
+"dateStateRegistration" = "Data da Inscrição no Estado";
+"stateRegime" = "Regime estadual";
+"taxOffice" = "Posto Fiscal";
+"fantasyName" = "Nome fantasia";
+"nire" = "NIRE";
+"registrationSituation" = "Situação Cadastral";
+"taxOccurrence" = "Ocorrência Fiscal";
+"unitType" = "Tipo de Unidade";
+"ieStartDate" = "Data Início da IE";
+"dateStartedSituation" = "Data Início da Situação";
+"practices" = "Formas de Atuação";
+
+//Infocrim
+"institution" = "Instituição";
+"url" = "URL";
+
+//Censec
+"act" = "Ato";
+"actDate" = "Data do ato";
+"book" = "Livro";
+"page" = "Folha";
+"parts" = "Partes";
+"role" = "Qualidade";
+
+//Sivec
+
+"birth" = "Data de nascimento";
+"issueDateDocument" = "Data de emissão do documento";
+"nickName" = "Apelido";
+"maritalStatus" = "Estado civil";
+"naturalness" = "Naturalidade";
+"naturalized" = "Naturalizado";
+"profession" = "Profissão";
+"hair" = "Cor do cabelo";
+"eyeColor" = "Cor do olho";

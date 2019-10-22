@@ -50,5 +50,9 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>1</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Salvar relatório</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Salvar relatório</string>
 </dict>
 </plist>
