@@ -23,6 +23,7 @@ class DetranTimeLineRequest: NSObject, RequestBase {
         #if MOCK
         return "/5dae505d3200005d00d95a58"
         #else
+        return "/detranTimeLine"
         #endif
     }
 }

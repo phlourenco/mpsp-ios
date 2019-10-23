@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SafariServices
 
 public extension UIScrollView {
     public var snapshot: UIImage? {
@@ -104,4 +104,11 @@ extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+}
+
+extension ReportViewController: TitleValueViewDelegate {
+    func openUrl(_ url: URL) {
+        let safVC = SFSafariViewController(url: url)
+        present(safVC, animated: true, completion: nil)
+    }
 }

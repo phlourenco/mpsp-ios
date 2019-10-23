@@ -53,6 +53,7 @@ class CagedResponsibleRequest: NSObject, RequestBase {
         #if MOCK
         return "/5da2746c2f00007900f41957"
         #else
+        return "/cagedResponsible"
         #endif
     }
 }

@@ -12,12 +12,15 @@ class StackedCell: ConfigurableCell {
 
     @IBOutlet weak var stackView: UIStackView!
     
+    var delegate: Any?
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         stackView.removeAllSubviews()
     }
     
     override func configure(viewModel: CellViewModel, delegate: Any?) {
+        self.delegate = delegate
         if let viewModel = viewModel as? UniqueValueCellViewModel {
             handleUniqueValue(viewModel: viewModel)
         } else if let viewModel = viewModel as? MultiValueCellViewModel {
@@ -59,11 +62,14 @@ class StackedCell: ConfigurableCell {
     
     private func createTitleValueView(title: String, value: Any) -> UIView {
         let translatedTitle = NSLocalizedString(title, comment: "")
+        var view: TitleValueView?
         if (value as? String)?.isURL ?? false {
-            return TitleValueView(title: translatedTitle, url: URL(string: "\(value)")!)
+            view = TitleValueView(title: translatedTitle, url: URL(string: "\(value)")!)
         } else {
-            return TitleValueView(title: translatedTitle, value: "\(value)")
+            view = TitleValueView(title: translatedTitle, value: "\(value)")
         }
+        view?.delegate = (delegate as? TitleValueViewDelegate)
+        return view ?? UIView()
     }
     
 }

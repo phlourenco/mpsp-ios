@@ -58,6 +58,7 @@ class ArpenspRequest: NSObject, RequestBase {
         #if MOCK
         return "/5da273002f00007900f41954"
         #else
+        return "/arpensp"
         #endif
     }
 }

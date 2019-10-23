@@ -27,20 +27,113 @@
             <point key="canvasLocation" x="-2034" y="278"/>
         </scene>
         <!--Relatórios-->
+        <scene sceneID="gLI-KV-knC">
+            <objects>
+                <navigationController modalPresentationStyle="fullScreen" id="R9z-9D-5i7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Relatórios" image="archivebox" catalog="system" id="oIX-VO-Kwk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2vC-5H-8hD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vaP-0Y-RHU" kind="relationship" relationship="rootViewController" id="i5O-DH-iXK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fBp-DO-O0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2034" y="-506"/>
+        </scene>
+        <!--Últimos relatórios-->
         <scene sceneID="Adj-Le-lU6">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="vaP-0Y-RHU" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="vaP-0Y-RHU" customClass="ReportListViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JH0-rr-sSt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Thf-Zn-1xy">
+                                <rect key="frame" x="0.0" y="56" width="375" height="542"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReportCell" rowHeight="92" id="9Nr-l2-w2M" customClass="ReportCell" customModule="mpsp_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Nr-l2-w2M" id="fbw-IX-oNy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIe-N1-N0x">
+                                                    <rect key="frame" x="8" y="8" width="359" height="76"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="s3p-Wh-sIm">
+                                                            <rect key="frame" x="16" y="14" width="192" height="48"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relatório #123456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb6-dJ-yvE">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="192" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARISP, ARPENSP, DETRAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAu-JA-uOM">
+                                                                    <rect key="frame" x="0.0" y="28.5" width="192" height="19.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="19.5" id="gH8-nC-dlj"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" cyan="0.2921890587839362" magenta="0.071293793618679047" yellow="0.067914284765720367" black="0.095861486486486486" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="s3p-Wh-sIm" firstAttribute="leading" secondItem="OIe-N1-N0x" secondAttribute="leading" constant="16" id="R7n-Ej-BtE"/>
+                                                        <constraint firstItem="s3p-Wh-sIm" firstAttribute="top" secondItem="OIe-N1-N0x" secondAttribute="top" constant="14" id="pcL-lf-3o3"/>
+                                                        <constraint firstAttribute="bottom" secondItem="s3p-Wh-sIm" secondAttribute="bottom" constant="14" id="zVa-r5-cfR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="s3p-Wh-sIm" secondAttribute="trailing" constant="151" id="zw4-6d-Rjq"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OIe-N1-N0x" firstAttribute="leading" secondItem="fbw-IX-oNy" secondAttribute="leading" constant="8" id="KOI-bO-WdI"/>
+                                                <constraint firstAttribute="bottom" secondItem="OIe-N1-N0x" secondAttribute="bottom" constant="8" id="nYF-GV-Y9a"/>
+                                                <constraint firstAttribute="trailing" secondItem="OIe-N1-N0x" secondAttribute="trailing" constant="8" id="xzX-bW-jx1"/>
+                                                <constraint firstItem="OIe-N1-N0x" firstAttribute="top" secondItem="fbw-IX-oNy" secondAttribute="top" constant="8" id="ybG-qB-oM9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="subtitleLabel" destination="lAu-JA-uOM" id="SRU-VD-Y4a"/>
+                                            <outlet property="titleLabel" destination="Tb6-dJ-yvE" id="aHr-5q-eZ9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Thf-Zn-1xy" firstAttribute="top" secondItem="q64-dC-6ew" secondAttribute="top" id="Fj3-mO-nUV"/>
+                            <constraint firstItem="q64-dC-6ew" firstAttribute="bottom" secondItem="Thf-Zn-1xy" secondAttribute="bottom" id="SM2-kc-Uag"/>
+                            <constraint firstItem="q64-dC-6ew" firstAttribute="trailing" secondItem="Thf-Zn-1xy" secondAttribute="trailing" id="Ww8-qU-noT"/>
+                            <constraint firstItem="Thf-Zn-1xy" firstAttribute="leading" secondItem="q64-dC-6ew" secondAttribute="leading" id="rmb-lQ-b2U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="q64-dC-6ew"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Relatórios" image="archivebox" catalog="system" id="Q7v-Wx-LV3"/>
+                    <navigationItem key="navigationItem" title="Últimos relatórios" id="1l9-dK-b9S"/>
+                    <connections>
+                        <outlet property="tableView" destination="Thf-Zn-1xy" id="Mea-z9-gFF"/>
+                        <segue destination="WD6-Fm-XXT" kind="show" identifier="reportDetailsSegue" id="v3h-rO-Y5v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agu-qk-mp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2034" y="-397"/>
+            <point key="canvasLocation" x="-1119" y="-506"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Lk9-1j-TVh">
@@ -53,7 +146,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vaP-0Y-RHU" kind="relationship" relationship="viewControllers" id="Kdn-3H-tSV"/>
+                        <segue destination="R9z-9D-5i7" kind="relationship" relationship="viewControllers" id="guC-Yj-5AX"/>
                         <segue destination="mmr-3w-Lo3" kind="relationship" relationship="viewControllers" id="RYE-Bv-9l5"/>
                         <segue destination="5Hh-uS-SUc" kind="relationship" relationship="viewControllers" id="ntv-Bo-kIJ"/>
                     </connections>
@@ -500,7 +593,7 @@
             </objects>
             <point key="canvasLocation" x="364" y="278"/>
         </scene>
-        <!--Relatório #1234-->
+        <!--Relatório-->
         <scene sceneID="QLG-ad-BLC">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="WD6-Fm-XXT" customClass="ReportViewController" customModule="mpsp_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -523,7 +616,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qxN-Rd-N3D"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Relatório #1234" id="y3h-c7-eRn">
+                    <navigationItem key="navigationItem" title="Relatório" id="y3h-c7-eRn">
                         <barButtonItem key="rightBarButtonItem" title="Compartilhar" image="square.and.arrow.up" catalog="system" id="zhN-RV-eYE">
                             <connections>
                                 <action selector="shareAct:" destination="WD6-Fm-XXT" id="CDx-eH-iYn"/>
@@ -715,4 +808,7 @@
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="v3h-rO-Y5v"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -16,7 +16,7 @@ class ReportViewModel {
     init(responses: [ServiceResponse]) {
         self.responses = responses
         
-        sections = responses.map { ReportSection(serviceName: $0.request.getServiceName(), dictionary: $0.response?.getKeysAndValues() ?? [:]) }
+        sections = responses.map { ReportSection(serviceName: $0.request?.getServiceName() ?? "", dictionary: $0.response?.getKeysAndValues() ?? [:]) }
     }
     
     func getSections() -> [SectionBase] {

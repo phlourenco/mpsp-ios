@@ -13,7 +13,7 @@ enum RequestState {
 }
 
 struct ServiceResponse {
-    var request: RequestBase
+    var request: RequestBase?
     var status: RequestState = .loading
     var response: ResponseBase?
     var tryAgainAction: (() -> Void)?
