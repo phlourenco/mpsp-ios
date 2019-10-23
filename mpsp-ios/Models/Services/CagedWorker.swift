@@ -49,6 +49,7 @@ class CagedWorkerRequest: NSObject, RequestBase {
         #if MOCK
         return "/5dae4ccf3200000e00d95a46"
         #else
+        return "/cagedWorker"
         #endif
     }
 }

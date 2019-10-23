@@ -19,6 +19,7 @@ class CensecRequest: NSObject, RequestBase {
         #if MOCK
         return "/5da79f5a1200004411eda945"
         #else
+        return "/censec"
         #endif
     }
 }

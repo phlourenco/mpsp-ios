@@ -23,6 +23,7 @@ class CagedCompanyRequest: NSObject, RequestBase {
         #if MOCK
         return "/5da79ee81200004411eda942"
         #else
+        return "/cagedCompany"
         #endif
     }
 }

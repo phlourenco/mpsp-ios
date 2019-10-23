@@ -7,7 +7,10 @@
 //
 
 import UIKit
-import SafariServices
+
+protocol TitleValueViewDelegate: class {
+    func openUrl(_ url: URL)
+}
 
 class TitleValueView: UIView {
 
@@ -17,6 +20,8 @@ class TitleValueView: UIView {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var valueLabel: UILabel!
     @IBOutlet private weak var urlButton: UIButton!
+    
+    weak var delegate: TitleValueViewDelegate?
     
     // MARK: - Methods
     var url: URL?
@@ -59,8 +64,7 @@ class TitleValueView: UIView {
     
     @IBAction func urlAction(_ sender: Any) {
         if let url = url {
-            let safVC = SFSafariViewController(url: url)
-            window?.rootViewController?.present(safVC, animated: true, completion: nil)
+            delegate?.openUrl(url)
         }
     }
     

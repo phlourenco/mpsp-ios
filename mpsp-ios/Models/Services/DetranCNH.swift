@@ -19,6 +19,7 @@ class DetranCNHRequest: NSObject, RequestBase {
         #if MOCK
         return "/5dae502e3200001200d95a57"
         #else
+        return "/detranCNH"
         #endif
     }
 }

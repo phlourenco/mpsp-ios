@@ -42,6 +42,7 @@ class SivecRequest: NSObject, RequestBase {
         #if MOCK
         return "/5da278c02f00003500f4195f"
         #else
+        return "/sivec"
         #endif
     }
 }

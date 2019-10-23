@@ -19,6 +19,7 @@ class JucespRequest: NSObject, RequestBase {
         #if MOCK
         return "/5da275f62f00006600f4195b"
         #else
+        return "/jucesp"
         #endif
     }
 }

@@ -21,6 +21,7 @@ class DetranVehicleRequest: NSObject, RequestBase {
         #if MOCK
         return "/5dae4f543200006d00d95a53"
         #else
+        return "/detranVehicle"
         #endif
     }
 }

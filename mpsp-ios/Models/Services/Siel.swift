@@ -23,6 +23,7 @@ class SielRequest: NSObject, RequestBase {
         #if MOCK
         return "/5da2729d2f00006c00f41952"
         #else
+        return "/siel"
         #endif
     }
 }

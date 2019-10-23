@@ -35,6 +35,8 @@
 		4B88499A234EA70700D1EEE7 /* LabelLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B884999234EA70700D1EEE7 /* LabelLoadingView.swift */; };
 		4B9AD44B235E85BE0011FF77 /* DetranCNH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9AD44A235E85BE0011FF77 /* DetranCNH.swift */; };
 		4B9AD44D235E85CF0011FF77 /* DetranVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9AD44C235E85CF0011FF77 /* DetranVehicle.swift */; };
+		4B9D49122360F5D0005E2404 /* ReportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D49112360F5D0005E2404 /* ReportListViewController.swift */; };
+		4B9D49142360F6EA005E2404 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D49132360F6EA005E2404 /* Profile.swift */; };
 		4BCE8ABF2342C847002791B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8ABE2342C847002791B4 /* AppDelegate.swift */; };
 		4BCE8AC42342C847002791B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8AC22342C847002791B4 /* Main.storyboard */; };
 		4BCE8AC62342C84B002791B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE8AC52342C84B002791B4 /* Assets.xcassets */; };
@@ -66,12 +68,15 @@
 		4BCE8B0D23492B1A002791B4 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0C23492B1A002791B4 /* UIStackView.swift */; };
 		4BCE8B0F23493476002791B4 /* SearchFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B0E23493476002791B4 /* SearchFormViewModel.swift */; };
 		4BCE8B1123494762002791B4 /* PickerBindableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE8B1023494762002791B4 /* PickerBindableTextField.swift */; };
-		6FBEF7170701F04E4C2CFF58 /* Pods_mpsp_ios_mock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3EA5A7CB70B1042CBAE42A /* Pods_mpsp_ios_mock.framework */; };
+		4BD54EB32360FC32004B1366 /* ReportListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EB22360FC32004B1366 /* ReportListViewModel.swift */; };
+		4BD54EB52360FECE004B1366 /* ReportCellSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EB42360FECE004B1366 /* ReportCellSection.swift */; };
+		4BD54EB72360FFEF004B1366 /* ReportCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EB62360FFEF004B1366 /* ReportCellViewModel.swift */; };
+		4BD54EB92361019D004B1366 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EB82361019D004B1366 /* ReportCell.swift */; };
+		5E11970C2360B3FA00448E10 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E11970B2360B3FA00448E10 /* Report.swift */; };
+		F736FE07CDCC9EA0CB62E4F6 /* Pods_mpsp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDAFFFB2E303B4795827E23 /* Pods_mpsp_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B4779DF21875015B4D6F7C4 /* Pods-mpsp-ios-homolog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios-homolog.release.xcconfig"; path = "Target Support Files/Pods-mpsp-ios-homolog/Pods-mpsp-ios-homolog.release.xcconfig"; sourceTree = "<group>"; };
-		0F91332DD70725317DE9F77A /* Pods-mpsp-ios-mock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios-mock.debug.xcconfig"; path = "Target Support Files/Pods-mpsp-ios-mock/Pods-mpsp-ios-mock.debug.xcconfig"; sourceTree = "<group>"; };
 		4B08316E235E9DA400F5AE53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4B083170235E9DF400F5AE53 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4B083172235FACFD00F5AE53 /* CategorySelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectorViewController.swift; sourceTree = "<group>"; };
@@ -90,8 +95,6 @@
 		4B4BFD5B23593EA000FF2359 /* StackedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedCell.swift; sourceTree = "<group>"; };
 		4B4BFD5C23593EA000FF2359 /* StackedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackedCell.xib; sourceTree = "<group>"; };
 		4B4BFD5F2359429500FF2359 /* ArrayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayCellViewModel.swift; sourceTree = "<group>"; };
-		4B4BFDA0235BA57500FF2359 /* mpsp-ios copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mpsp-ios copy-Info.plist"; path = "/Users/paulolourenco/Desktop/FIAP/mpsp-ios/mpsp-ios copy-Info.plist"; sourceTree = "<absolute>"; };
-		4B4BFDE3235BA66500FF2359 /* mpsp-ios-mock copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mpsp-ios-mock copy-Info.plist"; path = "/Users/paulolourenco/Desktop/FIAP/mpsp-ios/mpsp-ios-mock copy-Info.plist"; sourceTree = "<absolute>"; };
 		4B4BFDE4235BB19A00FF2359 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		4B6944132352B4E4000A1AE7 /* MPSPApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSPApi.swift; sourceTree = "<group>"; };
 		4B69441A2357E40D000A1AE7 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 		4B884999234EA70700D1EEE7 /* LabelLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelLoadingView.swift; sourceTree = "<group>"; };
 		4B9AD44A235E85BE0011FF77 /* DetranCNH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetranCNH.swift; sourceTree = "<group>"; };
 		4B9AD44C235E85CF0011FF77 /* DetranVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetranVehicle.swift; sourceTree = "<group>"; };
+		4B9D49112360F5D0005E2404 /* ReportListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportListViewController.swift; sourceTree = "<group>"; };
+		4B9D49132360F6EA005E2404 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		4BCE8ABB2342C847002791B4 /* mpsp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mpsp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCE8ABE2342C847002791B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BCE8AC32342C847002791B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,12 +141,15 @@
 		4BCE8B0C23492B1A002791B4 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		4BCE8B0E23493476002791B4 /* SearchFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormViewModel.swift; sourceTree = "<group>"; };
 		4BCE8B1023494762002791B4 /* PickerBindableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerBindableTextField.swift; sourceTree = "<group>"; };
-		58EC2753CAA8EEF01F204D29 /* Pods-mpsp-ios-homolog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios-homolog.debug.xcconfig"; path = "Target Support Files/Pods-mpsp-ios-homolog/Pods-mpsp-ios-homolog.debug.xcconfig"; sourceTree = "<group>"; };
-		7C3EA5A7CB70B1042CBAE42A /* Pods_mpsp_ios_mock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mpsp_ios_mock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		818A4A867B3FAFE6AB5A5A08 /* Pods-mpsp-ios-homolog.debug (homolog).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios-homolog.debug (homolog).xcconfig"; path = "Target Support Files/Pods-mpsp-ios-homolog/Pods-mpsp-ios-homolog.debug (homolog).xcconfig"; sourceTree = "<group>"; };
-		84625ACDBCF314A3AEB12945 /* Pods_mpsp_ios_homolog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mpsp_ios_homolog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		90119DEAF09F45EAC7C95B93 /* Pods-mpsp-ios-mock.debug (homolog).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios-mock.debug (homolog).xcconfig"; path = "Target Support Files/Pods-mpsp-ios-mock/Pods-mpsp-ios-mock.debug (homolog).xcconfig"; sourceTree = "<group>"; };
-		F6711A7B43C59B6F66C2F706 /* Pods-mpsp-ios-mock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios-mock.release.xcconfig"; path = "Target Support Files/Pods-mpsp-ios-mock/Pods-mpsp-ios-mock.release.xcconfig"; sourceTree = "<group>"; };
+		4BD54EB22360FC32004B1366 /* ReportListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportListViewModel.swift; sourceTree = "<group>"; };
+		4BD54EB42360FECE004B1366 /* ReportCellSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCellSection.swift; sourceTree = "<group>"; };
+		4BD54EB62360FFEF004B1366 /* ReportCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCellViewModel.swift; sourceTree = "<group>"; };
+		4BD54EB82361019D004B1366 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
+		5E11970B2360B3FA00448E10 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		8700099DF41D5AB625599B10 /* Pods-mpsp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.release.xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.release.xcconfig"; sourceTree = "<group>"; };
+		C3BE8C2778536617E2640787 /* Pods-mpsp-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.debug.xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		D96159E5B0D82AA0045FD3CF /* Pods-mpsp-ios.debug (homolog).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.debug (homolog).xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.debug (homolog).xcconfig"; sourceTree = "<group>"; };
+		ECDAFFFB2E303B4795827E23 /* Pods_mpsp_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mpsp_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,13 +157,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FBEF7170701F04E4C2CFF58 /* Pods_mpsp_ios_mock.framework in Frameworks */,
+				F736FE07CDCC9EA0CB62E4F6 /* Pods_mpsp_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E72C73B7AF81000156C02C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECDAFFFB2E303B4795827E23 /* Pods_mpsp_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3160ACA8626A236E604A2A73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3BE8C2778536617E2640787 /* Pods-mpsp-ios.debug.xcconfig */,
+				D96159E5B0D82AA0045FD3CF /* Pods-mpsp-ios.debug (homolog).xcconfig */,
+				8700099DF41D5AB625599B10 /* Pods-mpsp-ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4B083171235FACDF00F5AE53 /* CategorySelector */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,15 +288,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4B9D49102360F5AF005E2404 /* ReportList */ = {
+			isa = PBXGroup;
+			children = (
+				4B9D49112360F5D0005E2404 /* ReportListViewController.swift */,
+				4BD54EB22360FC32004B1366 /* ReportListViewModel.swift */,
+				4BD54EB42360FECE004B1366 /* ReportCellSection.swift */,
+				4BD54EB62360FFEF004B1366 /* ReportCellViewModel.swift */,
+				4BD54EB82361019D004B1366 /* ReportCell.swift */,
+			);
+			path = ReportList;
+			sourceTree = "<group>";
+		};
 		4BCE8AB22342C847002791B4 = {
 			isa = PBXGroup;
 			children = (
 				4BCE8ABD2342C847002791B4 /* mpsp-ios */,
 				4BCE8ABC2342C847002791B4 /* Products */,
-				6A43556A03CA379ED3D4AE73 /* Pods */,
-				4B4BFDA0235BA57500FF2359 /* mpsp-ios copy-Info.plist */,
-				4B4BFDE3235BA66500FF2359 /* mpsp-ios-mock copy-Info.plist */,
-				76949B4D50ACA258DB8F9E62 /* Frameworks */,
+				3160ACA8626A236E604A2A73 /* Pods */,
+				2E72C73B7AF81000156C02C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -350,9 +386,11 @@
 		4BCE8ADF2342D188002791B4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5E11970B2360B3FA00448E10 /* Report.swift */,
 				4BCE8B012345655D002791B4 /* RequestBase.swift */,
 				4B3AF8BD234FF0FC00DE088C /* ResponseBase.swift */,
 				4B3AF8BF234FF12D00DE088C /* Services */,
+				4B9D49132360F6EA005E2404 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -378,6 +416,7 @@
 		4BCE8B0023455F85002791B4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4B9D49102360F5AF005E2404 /* ReportList */,
 				4B083171235FACDF00F5AE53 /* CategorySelector */,
 				4BCE8AFA23455E20002791B4 /* ServiceSelector */,
 				4BCE8AFF23455F7D002791B4 /* SearchForm */,
@@ -403,28 +442,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		6A43556A03CA379ED3D4AE73 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				58EC2753CAA8EEF01F204D29 /* Pods-mpsp-ios-homolog.debug.xcconfig */,
-				818A4A867B3FAFE6AB5A5A08 /* Pods-mpsp-ios-homolog.debug (homolog).xcconfig */,
-				0B4779DF21875015B4D6F7C4 /* Pods-mpsp-ios-homolog.release.xcconfig */,
-				0F91332DD70725317DE9F77A /* Pods-mpsp-ios-mock.debug.xcconfig */,
-				90119DEAF09F45EAC7C95B93 /* Pods-mpsp-ios-mock.debug (homolog).xcconfig */,
-				F6711A7B43C59B6F66C2F706 /* Pods-mpsp-ios-mock.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		76949B4D50ACA258DB8F9E62 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				84625ACDBCF314A3AEB12945 /* Pods_mpsp_ios_homolog.framework */,
-				7C3EA5A7CB70B1042CBAE42A /* Pods_mpsp_ios_mock.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -432,11 +449,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BCE8ACD2342C84B002791B4 /* Build configuration list for PBXNativeTarget "mpsp-ios" */;
 			buildPhases = (
-				F9B3F19EAC6226784DE70753 /* [CP] Check Pods Manifest.lock */,
+				BC68CC11C85DDA5AECF5238B /* [CP] Check Pods Manifest.lock */,
 				4BCE8AB72342C847002791B4 /* Sources */,
 				4BCE8AB82342C847002791B4 /* Frameworks */,
 				4BCE8AB92342C847002791B4 /* Resources */,
-				CF81290A9ED22E97E9EE490E /* [CP] Embed Pods Frameworks */,
+				D519CCCE0E608C9889F65AD1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -501,24 +518,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CF81290A9ED22E97E9EE490E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mpsp-ios-mock/Pods-mpsp-ios-mock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mpsp-ios-mock/Pods-mpsp-ios-mock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mpsp-ios-mock/Pods-mpsp-ios-mock-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9B3F19EAC6226784DE70753 /* [CP] Check Pods Manifest.lock */ = {
+		BC68CC11C85DDA5AECF5238B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -533,11 +533,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-mpsp-ios-mock-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-mpsp-ios-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D519CCCE0E608C9889F65AD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -559,14 +576,17 @@
 				4BCE8ADE2342CBD4002791B4 /* UIView.swift in Sources */,
 				4BCE8AED234407BA002791B4 /* CagedCompany.swift in Sources */,
 				4B4BFD502359258400FF2359 /* TitleValueView.swift in Sources */,
+				4BD54EB72360FFEF004B1366 /* ReportCellViewModel.swift in Sources */,
 				4B4BFDE5235BB19A00FF2359 /* String.swift in Sources */,
 				4B9AD44D235E85CF0011FF77 /* DetranVehicle.swift in Sources */,
 				4BCE8AF7234428B3002791B4 /* Sivec.swift in Sources */,
 				4B88499A234EA70700D1EEE7 /* LabelLoadingView.swift in Sources */,
 				4B6944142352B4E4000A1AE7 /* MPSPApi.swift in Sources */,
+				5E11970C2360B3FA00448E10 /* Report.swift in Sources */,
 				4BCE8AE92342D5D5002791B4 /* CagedResponsible.swift in Sources */,
 				4B4BFD452359202000FF2359 /* ReportSection.swift in Sources */,
 				4B71050C234BF41F001A11A8 /* SelectableListViewController.swift in Sources */,
+				4BD54EB52360FECE004B1366 /* ReportCellSection.swift in Sources */,
 				4B3AF8BC234FEA9A00DE088C /* ResultListViewModel.swift in Sources */,
 				4BCE8AD22342CAB8002791B4 /* HTTPClient.swift in Sources */,
 				4B083175235FAD8E00F5AE53 /* CategorySelectorViewModel.swift in Sources */,
@@ -576,8 +596,10 @@
 				4BCE8B0D23492B1A002791B4 /* UIStackView.swift in Sources */,
 				4BCE8B052346DDC0002791B4 /* BindableTextField.swift in Sources */,
 				4B45436D2352068A005B1815 /* ReportManager.swift in Sources */,
+				4B9D49142360F6EA005E2404 /* Profile.swift in Sources */,
 				4B9AD44B235E85BE0011FF77 /* DetranCNH.swift in Sources */,
 				4BCE8AE12342D19B002791B4 /* Arisp.swift in Sources */,
+				4BD54EB92361019D004B1366 /* ReportCell.swift in Sources */,
 				4B3AF8BA234FEA8F00DE088C /* ResultListViewController.swift in Sources */,
 				4B4BFD602359429600FF2359 /* ArrayCellViewModel.swift in Sources */,
 				4B4BFD522359289600FF2359 /* MultiValueCellViewModel.swift in Sources */,
@@ -586,6 +608,7 @@
 				4BCE8AD72342CB11002791B4 /* Encodable+Convert.swift in Sources */,
 				4BCE8AD52342CAE9002791B4 /* Data+Parse.swift in Sources */,
 				4BCE8AF523440C06002791B4 /* Censec.swift in Sources */,
+				4B9D49122360F5D0005E2404 /* ReportListViewController.swift in Sources */,
 				4BCE8B022345655D002791B4 /* RequestBase.swift in Sources */,
 				4BCE8B0923491B7E002791B4 /* SwitchText.swift in Sources */,
 				4BCE8AF323440B03002791B4 /* Cadesp.swift in Sources */,
@@ -594,6 +617,7 @@
 				4B4BFD5823592D9E00FF2359 /* UniqueValueCellViewModel.swift in Sources */,
 				4BCE8AFE23455E8B002791B4 /* SearchFormViewController.swift in Sources */,
 				4BCE8AE72342D3F4002791B4 /* DetranTimeLine.swift in Sources */,
+				4BD54EB32360FC32004B1366 /* ReportListViewModel.swift in Sources */,
 				4B083173235FACFD00F5AE53 /* CategorySelectorViewController.swift in Sources */,
 				4B69441D2357E414000A1AE7 /* ReportViewModel.swift in Sources */,
 				4BCE8AFC23455E4E002791B4 /* ServiceSelectorViewController.swift in Sources */,
@@ -695,7 +719,7 @@
 		};
 		4B4BFDA2235BA61300FF2359 /* Debug (Homolog) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90119DEAF09F45EAC7C95B93 /* Pods-mpsp-ios-mock.debug (homolog).xcconfig */;
+			baseConfigurationReference = D96159E5B0D82AA0045FD3CF /* Pods-mpsp-ios.debug (homolog).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -834,7 +858,7 @@
 		};
 		4BCE8ACE2342C84B002791B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F91332DD70725317DE9F77A /* Pods-mpsp-ios-mock.debug.xcconfig */;
+			baseConfigurationReference = C3BE8C2778536617E2640787 /* Pods-mpsp-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -855,7 +879,7 @@
 		};
 		4BCE8ACF2342C84B002791B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6711A7B43C59B6F66C2F706 /* Pods-mpsp-ios-mock.release.xcconfig */;
+			baseConfigurationReference = 8700099DF41D5AB625599B10 /* Pods-mpsp-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
