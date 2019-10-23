@@ -27,4 +27,13 @@ class MPSPApi {
         let completeUrl = baseUrl.appending(endpoint)
         return HTTPClient().requestData(url: completeUrl, method: .post, parameters: contract.toJSON(), headers: headers)
     }
+    
+    func requestReportList() -> Promise<[Report]> {
+        var endpoint = "/reports"
+        #if MOCK
+        endpoint = "/5db083182f000004cbc13c80"
+        #endif
+        let completeUrl = baseUrl.appending(endpoint)
+        return HTTPClient().request(url: completeUrl, method: .get, parseAs: [Report].self)
+    }
 }
