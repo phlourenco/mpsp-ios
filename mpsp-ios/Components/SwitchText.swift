@@ -37,12 +37,13 @@ class SwitchText: UIView {
         commonInit()
     }
     
-    init(title: String) {
+    init(title: String, isOn: Bool = false) {
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 40))
         commonInit()
         
         titleLabel.text = title
         switchView.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
+        switchView.isOn = isOn
     }
     
     private func commonInit() {

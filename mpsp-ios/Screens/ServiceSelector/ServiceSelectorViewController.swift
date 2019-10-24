@@ -53,7 +53,7 @@ extension ServiceSelectorViewController: ServiceSelectorView {
         servicesStackView.removeAllSubviews()
         
         list.forEach { title in
-            let switchText = SwitchText(title: title)
+            let switchText = SwitchText(title: title, isOn: true)
             switchText.delegate = self
             servicesStackView.addArrangedSubview(switchText)
         }

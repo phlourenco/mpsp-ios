@@ -43,6 +43,7 @@ class ServiceSelectorViewModel {
         requestCategories.forEach { group in
             self.requests.append(contentsOf: group.requests)
         }
+        selectedRequests.append(contentsOf: requests)
         view.showServiceList(requests.map { $0.getServiceName() }.sorted())
     }
     

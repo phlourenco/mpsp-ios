@@ -72,6 +72,7 @@
 		4BD54EB52360FECE004B1366 /* ReportCellSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EB42360FECE004B1366 /* ReportCellSection.swift */; };
 		4BD54EB72360FFEF004B1366 /* ReportCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EB62360FFEF004B1366 /* ReportCellViewModel.swift */; };
 		4BD54EB92361019D004B1366 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EB82361019D004B1366 /* ReportCell.swift */; };
+		4BD54EBC23612E13004B1366 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EBB23612E13004B1366 /* MenuViewController.swift */; };
 		5E11970C2360B3FA00448E10 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E11970B2360B3FA00448E10 /* Report.swift */; };
 		F736FE07CDCC9EA0CB62E4F6 /* Pods_mpsp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDAFFFB2E303B4795827E23 /* Pods_mpsp_ios.framework */; };
 /* End PBXBuildFile section */
@@ -145,6 +146,7 @@
 		4BD54EB42360FECE004B1366 /* ReportCellSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCellSection.swift; sourceTree = "<group>"; };
 		4BD54EB62360FFEF004B1366 /* ReportCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCellViewModel.swift; sourceTree = "<group>"; };
 		4BD54EB82361019D004B1366 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
+		4BD54EBB23612E13004B1366 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5E11970B2360B3FA00448E10 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		8700099DF41D5AB625599B10 /* Pods-mpsp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.release.xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.release.xcconfig"; sourceTree = "<group>"; };
 		C3BE8C2778536617E2640787 /* Pods-mpsp-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.debug.xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 				4BCE8AFF23455F7D002791B4 /* SearchForm */,
 				4B3AF8B8234FEA6500DE088C /* ResultList */,
 				4B6944192357E3FD000A1AE7 /* Report */,
+				4BD54EBA23612D8F004B1366 /* Menu */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -440,6 +443,14 @@
 				4B083176235FB1EB00F5AE53 /* SelectableButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		4BD54EBA23612D8F004B1366 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4BD54EBB23612E13004B1366 /* MenuViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,6 +584,7 @@
 				4BCE8AE32342D2AE002791B4 /* Siel.swift in Sources */,
 				4B4BFD412357F6EE00FF2359 /* SectionBase.swift in Sources */,
 				4BCE8ADC2342CBB3002791B4 /* BaseDisplayLogic.swift in Sources */,
+				4BD54EBC23612E13004B1366 /* MenuViewController.swift in Sources */,
 				4BCE8ADE2342CBD4002791B4 /* UIView.swift in Sources */,
 				4BCE8AED234407BA002791B4 /* CagedCompany.swift in Sources */,
 				4B4BFD502359258400FF2359 /* TitleValueView.swift in Sources */,
