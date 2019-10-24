@@ -25,10 +25,7 @@ class CensecRequest: NSObject, RequestBase {
 }
 
 struct CensecResponse: ResponseBase {
-    var list: [CensecResponseItem]
-}
-
-struct CensecResponseItem: Decodable, ResponsePart {
+//    var list: [CensecResponseItem]
     var office: String
     var date: String
     var act: String
@@ -37,6 +34,16 @@ struct CensecResponseItem: Decodable, ResponsePart {
     var page: String
     var parts: [CensecResponseItemPart]
 }
+
+//struct CensecResponseItem: Decodable, ResponsePart {
+//    var office: String
+//    var date: String
+//    var act: String
+//    var actDate: String
+//    var book: String
+//    var page: String
+//    var parts: [CensecResponseItemPart]
+//}
 
 struct CensecResponseItemPart: Decodable, ResponsePart {
     var name: String
