@@ -9,26 +9,6 @@
 import UIKit
 import SafariServices
 
-public extension UIScrollView {
-    public var snapshot: UIImage? {
-        UIGraphicsBeginImageContextWithOptions(contentSize, false, 0)
-        defer {
-            UIGraphicsEndImageContext()
-        }
-        guard let context = UIGraphicsGetCurrentContext() else { return nil }
-        let previousFrame = frame
-        frame = CGRect(origin: frame.origin, size: contentSize)
-        layer.render(in: context)
-        frame = previousFrame
-        return UIGraphicsGetImageFromCurrentImageContext()
-    }
-}
-
-
-protocol ReportView: BaseDisplayLogic {
-    
-}
-
 class ReportViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -44,34 +24,78 @@ class ReportViewController: UIViewController {
         tableView.reloadData()
     }
     
+    //workaround para corrigir bug do iOS 13
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        if let vc = self.presentedViewController as? UIActivityViewController {
+            vc.dismiss(animated: flag, completion: completion)
+            return
+        }
+        super.dismiss(animated: flag, completion: completion)
+    }
+    
     @IBAction func shareAct(_ sender: Any) {
-        // image to share
-//        var image: UIImage?
-//        if #available(iOS 13.0, *) {
-//            image = UIImage(systemName: "pencil")
-//        } else {
-//            image = nil
-//        }
-//        
-        guard let img = tableView.snapshot else { return }
-
-        // set up activity view controller
+        let img = screenshot()
         let imageToShare = [ img ]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
-
-        // exclude some activity types from the list (optional)
-//        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
-
-        // present the view controller
-        self.present(activityViewController, animated: true, completion: nil)
-
+        let fakeVC = UIViewController()
+        fakeVC.view.backgroundColor = .clear
+        present(fakeVC, animated: false) {
+            fakeVC.present(activityViewController, animated: false, completion: nil)
+        }
     }
-}
-
-extension ReportViewController: ReportView {
-
     
+    func screenshot() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(tableView.contentSize, false, UIScreen.main.scale)
+        
+        let frame = CGRect(x: 0, y: 0, width: tableView.contentSize.width, height: tableView.contentSize.height)
+
+        let savedContentOffset = tableView.contentOffset
+        let savedFrame = tableView.frame
+        let savedBackgroundColor = tableView.backgroundColor
+
+        tableView.contentOffset = .zero
+        tableView.frame = frame
+        tableView.backgroundColor = .clear
+
+        let tempView = UIView(frame: frame)
+        let tempSuperView = tableView.superview
+
+        tableView.removeFromSuperview()
+
+        tempView.addSubview(tableView)
+        guard let currentContext = UIGraphicsGetCurrentContext() else {
+            return UIImage()
+        }
+        tempView.layer.render(in: currentContext)
+
+        guard let image =  UIGraphicsGetImageFromCurrentImageContext() else {
+            return UIImage()
+        }
+        
+        tempView.subviews[0].removeFromSuperview()
+        tempSuperView?.addSubview(tableView)
+
+        tableView.contentOffset = savedContentOffset
+        tableView.frame = savedFrame
+        tableView.backgroundColor = savedBackgroundColor
+        
+        UIGraphicsEndImageContext()
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.removeConstraints(tableView.constraints)
+        NSLayoutConstraint.activate([
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor)
+        ])
+        
+        tempSuperView?.sendSubviewToBack(tableView)
+        
+        
+        return image
+    }
+
 }
 
 extension ReportViewController: UITableViewDelegate, UITableViewDataSource {

@@ -40,8 +40,7 @@ class ReportListViewModel {
     
     private func handleReports(_ reports: [Report]) {
         self.reports = reports
-        sections.removeAll()
-        sections.append(ReportCellSection(reports: reports))
+        sections = [ReportCellSection(reports: reports)]
         view.showList(empty: reports.isEmpty)
     }
     
