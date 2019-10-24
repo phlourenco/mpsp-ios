@@ -41,4 +41,8 @@ struct SielResponse: ResponseBase {
     var motherName: String
     var natural: String
     var validationCode: String
+    
+    func getServiceName() -> String {
+        return "SIEL"
+    }
 }

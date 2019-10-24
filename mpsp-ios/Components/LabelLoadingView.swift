@@ -48,7 +48,7 @@ class LabelLoadingView: UIView {
         
         self.serviceResponse = serviceResponse
         
-        titleLabel.text = serviceResponse.request?.getServiceName() ?? ""
+        titleLabel.text = serviceResponse.request.getServiceName()
         handleState(serviceResponse.status)
         
     }

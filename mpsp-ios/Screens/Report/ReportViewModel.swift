@@ -10,13 +10,13 @@ import Foundation
 
 class ReportViewModel {
     
-    var responses: [ServiceResponse]
+    var responses: [ResponseBase]
     var sections: [ReportSection]
     
-    init(responses: [ServiceResponse]) {
+    init(responses: [ResponseBase]) {
         self.responses = responses
         
-        sections = responses.map { ReportSection(serviceName: $0.request?.getServiceName() ?? "", dictionary: $0.response?.getKeysAndValues() ?? [:]) }
+        sections = responses.map { ReportSection(serviceName: $0.getServiceName(), dictionary: $0.getKeysAndValues() ?? [:]) }
     }
     
     func getSections() -> [SectionBase] {

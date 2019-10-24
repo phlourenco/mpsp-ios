@@ -37,4 +37,8 @@ struct DetranCNHResponse: ResponseBase {
     var typographic: String
     var identification: String
     var cpf: String
+    
+    func getServiceName() -> String {
+        return "DETRAN (CNH)"
+    }
 }

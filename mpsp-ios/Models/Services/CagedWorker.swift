@@ -68,4 +68,8 @@ struct CagedWorkerResponse: ResponseBase {
     var study: String
     var hasDisability: Bool
     var pdfUrl: String
+    
+    func getServiceName() -> String {
+        return "CAGED (Trabalhador)"
+    }
 }

@@ -51,7 +51,7 @@ class ResultListViewModel {
     }
     
     func showCompleteReport() {
-        let successResponses = getResponses().filter { $0.status == .success }
+        let successResponses = getResponses().filter { $0.status == .success }.compactMap { $0.response }
         let showReportClosure = {
             self.view.showReport(successResponses)
         }

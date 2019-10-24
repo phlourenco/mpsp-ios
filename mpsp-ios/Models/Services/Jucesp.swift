@@ -26,6 +26,10 @@ class JucespRequest: NSObject, RequestBase {
 
 struct JucespResponse: ResponseBase {
     var companies: [JucespCompany]
+    
+    func getServiceName() -> String {
+        return "JUCESP"
+    }
 }
 
 struct JucespCompany: Codable, ResponsePart {

@@ -41,4 +41,8 @@ struct CadespResponse: ResponseBase {
     var ieStartDate: String
     var dateStartedSituation: String
     var practices: String
+    
+    func getServiceName() -> String {
+        return "CADESP"
+    }
 }

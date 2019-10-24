@@ -62,6 +62,10 @@ class ArispRequest: NSObject, RequestBase {
 
 struct ArispResponse: ResponseBase {
     var registries: [ArispRegistry]
+    
+    func getServiceName() -> String {
+        return "ARISP"
+    }
 }
 
 struct ArispRegistry: Decodable, ResponsePart {

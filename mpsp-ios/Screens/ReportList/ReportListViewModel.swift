@@ -35,14 +35,14 @@ class ReportListViewModel {
     
     func showReportDetails(of index: Int) {
         let responses = reports[index].getResponses()
-        let serviceResponses = responses.map { ServiceResponse(request: nil, status: .success, response: $0, tryAgainAction: nil) }
-        view.showDetails(responses: serviceResponses)
+        view.showDetails(responses: responses)
     }
     
     private func handleReports(_ reports: [Report]) {
         self.reports = reports
+        sections.removeAll()
         sections.append(ReportCellSection(reports: reports))
-        view.showList()
+        view.showList(empty: reports.isEmpty)
     }
     
     private func handleError(_ error: Error) {

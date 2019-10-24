@@ -35,4 +35,8 @@ struct CagedCompanyResponse: ResponseBase {
     var subsidiaries: Int
     var admissions: Int
     var demissions: Int
+    
+    func getServiceName() -> String {
+        return "CAGED (Empresa)"
+    }
 }

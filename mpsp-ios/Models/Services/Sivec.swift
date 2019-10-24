@@ -65,6 +65,10 @@ struct SivecResponse: ResponseBase {
     var hair: String
     var eyeColor: String
     var address: SivecAddress
+    
+    func getServiceName() -> String {
+        return "SIVEC"
+    }
 }
 
 struct SivecAddress: Decodable, ResponsePart {

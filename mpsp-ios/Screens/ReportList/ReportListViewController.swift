@@ -9,8 +9,8 @@
 import UIKit
 
 protocol ReportListView: BaseDisplayLogic {
-    func showList()
-    func showDetails(responses: [ServiceResponse])
+    func showList(empty: Bool)
+    func showDetails(responses: [ResponseBase])
 }
 
 class ReportListViewController: UIViewController {
@@ -23,6 +23,15 @@ class ReportListViewController: UIViewController {
     
     var viewModel: ReportListViewModel?
     
+    
+    // MARK: - Private properties
+    
+    private lazy var refreshControl: UIRefreshControl = {
+        let ref = UIRefreshControl()
+        ref.addTarget(self, action: #selector(pullToRefreshAction), for: .valueChanged)
+        return ref
+    }()
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -33,7 +42,13 @@ class ReportListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        tableView.addSubview(refreshControl)
         
+        viewModel?.getReports()
+    }
+    
+    @objc
+    private func pullToRefreshAction() {
         viewModel?.getReports()
     }
     
@@ -41,16 +56,22 @@ class ReportListViewController: UIViewController {
 
 extension ReportListViewController: ReportListView {
     
-    func showList() {
+    func showList(empty: Bool) {
+        refreshControl.endRefreshing()
         tableView.reloadData()
+        if empty {
+            tableView.backgroundView = EmptyStateView(title: "Nenhum relatório foi encontrado.")
+        } else {
+            tableView.backgroundView = nil
+        }
     }
     
-    func showDetails(responses: [ServiceResponse]) {
+    func showDetails(responses: [ResponseBase]) {
         performSegue(withIdentifier: "reportDetailsSegue", sender: responses)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let reportVC = segue.destination as? ReportViewController, let responses = sender as? [ServiceResponse] {
+        if let reportVC = segue.destination as? ReportViewController, let responses = sender as? [ResponseBase] {
             let vm = ReportViewModel(responses: responses)
             reportVC.viewModel = vm
         }

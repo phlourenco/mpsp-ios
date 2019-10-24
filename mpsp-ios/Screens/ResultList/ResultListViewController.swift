@@ -10,7 +10,7 @@ import UIKit
 
 protocol ResultListView: BaseDisplayLogic {
     func showList(_ list: [ServiceResponse])
-    func showReport(_ list: [ServiceResponse])
+    func showReport(_ list: [ResponseBase])
 }
 
 class ResultListViewController: UIViewController {
@@ -25,7 +25,7 @@ class ResultListViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let reportVC = segue.destination as? ReportViewController, let responses = sender as? [ServiceResponse] {
+        if let reportVC = segue.destination as? ReportViewController, let responses = sender as? [ResponseBase] {
             let vm = ReportViewModel(responses: responses)
             reportVC.viewModel = vm
         }
@@ -38,7 +38,7 @@ class ResultListViewController: UIViewController {
 
 extension ResultListViewController: ResultListView {
     
-    func showReport(_ list: [ServiceResponse]) {
+    func showReport(_ list: [ResponseBase]) {
         performSegue(withIdentifier: "reportSegue", sender: list)
     }
     
@@ -56,7 +56,9 @@ extension ResultListViewController: ResultListView {
 extension ResultListViewController: LabelLoadingViewDelegate {
     
     func getReport(response: ServiceResponse) {
-        showReport([response])
+        if let response = response.response {
+            showReport([response])
+        }
     }
     
 }

@@ -74,6 +74,8 @@
 		4BD54EB92361019D004B1366 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EB82361019D004B1366 /* ReportCell.swift */; };
 		4BD54EBC23612E13004B1366 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EBB23612E13004B1366 /* MenuViewController.swift */; };
 		5E11970C2360B3FA00448E10 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E11970B2360B3FA00448E10 /* Report.swift */; };
+		5E9F400D2362136300201C56 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F400C2362136300201C56 /* EmptyStateView.swift */; };
+		5E9F400F2362137000201C56 /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9F400E2362137000201C56 /* EmptyStateView.xib */; };
 		F736FE07CDCC9EA0CB62E4F6 /* Pods_mpsp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDAFFFB2E303B4795827E23 /* Pods_mpsp_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +150,8 @@
 		4BD54EB82361019D004B1366 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		4BD54EBB23612E13004B1366 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5E11970B2360B3FA00448E10 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		5E9F400C2362136300201C56 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		5E9F400E2362137000201C56 /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
 		8700099DF41D5AB625599B10 /* Pods-mpsp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.release.xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.release.xcconfig"; sourceTree = "<group>"; };
 		C3BE8C2778536617E2640787 /* Pods-mpsp-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.debug.xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		D96159E5B0D82AA0045FD3CF /* Pods-mpsp-ios.debug (homolog).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpsp-ios.debug (homolog).xcconfig"; path = "Target Support Files/Pods-mpsp-ios/Pods-mpsp-ios.debug (homolog).xcconfig"; sourceTree = "<group>"; };
@@ -441,6 +445,8 @@
 				4B884997234EA62200D1EEE7 /* LabelLoadingView.xib */,
 				4B884999234EA70700D1EEE7 /* LabelLoadingView.swift */,
 				4B083176235FB1EB00F5AE53 /* SelectableButton.swift */,
+				5E9F400C2362136300201C56 /* EmptyStateView.swift */,
+				5E9F400E2362137000201C56 /* EmptyStateView.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -520,6 +526,7 @@
 				4BCE8B0723491A77002791B4 /* SwitchText.xib in Resources */,
 				4B08316D235E9DA400F5AE53 /* Localizable.strings in Resources */,
 				4B710515234C0517001A11A8 /* MaterialIcons-Regular.ttf in Resources */,
+				5E9F400F2362137000201C56 /* EmptyStateView.xib in Resources */,
 				4B4BFD4E2359257300FF2359 /* TitleValueView.xib in Resources */,
 				4B884998234EA62200D1EEE7 /* LabelLoadingView.xib in Resources */,
 				4BCE8AC42342C847002791B4 /* Main.storyboard in Resources */,
@@ -622,6 +629,7 @@
 				4BCE8AF523440C06002791B4 /* Censec.swift in Sources */,
 				4B9D49122360F5D0005E2404 /* ReportListViewController.swift in Sources */,
 				4BCE8B022345655D002791B4 /* RequestBase.swift in Sources */,
+				5E9F400D2362136300201C56 /* EmptyStateView.swift in Sources */,
 				4BCE8B0923491B7E002791B4 /* SwitchText.swift in Sources */,
 				4BCE8AF323440B03002791B4 /* Cadesp.swift in Sources */,
 				4B69441B2357E40D000A1AE7 /* ReportViewController.swift in Sources */,

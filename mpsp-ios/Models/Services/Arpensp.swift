@@ -69,4 +69,8 @@ struct ArpenspResponse: ResponseBase {
     var spouse2OldName: String
     var spouse2NewName: String
     var marriageDate: String
+    
+    func getServiceName() -> String {
+        return "ARPENSP"
+    }
 }

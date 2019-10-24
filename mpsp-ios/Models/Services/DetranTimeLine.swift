@@ -30,4 +30,8 @@ class DetranTimeLineRequest: NSObject, RequestBase {
 
 struct DetranTimeLineResponse: ResponseBase {
     var registryFileUrl: String
+    
+    func getServiceName() -> String {
+        return "DETRAN (Linha de Tempo)"
+    }
 }

@@ -28,4 +28,8 @@ class DetranVehicleRequest: NSObject, RequestBase {
 
 struct DetranVehicleResponse: ResponseBase {
     var registryFileUrl: String
+    
+    func getServiceName() -> String {
+        return "DETRAN (Veículo)"
+    }
 }

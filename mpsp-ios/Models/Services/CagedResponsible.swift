@@ -62,6 +62,10 @@ struct CagedResponsibleResponse: ResponseBase {
     var identification: CagedResponsibleIdentification
     var address: CagedResponsibleAddress
     var contact: CagedResponsibleContact
+    
+    func getServiceName() -> String {
+        return "CAGED (Responsável)"
+    }
 }
 
 struct CagedResponsibleIdentification: Decodable, ResponsePart {

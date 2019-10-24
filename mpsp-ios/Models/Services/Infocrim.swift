@@ -44,4 +44,8 @@ class InfocrimRequest: NSObject, RequestBase {
 
 struct InfocrimResponse: ResponseBase {
     var url: String
+    
+    func getServiceName() -> String {
+        return "INFOCRIM"
+    }
 }

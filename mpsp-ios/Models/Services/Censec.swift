@@ -33,6 +33,10 @@ struct CensecResponse: ResponseBase {
     var book: String
     var page: String
     var parts: [CensecResponseItemPart]
+    
+    func getServiceName() -> String {
+        return "CENSEC"
+    }
 }
 
 //struct CensecResponseItem: Decodable, ResponsePart {
