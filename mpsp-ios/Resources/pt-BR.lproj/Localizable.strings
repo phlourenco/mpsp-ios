@@ -58,7 +58,8 @@
 "conductionName" = "Nome do condutor";
 "registerDate" = "Data de registro";
 "typographic" = "Tipografia";
-"identification" = "Identificaçõa";
+"identification" = "Identificação";
+"residential" = "Rua";
 
 //Detran Vehicle
 "board" = "Quadro";

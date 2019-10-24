@@ -68,6 +68,6 @@ struct SivecResponse: ResponseBase {
 }
 
 struct SivecAddress: Decodable, ResponsePart {
-    var street: String
+    var residential: String
     var city: String
 }
