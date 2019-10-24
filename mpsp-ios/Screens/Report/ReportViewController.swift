@@ -37,6 +37,7 @@ class ReportViewController: UIViewController {
         let img = screenshot()
         let imageToShare = [ img ]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+//        present(activityViewController, animated: false, completion: nil)
         let fakeVC = UIViewController()
         fakeVC.view.backgroundColor = .clear
         present(fakeVC, animated: false) {

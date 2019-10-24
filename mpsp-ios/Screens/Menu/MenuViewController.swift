@@ -17,7 +17,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func infoAct(_ sender: Any) {
-        let msg = "Grupo Morcegos\n\n Paulo Lourenço\n Thiago Cavalcante\n Gustavo Boehm\n Matheu Gonçalves\n Vitor Piovezam"
+        let msg = "Grupo Morcegos\n\n Paulo Lourenço\n Thiago Cavalcante\n Gustavo Boehm\n Matheus Gonçalves\n Vitor Piovezam"
         
         let alertVC = UIAlertController(title: "Sobre o App", message: msg, preferredStyle: .alert)
         
