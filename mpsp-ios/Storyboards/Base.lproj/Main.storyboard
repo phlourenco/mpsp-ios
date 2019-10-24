@@ -779,6 +779,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="Kqn-ZZ-4QI">
+                                        <barButtonItem key="leftBarButtonItem" title="Todos" id="9Js-dJ-OBa">
+                                            <connections>
+                                                <action selector="allAct:" destination="av2-9a-9Tf" id="hKh-Fn-Wpr"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="OK" id="DFN-Bw-GRa">
                                             <connections>
                                                 <action selector="okAction:" destination="av2-9a-9Tf" id="iwH-9M-kyD"/>
@@ -914,6 +919,6 @@
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="v3h-rO-Y5v"/>
+        <segue reference="rgO-zI-T8T"/>
     </inferredMetricsTieBreakers>
 </document>

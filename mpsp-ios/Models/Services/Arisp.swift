@@ -37,9 +37,22 @@ class ArispRequest: NSObject, RequestBase {
         return nil
     }
     
+    private func getArispCities() -> [String]? {
+        if let path = Bundle.main.path(forResource: "arisp_cities", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let cities = data.parse(asObject: [String].self)
+                return cities
+            } catch {
+                return nil
+            }
+        }
+        return nil
+    }
+    
     func getArrayValues(propertyName: String) -> [String]? {
         if propertyName == "cityNames" {
-            return ["São Paulo", "Alfenas"]
+            return getArispCities()
         }
         return nil
     }

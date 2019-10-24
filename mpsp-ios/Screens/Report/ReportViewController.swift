@@ -37,7 +37,6 @@ class ReportViewController: UIViewController {
         let img = screenshot()
         let imageToShare = [ img ]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
-//        present(activityViewController, animated: false, completion: nil)
         let fakeVC = UIViewController()
         fakeVC.view.backgroundColor = .clear
         present(fakeVC, animated: false) {
@@ -107,6 +106,10 @@ extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel?.getSections()[section].sectionTitle
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

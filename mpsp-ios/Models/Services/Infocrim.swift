@@ -40,6 +40,13 @@ class InfocrimRequest: NSObject, RequestBase {
         #endif
     }
     
+    func getEnumCases(propertyName: String) -> [EnumWrapper]? {
+        if propertyName == "institution" {
+            return InfocrimInstitution.allCases.map { EnumWrapper(intValue: $0.rawValue, stringValue: $0.getValue()) }
+        }
+        return nil
+    }
+    
 }
 
 struct InfocrimResponse: ResponseBase {

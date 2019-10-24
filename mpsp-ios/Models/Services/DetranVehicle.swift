@@ -17,6 +17,13 @@ class DetranVehicleRequest: NSObject, RequestBase {
         return "DETRAN (Veículo)"
     }
     
+    func getKeyboardType(propertyName: String) -> SystemKeyboardType {
+        if propertyName == "document" || propertyName == "renavam" {
+            return .number
+        }
+        return .default
+    }
+    
     func getEndpoint() -> String {
         #if MOCK
         return "/5dae4f543200006d00d95a53"

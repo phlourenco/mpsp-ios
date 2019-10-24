@@ -14,19 +14,19 @@ import Foundation
     func getValue() -> String {
         switch self {
         case .BIRTH:
-            return "BIRTH"
+            return "Nascimento"
         case .MARRIAGE:
-            return "MARRIAGE"
+            return "Casamento"
         case .DEATH:
-            return "DEATH"
+            return "Óbito"
         case .EMANCIPATION:
-            return "EMANCIPATION"
+            return "Emancipação"
         case .INTERDITION:
-            return "INTERDITION"
+            return "Interdição"
         case .AWAY:
-            return "AWAY"
+            return "Ausência"
         case .STABLE_UNION:
-            return "STABLE_UNION"
+            return "União estável"
         }
     }
 }

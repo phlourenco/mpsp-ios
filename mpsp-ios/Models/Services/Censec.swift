@@ -15,6 +15,13 @@ class CensecRequest: NSObject, RequestBase {
         return "CENSEC"
     }
     
+    func getKeyboardType(propertyName: String) -> SystemKeyboardType {
+        if propertyName == "cpfCnpj" {
+            return .number
+        }
+        return .default
+    }
+    
     func getEndpoint() -> String {
         #if MOCK
         return "/5da79f5a1200004411eda945"

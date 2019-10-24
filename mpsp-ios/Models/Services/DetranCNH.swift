@@ -22,6 +22,13 @@ class DetranCNHRequest: NSObject, RequestBase {
         return "/detranCNH"
         #endif
     }
+    
+    func getKeyboardType(propertyName: String) -> SystemKeyboardType {
+        if propertyName == "cpf" {
+            return .number
+        }
+        return .default
+    }
 }
 
 struct DetranCNHResponse: ResponseBase {

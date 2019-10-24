@@ -25,4 +25,14 @@ class SearchFormViewModel {
         view.generateForm(basedOnContracts: selectedRequests)
     }
     
+    func validateForms(_ contents: [String?]) {
+        for content in contents {
+            guard let realContent = content, !realContent.isEmpty else {
+                view.showError(title: "Erro", message: "Preencha todos os campos!", tryAgainAction: nil)
+                return
+            }
+        }
+        view.presentResults()
+    }
+    
 }

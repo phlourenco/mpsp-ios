@@ -50,6 +50,14 @@ class SelectableListViewController: UIViewController {
         }
     }
     
+    @IBAction func allAct(_ sender: Any) {
+        stackView.arrangedSubviews.forEach { view in
+            guard let checkbox = (view as? UIButton) else { return }
+            checkbox.isSelected = !checkbox.isSelected
+            handleChecks(checkbox)
+        }
+    }
+    
     // MARK: - Public methods
     
     func setTitle(_ title: String) {

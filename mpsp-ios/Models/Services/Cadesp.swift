@@ -15,6 +15,13 @@ class CadespRequest: NSObject, RequestBase {
         return "CADESP"
     }
     
+    func getKeyboardType(propertyName: String) -> SystemKeyboardType {
+        if propertyName == "cnpj" {
+            return .number
+        }
+        return .default
+    }
+    
     func getEndpoint() -> String {
         #if MOCK
         return "/5da277922f00006600f4195d"

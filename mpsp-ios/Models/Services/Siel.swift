@@ -26,6 +26,13 @@ class SielRequest: NSObject, RequestBase {
         return "/siel"
         #endif
     }
+    
+    func getKeyboardType(propertyName: String) -> SystemKeyboardType {
+        if propertyName == "documentNumber" || propertyName == "processNumber" {
+            return .number
+        }
+        return .default
+    }
 }
 
 struct SielResponse: ResponseBase {

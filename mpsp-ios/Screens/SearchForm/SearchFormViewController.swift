@@ -10,13 +10,24 @@ import UIKit
 
 protocol SearchFormView: BaseDisplayLogic {
     func generateForm(basedOnContracts contracts: [RequestBase])
+    func presentResults()
 }
 
 class SearchFormViewController: UIViewController {
+    
+    // MARK: - IBOutlets
 
     @IBOutlet var fieldStackView: UIStackView!
     
+    // MARK: - Private properties
+    
+    private var fields: [UITextField] = []
+    
+    // MARK: - Public properties
+
     var viewModel: SearchFormViewModel?
+    
+    // MARK: - Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +35,8 @@ class SearchFormViewController: UIViewController {
     }
     
     @IBAction func searchAction(_ sender: Any) {
-        performSegue(withIdentifier: "resultSegue", sender: viewModel?.selectedRequests)
+        let fieldsContents = fields.map { $0.text }
+        viewModel?.validateForms(fieldsContents)
     }
     
     private func openSelectableList(title: String, list: [String], didEndSelectingFunc: (([String]) -> Void)?) {
@@ -51,6 +63,7 @@ extension SearchFormViewController: SearchFormView {
         
         contracts.forEach { contract in
             let serviceNameLabel = UILabel()
+            serviceNameLabel.font = UIFont.boldSystemFont(ofSize: 20)
             serviceNameLabel.text = contract.getServiceName()
             fieldStackView.addArrangedSubview(serviceNameLabel)
             
@@ -84,6 +97,10 @@ extension SearchFormViewController: SearchFormView {
                 if let field = field {
                     fieldStackView.addArrangedSubview(field)
                 }
+                
+                if let textField = field {
+                    fields.append(textField)
+                }
             }
         }
     }
@@ -95,6 +112,10 @@ extension SearchFormViewController: SearchFormView {
         } else {
             field?.keyboardType = .default
         }
+    }
+    
+    func presentResults() {
+        performSegue(withIdentifier: "resultSegue", sender: viewModel?.selectedRequests)
     }
     
 }
