@@ -25,8 +25,9 @@ class ReportSection: SectionBase {
     init(serviceName: String, dictionary: Dictionary<String, Any>) {
         self.serviceName = serviceName
         responseDictionary = dictionary
-        keys = [String](dictionary.keys)
-        values = [Any](dictionary.values)
+        let keysAndValues = dictionary.toSortedKeysAndValues()
+        keys = keysAndValues.0
+        values = keysAndValues.1
     }
 
     func getNumberOfRows() -> Int {
