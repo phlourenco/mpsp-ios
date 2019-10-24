@@ -9,7 +9,7 @@
 import Foundation
 
 class CensecRequest: NSObject, RequestBase {    
-    @objc var cpf: String = ""
+    @objc var cpfCnpj: String = ""
     
     func getServiceName() -> String {
         return "CENSEC"
