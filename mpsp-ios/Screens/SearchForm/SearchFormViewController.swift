@@ -31,25 +31,25 @@ class SearchFormViewController: UIViewController {
     }
     
     @IBAction func searchAction(_ sender: Any) {
-        let textFields = fieldStackView.arrangedSubviews.compactMap { $0 as? UITextField }
-        textFields.forEach { field in
-            if let bindableTextField = field as? BindableTextField, let propertyName = bindableTextField.placeholder {
-                if !bindableTextField.hasEnoughLength() {
-                    bindableTextField.layer.borderColor = UIColor.red.cgColor
-                    bindableTextField.layer.borderWidth = 2
-                    showError(title: "Erro", message: "Preencha o campo '\(propertyName)' corretamente", tryAgainAction: nil)
-                    return
-                } else {
-                    bindableTextField.layer.borderColor = UIColor.clear.cgColor
-                    bindableTextField.layer.borderWidth = 0
-                }
-            }
-        }
+//        let textFields = fieldStackView.arrangedSubviews.compactMap { $0 as? UITextField }
+//        textFields.forEach { field in
+//            if let bindableTextField = field as? BindableTextField, let propertyName = bindableTextField.placeholder {
+//                if !bindableTextField.hasEnoughLength() {
+//                    bindableTextField.layer.borderColor = UIColor.red.cgColor
+//                    bindableTextField.layer.borderWidth = 2
+//                    showError(title: "Erro", message: "Preencha o campo '\(propertyName)' corretamente", tryAgainAction: nil)
+//                    return
+//                } else {
+//                    bindableTextField.layer.borderColor = UIColor.clear.cgColor
+//                    bindableTextField.layer.borderWidth = 0
+//                }
+//            }
+//        }
+//        
+//        let fieldsContents = textFields.map { $0.text }
+//        viewModel?.validateForms(fieldsContents)
         
-        let fieldsContents = textFields.map { $0.text }
-        viewModel?.validateForms(fieldsContents)
-        
-//        presentResults()
+        presentResults()
     }
     
     private func openSelectableList(title: String, list: [String], didEndSelectingFunc: (([String]) -> Void)?) {
