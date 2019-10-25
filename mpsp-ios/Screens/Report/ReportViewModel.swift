@@ -16,7 +16,9 @@ class ReportViewModel {
     init(responses: [ResponseBase]) {
         self.responses = responses
         
-        sections = responses.map { ReportSection(serviceName: $0.getServiceName(), dictionary: $0.getKeysAndValues() ?? [:]) }
+        sections = responses.map { ReportSection(serviceName: $0.getServiceName(), dictionary: $0.getKeysAndValues() ?? [:]) }.sorted(by: { (a, b) -> Bool in
+            return a.serviceName < b.serviceName
+        })
     }
     
     func getSections() -> [SectionBase] {

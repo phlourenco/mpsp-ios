@@ -12,8 +12,8 @@ class SielRequest: NSObject, RequestBase {
     @objc var name: String = ""
     @objc var motherName: String = ""
     @objc var birthDate: String = ""
-    @objc var documentNumber: String = ""
-    @objc var processNumber: String = ""
+    @objc var documentNumber: String = "123456789012"
+    @objc var processNumber: String = "12345"
     
     func getServiceName() -> String {
         return "SIEL"

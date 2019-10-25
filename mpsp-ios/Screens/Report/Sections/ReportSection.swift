@@ -11,7 +11,6 @@ import UIKit
 
 class ReportSection: SectionBase {
     
-    let responseDictionary: Dictionary<String, Any>
     let serviceName: String
     
     private var keys: [String] = []
@@ -24,14 +23,13 @@ class ReportSection: SectionBase {
     
     init(serviceName: String, dictionary: Dictionary<String, Any>) {
         self.serviceName = serviceName
-        responseDictionary = dictionary
         let keysAndValues = dictionary.toSortedKeysAndValues()
         keys = keysAndValues.0
         values = keysAndValues.1
     }
 
     func getNumberOfRows() -> Int {
-        return responseDictionary.count
+        return keys.count
     }
     
     func getCellIdentifier(forRow row: Int) -> String {
