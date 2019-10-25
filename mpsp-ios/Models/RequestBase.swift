@@ -24,6 +24,8 @@ protocol RequestBase: NSObject, Codable {
     func getArrayValues(propertyName: String) -> [String]?
     func getKeyboardType(propertyName: String) -> SystemKeyboardType
     func getEndpoint() -> String
+    func getMaxLength(propertyName: String) -> Int
+    func getAllowedLength(propertyName: String) -> Int?
 }
 
 extension RequestBase {
@@ -38,6 +40,15 @@ extension RequestBase {
     func getKeyboardType(propertyName: String) -> SystemKeyboardType {
         return .default
     }
+    
+    func getMaxLength(propertyName: String) -> Int {
+        return 0
+    }
+    
+    func getAllowedLength(propertyName: String) -> Int? {
+        return nil
+    }
+    
 }
 
 protocol StringEnum: Codable, CaseIterable {

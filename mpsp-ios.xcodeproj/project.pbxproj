@@ -75,6 +75,7 @@
 		4BD54EBC23612E13004B1366 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EBB23612E13004B1366 /* MenuViewController.swift */; };
 		4BD54EBE23624F3A004B1366 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EBD23624F3A004B1366 /* Dictionary.swift */; };
 		4BD54EC023625897004B1366 /* arisp_cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BD54EBF23625897004B1366 /* arisp_cities.json */; };
+		4BD54EC22362749C004B1366 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD54EC12362749C004B1366 /* CommonConstants.swift */; };
 		5E11970C2360B3FA00448E10 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E11970B2360B3FA00448E10 /* Report.swift */; };
 		5E9F400D2362136300201C56 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F400C2362136300201C56 /* EmptyStateView.swift */; };
 		5E9F400F2362137000201C56 /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9F400E2362137000201C56 /* EmptyStateView.xib */; };
@@ -153,6 +154,7 @@
 		4BD54EBB23612E13004B1366 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4BD54EBD23624F3A004B1366 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		4BD54EBF23625897004B1366 /* arisp_cities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = arisp_cities.json; sourceTree = "<group>"; };
+		4BD54EC12362749C004B1366 /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
 		5E11970B2360B3FA00448E10 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		5E9F400C2362136300201C56 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		5E9F400E2362137000201C56 /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 			children = (
 				4BCE8ADB2342CBB3002791B4 /* BaseDisplayLogic.swift */,
 				4B4BFD402357F6EE00FF2359 /* SectionBase.swift */,
+				4BD54EC12362749C004B1366 /* CommonConstants.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				4B9AD44B235E85BE0011FF77 /* DetranCNH.swift in Sources */,
 				4BCE8AE12342D19B002791B4 /* Arisp.swift in Sources */,
 				4BD54EB92361019D004B1366 /* ReportCell.swift in Sources */,
+				4BD54EC22362749C004B1366 /* CommonConstants.swift in Sources */,
 				4B3AF8BA234FEA8F00DE088C /* ResultListViewController.swift in Sources */,
 				4B4BFD602359429600FF2359 /* ArrayCellViewModel.swift in Sources */,
 				4B4BFD522359289600FF2359 /* MultiValueCellViewModel.swift in Sources */,

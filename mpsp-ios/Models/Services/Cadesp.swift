@@ -22,6 +22,20 @@ class CadespRequest: NSObject, RequestBase {
         return .default
     }
     
+    func getMaxLength(propertyName: String) -> Int {
+        if propertyName == "cnpj" {
+            return CommonConstants.kCnpjLength
+        }
+        return 0
+    }
+    
+    func getAllowedLength(propertyName: String) -> Int? {
+        if propertyName == "cnpj" {
+            return CommonConstants.kCnpjLength
+        }
+        return nil
+    }
+    
     func getEndpoint() -> String {
         #if MOCK
         return "/5da277922f00006600f4195d"

@@ -19,6 +19,20 @@ class CagedCompanyRequest: NSObject, RequestBase {
         return .number
     }
     
+    func getMaxLength(propertyName: String) -> Int {
+        if propertyName == "cnpj" {
+            return CommonConstants.kCnpjLength
+        }
+        return 0
+    }
+    
+    func getAllowedLength(propertyName: String) -> Int? {
+        if propertyName == "cnpj" {
+            return CommonConstants.kCnpjLength
+        }
+        return nil
+    }
+    
     func getEndpoint() -> String {
         #if MOCK
         return "/5da79ee81200004411eda942"

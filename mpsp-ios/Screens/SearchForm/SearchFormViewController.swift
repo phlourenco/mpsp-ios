@@ -19,10 +19,6 @@ class SearchFormViewController: UIViewController {
 
     @IBOutlet var fieldStackView: UIStackView!
     
-    // MARK: - Private properties
-    
-    private var fields: [UITextField] = []
-    
     // MARK: - Public properties
 
     var viewModel: SearchFormViewModel?
@@ -35,8 +31,25 @@ class SearchFormViewController: UIViewController {
     }
     
     @IBAction func searchAction(_ sender: Any) {
-        let fieldsContents = fields.map { $0.text }
+        let textFields = fieldStackView.arrangedSubviews.compactMap { $0 as? UITextField }
+        textFields.forEach { field in
+            if let bindableTextField = field as? BindableTextField, let propertyName = bindableTextField.placeholder {
+                if !bindableTextField.hasEnoughLength() {
+                    bindableTextField.layer.borderColor = UIColor.red.cgColor
+                    bindableTextField.layer.borderWidth = 2
+                    showError(title: "Erro", message: "Preencha o campo '\(propertyName)' corretamente", tryAgainAction: nil)
+                    return
+                } else {
+                    bindableTextField.layer.borderColor = UIColor.clear.cgColor
+                    bindableTextField.layer.borderWidth = 0
+                }
+            }
+        }
+        
+        let fieldsContents = textFields.map { $0.text }
         viewModel?.validateForms(fieldsContents)
+        
+//        presentResults()
     }
     
     private func openSelectableList(title: String, list: [String], didEndSelectingFunc: (([String]) -> Void)?) {
@@ -89,17 +102,13 @@ extension SearchFormViewController: SearchFormView {
                         self.handleKeyboard(field: textField, contract: contract, child: child)
                     }, onChange: { value in
                         contract.setValue(value, forKey: propertyName)
-                    })
+                    }, maxLength: contract.getMaxLength(propertyName: propertyName), allowedLength: contract.getAllowedLength(propertyName: propertyName))
                 }
                 handleKeyboard(field: field, contract: contract, child: child)
                 field?.borderStyle = .roundedRect
                 field?.placeholder = NSLocalizedString(translatedTitle, comment: "")
                 if let field = field {
                     fieldStackView.addArrangedSubview(field)
-                }
-                
-                if let textField = field {
-                    fields.append(textField)
                 }
             }
         }

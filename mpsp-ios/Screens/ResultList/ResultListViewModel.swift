@@ -62,7 +62,7 @@ class ResultListViewModel {
         }
     }
     
-    private func handleResponse(index: Int, data: Data) {
+    private func handleResponse(index: Int, data: Data) {        
         if let arispResponse = data.parse(asObject: ArispResponse.self) {
             self.responses[index].response = arispResponse
         } else if let sielResponse = data.parse(asObject: SielResponse.self) {

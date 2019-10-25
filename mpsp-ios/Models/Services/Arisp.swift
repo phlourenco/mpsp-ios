@@ -64,6 +64,20 @@ class ArispRequest: NSObject, RequestBase {
         return .default
     }
     
+    func getMaxLength(propertyName: String) -> Int {
+        if propertyName == "cpfCnpj" {
+            return CommonConstants.kCnpjLength
+        }
+        return 0
+    }
+    
+    func getAllowedLength(propertyName: String) -> Int? {
+        if propertyName == "cpfCnpj" {
+            return CommonConstants.kCpfLength
+        }
+        return nil
+    }
+    
     func getEndpoint() -> String {
         #if MOCK
         return "/5da79de01200001100eda940"

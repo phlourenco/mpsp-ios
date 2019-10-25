@@ -23,6 +23,20 @@ class DetranCNHRequest: NSObject, RequestBase {
         #endif
     }
     
+    func getMaxLength(propertyName: String) -> Int {
+        if propertyName == "cpf" {
+            return CommonConstants.kCpfLength
+        }
+        return 0
+    }
+    
+    func getAllowedLength(propertyName: String) -> Int? {
+        if propertyName == "cpf" {
+            return CommonConstants.kCpfLength
+        }
+        return nil
+    }
+    
     func getKeyboardType(propertyName: String) -> SystemKeyboardType {
         if propertyName == "cpf" {
             return .number
